@@ -35,7 +35,6 @@ INTERNALS_REPOS=(
   "https://github.com/itm4n/PrivescCheck.git"
   "https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git"
   "https://github.com/p0dalirius/Coercer.git"
-  "https://github.com/blacklanternsecurity/MANSPIDER.git"
   "https://github.com/Ridter/noPac.git"
   "https://github.com/peass-ng/PEASS-ng.git"
   "https://github.com/lgandx/Responder.git"
