@@ -23,7 +23,6 @@ INTERNALS_REPOS=(
   "https://github.com/breenmachine/RottenPotatoNG.git"
   "https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git"
   "https://github.com/byt3bl33d3r/ItWasAllADream.git"
-  "https://github.com/Pennyw0rth/NetExec.git"
   "https://github.com/dirkjanm/mitm6.git"
   "https://github.com/ly4k/PetitPotam.git"
   "https://github.com/ly4k/Certipy.git"
