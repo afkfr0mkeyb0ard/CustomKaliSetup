@@ -151,7 +151,7 @@ download_scripts() {
 }
 
 # Download scripts into respective directories
-download_scripts "$INTERNALS_DIR" "${INTERNS_SCRIPTS[@]}"
+download_scripts "$INTERNALS_DIR" "${INTERNALS_SCRIPTS[@]}"
 download_scripts "$WEB_DIR" "${WEB_SCRIPTS[@]}"
 download_scripts "$WIFI_DIR" "${WIFI_SCRIPTS[@]}"
 download_scripts "$RECON_DIR" "${RECON_SCRIPTS[@]}"
