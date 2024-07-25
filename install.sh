@@ -70,6 +70,10 @@ echo "alias activate-itwasalladream='cd \$INTERNALS_DIR/ItWasAllADream && poetry
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
 deactivate
 
+# Kerbrute
+cd $INTERNALS_DIR
+chmod +x kerbrute_linux_amd64
+
 # Ldapnomnom
 cd $INTERNALS_DIR
 chmod +x ldapnomnom-linux-x64
