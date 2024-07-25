@@ -48,6 +48,7 @@ INTERNALS_REPOS=(
 WEB_REPOS=(
   "https://github.com/devanshbatham/OpenRedireX.git"
   "https://github.com/defparam/smuggler.git"
+  "https://github.com/swisskyrepo/PayloadsAllTheThings.git"
 )
 
 WIFI_REPOS=(
