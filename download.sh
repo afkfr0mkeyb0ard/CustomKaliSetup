@@ -12,7 +12,7 @@ PASSGEN_DIR="$BASE_DIR/PassGen"
 GENERAL_DIR="$BASE_DIR/General"
 
 # Create the directories if they don't exist
-mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$GENERAL_DIR"
+mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR"
 
 # Define Git repositories for each category
 INTERNALS_REPOS=(
