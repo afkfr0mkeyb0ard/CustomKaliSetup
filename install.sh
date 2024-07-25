@@ -42,7 +42,7 @@ gzip -d chisel_1.9.1_linux_amd64.gz
 gzip -d chisel_1.9.1_windows_amd64.gz
 chmod +x chisel_1.9.1_linux_amd64
 chmod +x chisel_1.9.1_windows_amd64
-echo 'chisel server -p 8000 --reverse' > ~/.zshrc
+echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 
 # Coercer
 cd $INTERNALS_DIR
