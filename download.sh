@@ -34,7 +34,6 @@ INTERNALS_REPOS=(
   "https://github.com/dirkjanm/PKINITtools.git"
   "https://github.com/itm4n/PrivescCheck.git"
   "https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git"
-  "https://github.com/lkarlslund/ldapnomnom.git"
   "https://github.com/p0dalirius/Coercer.git"
   "https://github.com/blacklanternsecurity/MANSPIDER.git"
   "https://github.com/Ridter/noPac.git"
@@ -81,6 +80,8 @@ INTERNALS_SCRIPTS=(
   "https://github.com/fortra/impacket/releases/download/impacket_0_11_0/impacket-0.11.0.tar.gz"
   "https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_linux_amd64.gz"
   "https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_windows_amd64.gz"
+  "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64"
+  "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64-obfuscated"
 )
 
 WEB_SCRIPTS=(
