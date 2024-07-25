@@ -33,7 +33,6 @@ INTERNALS_REPOS=(
   "https://github.com/AlmondOffSec/PassTheCert.git"
   "https://github.com/dirkjanm/PKINITtools.git"
   "https://github.com/itm4n/PrivescCheck.git"
-  "https://github.com/jpillora/chisel.git"
   "https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git"
   "https://github.com/lkarlslund/ldapnomnom.git"
   "https://github.com/p0dalirius/Coercer.git"
