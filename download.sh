@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the destination directory
-BASE_DIR="/home/kali/Documents"
+BASE_DIR="$HOME/Documents"
 
 # Define directories for categories
 INTERNALS_DIR="$BASE_DIR/Internals"
