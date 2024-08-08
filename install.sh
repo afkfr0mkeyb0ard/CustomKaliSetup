@@ -58,6 +58,7 @@ echo "python3 Coercer.py scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_hist
 echo "python3 Coercer.py coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
 # DonPAPI
+cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git
 
 # Ffuf
