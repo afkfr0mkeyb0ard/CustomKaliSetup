@@ -43,7 +43,6 @@ INTERNALS_REPOS=(
   "https://github.com/zer0condition/mhydeath.git"
   "https://github.com/afkfr0mkeyb0ard/PyScan.git"
   "https://github.com/afkfr0mkeyb0ard/findADCS.git"
-  "https://github.com/login-securite/DonPAPI.git"
   "https://github.com/L-codes/Neo-reGeorg.git"
 )
 
