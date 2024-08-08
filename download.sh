@@ -43,12 +43,16 @@ INTERNALS_REPOS=(
   "https://github.com/zer0condition/mhydeath.git"
   "https://github.com/afkfr0mkeyb0ard/PyScan.git"
   "https://github.com/afkfr0mkeyb0ard/findADCS.git"
+  "https://github.com/login-securite/DonPAPI.git"
+  "https://github.com/L-codes/Neo-reGeorg.git"
 )
 
 WEB_REPOS=(
   "https://github.com/devanshbatham/OpenRedireX.git"
   "https://github.com/defparam/smuggler.git"
   "https://github.com/swisskyrepo/PayloadsAllTheThings.git"
+  "https://github.com/initstring/cloud_enum.git"
+  "https://github.com/devploit/nomore403.git"
 )
 
 WIFI_REPOS=(
@@ -57,6 +61,9 @@ WIFI_REPOS=(
 
 RECON_REPOS=(
   "https://github.com/afkfr0mkeyb0ard/bruteSubdomains.git"
+  "https://github.com/m8sec/CrossLinked.git"
+  "https://github.com/0xZDH/o365spray.git"
+  "https://github.com/RedSiege/EyeWitness.git"
 )
 
 PASSGEN_REPOS=(
