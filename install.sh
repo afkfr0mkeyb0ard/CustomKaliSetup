@@ -57,6 +57,9 @@ echo "alias activate-coercer='cd \$INTERNALS_DIR/Coercer && source ./bin/activat
 echo "python3 Coercer.py scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
 echo "python3 Coercer.py coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
+# DonPAPI
+pipx install git+https://github.com/login-securite/DonPAPI.git
+
 # Ffuf
 cd $WEB_DIR
 tar -xzvf ffuf_2.1.0_linux_amd64.tar.gz ffuf
