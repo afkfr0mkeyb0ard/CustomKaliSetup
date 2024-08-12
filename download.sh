@@ -68,6 +68,7 @@ RECON_REPOS=(
 PASSGEN_REPOS=(
   "https://github.com/digininja/RSMangler.git"
   "https://github.com/afkfr0mkeyb0ard/Mentalist_chains.git"
+  "https://github.com/hashcat/hashcat.git"
 )
 
 GENERAL_REPOS=(
