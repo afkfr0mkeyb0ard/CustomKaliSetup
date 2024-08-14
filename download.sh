@@ -89,6 +89,7 @@ INTERNALS_SCRIPTS=(
   "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64"
   "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64-obfuscated"
   "https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.6/bloodyAD.exe"
+  "https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.4/SharpHound-v2.5.4.zip"
 )
 
 WEB_SCRIPTS=(
