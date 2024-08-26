@@ -45,6 +45,7 @@ INTERNALS_REPOS=(
   "https://github.com/afkfr0mkeyb0ard/findADCS.git"
   "https://github.com/L-codes/Neo-reGeorg.git"
   "https://github.com/SecuraBV/Timeroast.git"
+  "https://github.com/garrettfoster13/pre2k.git"
 )
 
 WEB_REPOS=(
