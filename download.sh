@@ -103,7 +103,7 @@ WIFI_SCRIPTS=(
 )
 
 RECON_SCRIPTS=(
-
+  "https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip"
 )
 
 PASSGEN_SCRIPTS=(
