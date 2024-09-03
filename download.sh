@@ -70,6 +70,7 @@ RECON_REPOS=(
   "https://github.com/smicallef/spiderfoot.git"
   "https://github.com/a6avind/spoofcheck.git"
   "https://github.com/initstring/cloud_enum.git"
+  "https://github.com/thewhiteh4t/FinalRecon.git"
 )
 
 PASSGEN_REPOS=(
