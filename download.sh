@@ -69,6 +69,7 @@ RECON_REPOS=(
   "https://github.com/laramies/theHarvester.git"
   "https://github.com/smicallef/spiderfoot.git"
   "https://github.com/a6avind/spoofcheck.git"
+  "https://github.com/initstring/cloud_enum.git"
 )
 
 PASSGEN_REPOS=(
