@@ -114,3 +114,8 @@ sudo apt-get install libpcap-dev && pip3 install Cython && pip3 install python-l
 
 # Pypycatz
 pip3 install pypykatz
+
+# theHarvester
+cd $RECON_DIR
+cd theHarvester
+pip3 install -r requirements/base.txt
