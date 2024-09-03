@@ -65,6 +65,7 @@ RECON_REPOS=(
   "https://github.com/m8sec/CrossLinked.git"
   "https://github.com/0xZDH/o365spray.git"
   "https://github.com/RedSiege/EyeWitness.git"
+  "https://github.com/gremwell/o365enum"
 )
 
 PASSGEN_REPOS=(
