@@ -71,6 +71,7 @@ RECON_REPOS=(
   "https://github.com/a6avind/spoofcheck.git"
   "https://github.com/initstring/cloud_enum.git"
   "https://github.com/thewhiteh4t/FinalRecon.git"
+  "https://github.com/blacklanternsecurity/bbot.git"
 )
 
 PASSGEN_REPOS=(
@@ -111,6 +112,7 @@ WIFI_SCRIPTS=(
 RECON_SCRIPTS=(
   "https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip"
   "https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz"
+  "https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz"
 )
 
 PASSGEN_SCRIPTS=(
