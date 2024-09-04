@@ -32,6 +32,9 @@ unzip aquatone_linux_amd64_1.7.0.zip aquatone
 chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
 
+# Bbot
+pipx install bbot
+
 # Certipy
 pip3 install certipy-ad || echo "[-] Failed to install certipy-ad"
 echo "certipy-ad find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222" >> ~/.zsh_history
