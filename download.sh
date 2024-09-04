@@ -71,7 +71,6 @@ RECON_REPOS=(
   "https://github.com/a6avind/spoofcheck.git"
   "https://github.com/initstring/cloud_enum.git"
   "https://github.com/thewhiteh4t/FinalRecon.git"
-  "https://github.com/blacklanternsecurity/bbot.git"
 )
 
 PASSGEN_REPOS=(
