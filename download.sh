@@ -72,6 +72,7 @@ RECON_REPOS=(
   "https://github.com/initstring/cloud_enum.git"
   "https://github.com/thewhiteh4t/FinalRecon.git"
   "https://github.com/sse-secure-systems/TeamsEnum.git"
+  "https://github.com/optiv/KnockKnock.git"
 )
 
 PASSGEN_REPOS=(
