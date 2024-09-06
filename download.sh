@@ -114,6 +114,7 @@ RECON_SCRIPTS=(
   "https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip"
   "https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz"
   "https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz"
+  "https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz"
 )
 
 PASSGEN_SCRIPTS=(
