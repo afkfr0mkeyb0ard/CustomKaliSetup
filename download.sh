@@ -84,6 +84,7 @@ PASSGEN_REPOS=(
 GENERAL_REPOS=(
   "https://github.com/danielmiessler/SecLists.git"
   "https://github.com/afkfr0mkeyb0ard/PayloadEverything.git"
+  "https://github.com/afkfr0mkeyb0ard/GenUsernames.git"
 )
 
 # Define scripts to download for each category
