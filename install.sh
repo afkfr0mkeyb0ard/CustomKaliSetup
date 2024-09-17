@@ -112,6 +112,12 @@ echo "python3 mitm6.py -i eth0 -d domain.local -hb [donotrespondtoFILE] [-hw <ta
 python3 -m pipx ensurepath
 python3 -m pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
 
+# Nomore403
+cd $WEB_DIR
+cd nomore403
+wget https://github.com/devploit/nomore403/releases/download/1.0.2/nomore403_linux_amd64
+chmod +x nomore403_linux_amd64
+
 # PCredz
 sudo apt-get install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 
