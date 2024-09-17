@@ -53,6 +53,7 @@ WEB_REPOS=(
   "https://github.com/defparam/smuggler.git"
   "https://github.com/swisskyrepo/PayloadsAllTheThings.git"
   "https://github.com/initstring/cloud_enum.git"
+  "https://github.com/devploit/nomore403.git"
 )
 
 WIFI_REPOS=(
