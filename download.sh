@@ -53,7 +53,6 @@ WEB_REPOS=(
   "https://github.com/defparam/smuggler.git"
   "https://github.com/swisskyrepo/PayloadsAllTheThings.git"
   "https://github.com/initstring/cloud_enum.git"
-  "https://github.com/devploit/nomore403.git"
 )
 
 WIFI_REPOS=(
@@ -105,6 +104,7 @@ INTERNALS_SCRIPTS=(
 
 WEB_SCRIPTS=(
   "https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz"
+  "https://github.com/devploit/nomore403/releases/download/1.0.2/nomore403_linux_amd64"
 )
 
 WIFI_SCRIPTS=(
