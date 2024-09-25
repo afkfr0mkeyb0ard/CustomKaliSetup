@@ -54,6 +54,7 @@ WEB_REPOS=(
   "https://github.com/swisskyrepo/PayloadsAllTheThings.git"
   "https://github.com/initstring/cloud_enum.git"
   "https://github.com/devploit/nomore403.git"
+  "https://github.com/epinna/weevely3.git"
 )
 
 WIFI_REPOS=(
