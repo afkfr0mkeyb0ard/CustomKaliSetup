@@ -74,6 +74,7 @@ RECON_REPOS=(
   "https://github.com/thewhiteh4t/FinalRecon.git"
   "https://github.com/sse-secure-systems/TeamsEnum.git"
   "https://github.com/optiv/KnockKnock.git"
+  "https://github.com/MartinIngesen/MSOLSpray.git"
 )
 
 PASSGEN_REPOS=(
