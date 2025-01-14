@@ -51,15 +51,9 @@ echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 
 # Coercer
 cd $INTERNALS_DIR
-cd Coercer
-python3 -m venv .
-source ./bin/activate
-pip3 install sectools
-python3 -m pip install coercer || echo "[-] Failed to install Coercer"
-deactivate
-echo "alias activate-coercer='cd \$INTERNALS_DIR/Coercer && source ./bin/activate && python3 Coercer.py'" >> ~/.zshrc
-echo "python3 Coercer.py scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
-echo "python3 Coercer.py coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
+pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy" || echo "[-] Failed to install Coercer"
+echo "coercer scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
+echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
 # DonPAPI
 cd $INTERNALS_DIR
