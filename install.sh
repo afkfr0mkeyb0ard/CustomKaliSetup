@@ -36,7 +36,12 @@ rm aquatone_linux_amd64_1.7.0.zip
 pipx install bbot
 
 # Certipy
+cd $INTERNALS_DIR
+cd Certipy
+python3 -m venv .
+source ./bin/activate
 pip3 install certipy-ad || echo "[-] Failed to install certipy-ad"
+alias certipy-ad-activate='cd \$INTERNALS_DIR/Certipy && source ./bin/activate && certipy-ad -h'" >> ~/.zshrc
 echo "certipy-ad find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222" >> ~/.zsh_history
 echo "certipy-ad find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222 -vulnerable" >> ~/.zsh_history
 
