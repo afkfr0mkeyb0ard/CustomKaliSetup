@@ -23,7 +23,7 @@ echo 'export GENERAL_DIR="$HOME/Documents/General"' >> ~/.zshrc
 
 # Dependencies
 sudo apt install python3.11-venv || echo "[-] Failed to install python3.11-venv"
-pip install pipx
+pip install pipx || echo "[-] Failed to install pipx"
 pipx ensurepath
 
 # Aquatone
@@ -57,7 +57,7 @@ echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v"
 
 # DonPAPI
 cd $INTERNALS_DIR
-pipx install git+https://github.com/login-securite/DonPAPI.git
+pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
 
 # Ffuf
 cd $WEB_DIR
@@ -66,10 +66,7 @@ chmod +x ffuf
 rm ffuf_2.1.0_linux_amd64.tar.gz
 
 # ItWasAllADream
-cd $INTERNALS_DIR
-cd ItWasAllADream
-poetry install || echo "[-] Failed to install ItWasAllADream"
-echo "alias activate-itwasalladream='cd \$INTERNALS_DIR/ItWasAllADream && poetry shell && itwasalladream -h'" >> ~/.zshrc
+pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Failed to install ItWasAllADream"
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
 deactivate
 
@@ -83,8 +80,7 @@ chmod +x ldapnomnom-linux-x64
 chmod +x ldapnomnom-linux-x64-obfuscated
 
 # Manspider
-python3 -m pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
-echo "alias manspider='\$HOME/.local/share/pipx/venvs/man-spider/bin/manspider'" >> ~/.zshrc
+pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
 
 # Mentalist
@@ -94,18 +90,11 @@ chmod +x Mentalist
 rm Mentalist-v1.0-Linux-x86_64.zip
 
 # Mitm6
-cd $INTERNALS_DIR
-cd mitm6
-python3 -m venv .
-source ./bin/activate
-pip3 install -r requirements.txt || echo "[-] Failed to install Mitm6"
-deactivate
-echo "alias activate-mitm6='cd \$INTERNALS_DIR/mitm6 && source ./bin/activate'" >> ~/.zshrc
-echo "python3 mitm6.py -i eth0 -d domain.local -hb [donotrespondtoFILE] [-hw <target>] [--ignore-nofqnd]" >> ~/.zsh_history
+pipx install git+https://github.com/dirkjanm/mitm6 || echo "[-] Failed to install Mitm6"
+echo "mitm6 -i eth0 -d domain.local -hb [donotrespondtoFILE] [-hw <target>] [--ignore-nofqnd]" >> ~/.zsh_history
 
 # Netexec
-python3 -m pipx ensurepath
-python3 -m pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
+pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
 
 # Nomore403
 cd $WEB_DIR
@@ -117,7 +106,7 @@ chmod +x nomore403_linux_amd64
 sudo apt-get install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 
 # Pypycatz
-pip3 install pypykatz
+pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
 
 # theHarvester
 cd $RECON_DIR
