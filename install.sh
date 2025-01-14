@@ -103,7 +103,12 @@ wget https://github.com/devploit/nomore403/releases/download/1.0.2/nomore403_lin
 chmod +x nomore403_linux_amd64
 
 # PCredz
+cd $INTERNALS_DIR
+cd PCredz
+python3 -m venv .
+source bin/activate
 sudo apt-get install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+deactivate
 
 # Pypycatz
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
