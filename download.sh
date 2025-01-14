@@ -102,7 +102,7 @@ INTERNALS_SCRIPTS=(
   "https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_windows_amd64.gz"
   "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64"
   "https://github.com/lkarlslund/ldapnomnom/releases/download/v1.3.0/ldapnomnom-linux-x64-obfuscated"
-  "https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.6/bloodyAD.exe"
+  "https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.exe"
   "https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.4/SharpHound-v2.5.4.zip"
   "https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc-ubuntu-latest.zip"
 )
