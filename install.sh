@@ -37,13 +37,9 @@ pipx install bbot
 
 # Certipy
 cd $INTERNALS_DIR
-cd Certipy
-python3 -m venv .
-source ./bin/activate
-pip3 install certipy-ad || echo "[-] Failed to install certipy-ad"
-alias certipy-ad-activate='cd \$INTERNALS_DIR/Certipy && source ./bin/activate && certipy-ad -h'" >> ~/.zshrc
-echo "certipy-ad find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222" >> ~/.zsh_history
-echo "certipy-ad find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222 -vulnerable" >> ~/.zsh_history
+pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy"
+echo "certipy find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222" >> ~/.zsh_history
+echo "certipy find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222 -vulnerable" >> ~/.zsh_history
 
 # Chisel
 cd $INTERNALS_DIR
