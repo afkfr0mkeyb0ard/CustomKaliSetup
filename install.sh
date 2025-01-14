@@ -112,3 +112,7 @@ pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to inst
 cd $RECON_DIR
 cd theHarvester
 pip3 install -r requirements/base.txt
+
+# Webclientservicescanner
+pipx install git+https://github.com/Hackndo/WebclientServiceScanner || echo "[-] Failed to install Webclientservicescanner"
+pipx ensurepath
