@@ -77,6 +77,10 @@ cd $INTERNALS_DIR
 chmod +x ldapnomnom-linux-x64
 chmod +x ldapnomnom-linux-x64-obfuscated
 
+# Ldapsearch-ad
+pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
+echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
+
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
