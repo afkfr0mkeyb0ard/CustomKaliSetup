@@ -25,7 +25,6 @@ INTERNALS_REPOS=(
   "https://github.com/byt3bl33d3r/ItWasAllADream.git"
   "https://github.com/dirkjanm/mitm6.git"
   "https://github.com/ly4k/PetitPotam.git"
-  "https://github.com/ly4k/Certipy.git"
   "https://github.com/galkan/crowbar.git"
   "https://github.com/dirkjanm/krbrelayx.git"
   "https://github.com/worawit/MS17-010.git"
