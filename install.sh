@@ -22,8 +22,7 @@ echo 'export GENERAL_DIR="$HOME/Documents/General"' >> ~/.zshrc
 # Installation of the tools
 
 # Dependencies
-sudo apt install python3.11-venv || echo "[-] Failed to install python3.11-venv"
-pip install pipx || echo "[-] Failed to install pipx"
+pipx || echo "[-] Please install pipx first with apt install pipx" && exit
 pipx ensurepath
 
 # Aquatone
