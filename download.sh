@@ -110,6 +110,7 @@ WEB_SCRIPTS=(
   "https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz"
   "https://github.com/devploit/nomore403/releases/download/1.0.2/nomore403_linux_amd64"
   "https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz"
+  "https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.2/trufflehog_3.88.2_linux_amd64.tar.gz"
 )
 
 WIFI_SCRIPTS=(
