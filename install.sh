@@ -69,6 +69,7 @@ echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_his
 deactivate
 
 #JSLuice
+cd $WEB_DIR
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest
 
 # Kerbrute
