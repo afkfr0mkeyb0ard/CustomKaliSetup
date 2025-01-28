@@ -68,6 +68,9 @@ pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Fail
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
 deactivate
 
+#JSLuice
+go install github.com/BishopFox/jsluice/cmd/jsluice@latest
+
 # Kerbrute
 cd $INTERNALS_DIR
 chmod +x kerbrute_linux_amd64
