@@ -12,12 +12,12 @@ PASSGEN_DIR="$BASE_DIR/PassGen"
 GENERAL_DIR="$BASE_DIR/General"
 
 # Config variables
-echo 'export INTERNALS_DIR="$HOME/Documents/Internals"' >> ~/.zshrc
-echo 'export WEB_DIR="$HOME/Documents/Web"' >> ~/.zshrc
-echo 'export WIFI_DIR="$HOME/Documents/WiFi"' >> ~/.zshrc
-echo 'export RECON_DIR="$HOME/Documents/Recon"' >> ~/.zshrc
-echo 'export PASSGEN_DIR="$HOME/Documents/PassGen"' >> ~/.zshrc
-echo 'export GENERAL_DIR="$HOME/Documents/General"' >> ~/.zshrc
+echo 'export INTERNALS_DIR="$BASE_DIR/Internals"' >> ~/.zshrc
+echo 'export WEB_DIR="$BASE_DIR/Web"' >> ~/.zshrc
+echo 'export WIFI_DIR="$BASE_DIR/WiFi"' >> ~/.zshrc
+echo 'export RECON_DIR="$BASE_DIR/Recon"' >> ~/.zshrc
+echo 'export PASSGEN_DIR="$BASE_DIR/PassGen"' >> ~/.zshrc
+echo 'export GENERAL_DIR="$BASE_DIR/General"' >> ~/.zshrc
 
 # Installation of the tools
 
