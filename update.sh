@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the git projects
-BASE_DIR="$HOME/Documents"
+BASE_DIR="$HOME"
 
 # Define directories for categories
 INTERNALS_DIR="$BASE_DIR/Internals"
