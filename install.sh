@@ -22,7 +22,7 @@ echo 'export GENERAL_DIR="$BASE_DIR/General"' >> ~/.zshrc
 # Installation of the tools
 
 # Dependencies
-pipx ensurepath || echo "[-] Please install pipx first with apt install pipx" && exit 1
+pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 
 # Aquatone
 cd $INTERNALS_DIR
