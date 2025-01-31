@@ -104,6 +104,7 @@ INTERNALS_SCRIPTS=(
   "https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.exe"
   "https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.4/SharpHound-v2.5.4.zip"
   "https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc-ubuntu-latest.zip"
+  "https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip"
 )
 
 WEB_SCRIPTS=(
