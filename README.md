@@ -36,6 +36,7 @@ EyeWitness
 Ffuf
 FinalRecon
 FindADCS
+GMSADumper
 GenUsernames
 Hashcat
 ItWasAllADream
