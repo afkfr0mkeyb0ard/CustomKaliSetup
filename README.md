@@ -21,6 +21,7 @@ To automatically download &amp; install most used pentest tools on Kali or any L
 ```
 Aquatone
 BBot
+BloodHound
 BloodyAD
 BruteSubdomains
 Certipy
