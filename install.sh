@@ -33,6 +33,9 @@ rm aquatone_linux_amd64_1.7.0.zip
 # Bbot
 pipx install bbot
 
+# BloodHound
+pipx install bloodhound
+
 # Certipy
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy"
