@@ -56,6 +56,7 @@ WEB_REPOS=(
   "https://github.com/initstring/cloud_enum.git"
   "https://github.com/devploit/nomore403.git"
   "https://github.com/epinna/weevely3.git"
+  "https://github.com/bitquark/shortscan.git"
 )
 
 WIFI_REPOS=(
