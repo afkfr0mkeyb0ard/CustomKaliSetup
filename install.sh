@@ -69,7 +69,6 @@ rm ffuf_2.1.0_linux_amd64.tar.gz
 # ItWasAllADream
 pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Failed to install ItWasAllADream"
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
-deactivate
 
 #JSLuice
 cd $WEB_DIR
