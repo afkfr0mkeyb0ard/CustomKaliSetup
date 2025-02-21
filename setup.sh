@@ -33,7 +33,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 
 # Amass
 cd $RECON_DIR
-wget -q https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip
+wget https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip
 unzip -q amass_Linux_amd64.zip amass_Linux_amd64/amass
 rm amass_Linux_amd64.zip
 mv amass_Linux_amd64/amass amass
@@ -42,7 +42,7 @@ chmod +x amass
 
 # Aquatone
 cd $INTERNALS_DIR
-wget -q https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip -q aquatone_linux_amd64_1.7.0.zip aquatone
 chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
@@ -57,17 +57,17 @@ pipx install bloodhound
 
 # BloodHound-Legacy
 cd $INTERNALS_DIR
-wget -q https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip
+wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
 
 # BloodyAD
 cd $INTERNALS_DIR
-wget -q https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.exe
+wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.exe
 
 # BruteSubdomains
 cd $RECON_DIR
-git -q clone https://github.com/afkfr0mkeyb0ard/bruteSubdomains.git
+git clone https://github.com/afkfr0mkeyb0ard/bruteSubdomains.git
 
 # Certipy
 cd $INTERNALS_DIR
@@ -77,8 +77,8 @@ echo "certipy find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222 -
 
 # Chisel
 cd $INTERNALS_DIR
-wget -q https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz
-wget -q https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz
+wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz
+wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz
 gzip -d chisel_1.10.1_windows_amd64.gz
 gzip -d chisel_1.10.1_linux_amd64.gz
 mv chisel_1.10.1_windows_amd64 chisel_windows
@@ -107,7 +107,7 @@ pipx install git+https://github.com/galkan/crowbar || echo "[-] Failed to instal
 
 # CsFalconUninstaller
 cd $INTERNALS_DIR
-git -q clone https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git
+git clone https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git
 
 # DonPAPI
 cd $INTERNALS_DIR
@@ -115,15 +115,15 @@ pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Fail
 
 # Eaphammer
 cd $WIFI_DIR
-git -q clone https://github.com/s0lst1c3/eaphammer.git
+git clone https://github.com/s0lst1c3/eaphammer.git
 
 # EyeWitness
 cd $RECON_DIR
-git -q clone https://github.com/RedSiege/EyeWitness.git
+git clone https://github.com/RedSiege/EyeWitness.git
 
 # Ffuf
 cd $WEB_DIR
-wget -q https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
+wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
 tar -xzf ffuf_2.1.0_linux_amd64.tar.gz
 rm CHANGELOG.md LICENSE README.md
 chmod +x ffuf
@@ -131,7 +131,7 @@ rm ffuf_2.1.0_linux_amd64.tar.gz
 
 # FinalRecon
 cd $RECON_DIR
-git -q clone https://github.com/thewhiteh4t/FinalRecon.git
+git clone https://github.com/thewhiteh4t/FinalRecon.git
 cd FinalRecon
 python3 -m venv .
 source bin/activate
@@ -141,29 +141,29 @@ echo 'alias finalrecon="$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/
 
 # FindADCS
 cd $INTERNALS_DIR
-git -q clone https://github.com/afkfr0mkeyb0ard/findADCS.git
+git clone https://github.com/afkfr0mkeyb0ard/findADCS.git
 
 # GenUsernames
 cd $PASSGEN_DIR
-git -q clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
+git clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
 
 # GMSADumper
 cd $INTERNALS_DIR
-git -q clone https://github.com/micahvandeusen/gMSADumper.git
+git clone https://github.com/micahvandeusen/gMSADumper.git
 
 # GoMapEnum
 cd $RECON_DIR
-wget -q https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
+wget https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
 tar -xzf GoMapEnum_1.1.0_linux_amd64.tar.gz
 rm GoMapEnum_1.1.0_linux_amd64.tar.gz
 
 # Hashcat
 cd $PASSGEN_DIR
-wget -q https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
+wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
 
 # Impacket
 cd $INTERNALS_DIR
-wget -q https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
+wget https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
 tar -xzf impacket-0.12.0.tar.gz
 cd impacket-0.12.0
 python3 -m venv .
@@ -182,14 +182,14 @@ go install github.com/BishopFox/jsluice/cmd/jsluice@latest
 
 # Kerbrute
 cd $INTERNALS_DIR
-wget -q https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
+wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 mv kerbrute_linux_amd64 kerbrute
 chmod +x kerbrute
 echo 'alias kerbrute="$INTERNALS_DIR/kerbrute"' >> ~/.zshrc
 
 # KnockKnock
 cd $RECON_DIR
-git -q clone https://github.com/waffl3ss/KnockKnock.git
+git clone https://github.com/waffl3ss/KnockKnock.git
 cd KnockKnock
 python3 -m venv .
 source bin/activate
@@ -199,14 +199,14 @@ echo 'alias knockknock="$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/
 
 # Krbrelayx
 cd $INTERNALS_DIR
-git -q clone https://github.com/dirkjanm/krbrelayx.git
+git clone https://github.com/dirkjanm/krbrelayx.git
 
 # Ldapnomnom
 cd $INTERNALS_DIR
-wget -q https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-linux-x64
-wget -q https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-linux-x64-obfuscated
-wget -q https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-windows-x64.exe
-wget -q https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-windows-x64-obfuscated.exe
+wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-linux-x64
+wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-linux-x64-obfuscated
+wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-windows-x64.exe
+wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-windows-x64-obfuscated.exe
 chmod +x ldapnomnom-linux-x64
 chmod +x ldapnomnom-linux-x64-obfuscated
 echo 'alias ldapnomnom="$INTERNALS_DIR/ldapnomnom-linux-x64"' >> ~/.zshrc
@@ -222,18 +222,18 @@ echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p 
 
 # Mentalist
 cd $PASSGEN_DIR
-wget -q https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
+wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
 unzip -q Mentalist-v1.0-Linux-x86_64.zip Mentalist
 chmod +x Mentalist
 rm Mentalist-v1.0-Linux-x86_64.zip
 
 # Mentalist_chains
 cd $PASSGEN_DIR
-git -q clone https://github.com/afkfr0mkeyb0ard/Mentalist_chains.git
+git clone https://github.com/afkfr0mkeyb0ard/Mentalist_chains.git
 
 # Mhydeath
 cd $INTERNALS_DIR
-git -q clone https://github.com/zer0condition/mhydeath.git
+git clone https://github.com/zer0condition/mhydeath.git
 
 # Mitm6
 pipx install git+https://github.com/dirkjanm/mitm6 || echo "[-] Failed to install Mitm6"
@@ -241,19 +241,19 @@ echo "mitm6 -i eth0 -d domain.local -hb [donotrespondtoFILE] [-hw <target>] [--i
 
 # MS17-010
 cd $INTERNALS_DIR
-git -q clone https://github.com/worawit/MS17-010.git
+git clone https://github.com/worawit/MS17-010.git
 
 # MSOLSpray
 cd $RECON_DIR
-git -q clone https://github.com/MartinIngesen/MSOLSpray.git
+git clone https://github.com/MartinIngesen/MSOLSpray.git
 
 # Neo-reGeorg
 cd $INTERNALS_DIR
-git -q clone https://github.com/L-codes/Neo-reGeorg.git
+git clone https://github.com/L-codes/Neo-reGeorg.git
 
 # Netcredz
 cd $INTERNALS_DIR
-git -q clone https://github.com/joey-melo/netcredz.git
+git clone https://github.com/joey-melo/netcredz.git
 
 # Netexec
 cd $INTERNALS_DIR
@@ -261,21 +261,21 @@ pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to in
 
 # Nomore403
 cd $WEB_DIR
-wget -q https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
+wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
 mv nomore403_linux_amd64 nomore403
 chmod +x nomore403
 
 # NoPac
 cd $INTERNALS_DIR
-git -q clone https://github.com/Ridter/noPac.git
+git clone https://github.com/Ridter/noPac.git
 
 # NTLMv1-multi
 cd $INTERNALS_DIR
-git -q clone https://github.com/evilmog/ntlmv1-multi.git
+git clone https://github.com/evilmog/ntlmv1-multi.git
 
 # O365enum
 cd $RECON_DIR
-git -q clone https://github.com/gremwell/o365enum.git
+git clone https://github.com/gremwell/o365enum.git
 
 # O365spray
 cd $RECON_DIR
@@ -283,36 +283,36 @@ pipx install git+https://github.com/0xZDH/o365spray.git
 
 # OpenRedireX
 cd $WEB_DIR
-git -q clone https://github.com/devanshbatham/OpenRedireX.git
+git clone https://github.com/devanshbatham/OpenRedireX.git
 
 # PassTheCert
 cd $INTERNALS_DIR
-git -q clone https://github.com/AlmondOffSec/PassTheCert.git
+git clone https://github.com/AlmondOffSec/PassTheCert.git
 
 # PayloadsAllTheThings
 cd $WEB_DIR
-git -q clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
+git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
 
 # PayloadEverything
 cd $WEB_DIR
-git -q clone https://github.com/afkfr0mkeyb0ard/PayloadEverything.git
+git clone https://github.com/afkfr0mkeyb0ard/PayloadEverything.git
 
 # PEASS-ng
 cd $INTERNALS_DIR
 mkdir PEASS-ng
 cd PEASS-ng
-wget -q https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEAS.bat
-wget -q https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEASx64.exe
-wget -q https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas.sh
-wget -q https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_darwin_amd64
-wget -q https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_linux_amd64
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEAS.bat
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEASx64.exe
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas.sh
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_darwin_amd64
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_linux_amd64
 chmod +x win*
 chmod +x lin*
 
 # PetitPotam
 cd $INTERNALS_DIR
-git -q clone https://github.com/topotam/PetitPotam.git
-git -q clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
+git clone https://github.com/topotam/PetitPotam.git
+git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
 
 # PCredz
 cd $INTERNALS_DIR
@@ -324,46 +324,46 @@ deactivate
 
 # PKINITtools
 cd $INTERNALS_DIR
-git -q clone https://github.com/dirkjanm/PKINITtools.git
+git clone https://github.com/dirkjanm/PKINITtools.git
 
 # Pre2k
 cd $INTERNALS_DIR
-git -q clone https://github.com/garrettfoster13/pre2k.git
+git clone https://github.com/garrettfoster13/pre2k.git
 
 # PrintNightmare
 cd $INTERNALS_DIR
-git -q clone https://github.com/cube0x0/CVE-2021-1675.git PrintNightmare
-git -q clone https://github.com/ly4k/PrintNightmare.git PrintNightmare-ly4k
+git clone https://github.com/cube0x0/CVE-2021-1675.git PrintNightmare
+git clone https://github.com/ly4k/PrintNightmare.git PrintNightmare-ly4k
 
 # PrivescCheck
 cd $INTERNALS_DIR
-git -q clone https://github.com/itm4n/PrivescCheck.git
+git clone https://github.com/itm4n/PrivescCheck.git
 
 # Pypycatz
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
 
 # PyScan
-git -q clone https://github.com/afkfr0mkeyb0ard/PyScan.git
+git clone https://github.com/afkfr0mkeyb0ard/PyScan.git
 
 # Responder
 cd $INTERNALS_DIR
-git -q clone https://github.com/lgandx/Responder.git
+git clone https://github.com/lgandx/Responder.git
 
 # RottenPotatoNG
 cd $INTERNALS_DIR
-git -q clone https://github.com/breenmachine/RottenPotatoNG.git
+git clone https://github.com/breenmachine/RottenPotatoNG.git
 
 # RSMangler
 cd $PASSGEN_DIR
-git -q clone https://github.com/digininja/RSMangler.git
+git clone https://github.com/digininja/RSMangler.git
 
 # SecLists
 cd $WEB_DIR
-git -q clone https://github.com/danielmiessler/SecLists.git
+git clone https://github.com/danielmiessler/SecLists.git
 
 # SharpHound
 cd $INTERNALS_DIR
-wget -q https://github.com/SpecterOps/SharpHound/releases/download/v2.5.13/SharpHound-v2.5.13.zip
+wget https://github.com/SpecterOps/SharpHound/releases/download/v2.5.13/SharpHound-v2.5.13.zip
 unzip -q SharpHound-v2.5.13.zip -d SharpHound
 rm SharpHound-v2.5.13.zip
 
@@ -373,7 +373,7 @@ go install github.com/bitquark/shortscan/cmd/shortscan@latest
 
 # Smuggler
 cd $WEB_DIR
-git -q clone https://github.com/defparam/smuggler.git
+git clone https://github.com/defparam/smuggler.git
 
 # Spiderfoot
 # Installed by default on Kali
@@ -381,16 +381,16 @@ git -q clone https://github.com/defparam/smuggler.git
 
 # Spoofcheck
 cd $RECON_DIR
-git -q clone https://github.com/a6avind/spoofcheck.git
+git clone https://github.com/a6avind/spoofcheck.git
 
 # Swaks
-wget -q https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz
+wget https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz
 tar -xzf swaks-20240103.0.tar.gz
 rm swaks-20240103.0.tar.gz
 
 # TeamsEnum
 cd $RECON_DIR
-git -q clone https://github.com/sse-secure-systems/TeamsEnum.git
+git clone https://github.com/sse-secure-systems/TeamsEnum.git
 cd TeamsEnum
 python3 -m venv .
 source bin/activate
@@ -404,18 +404,18 @@ pipx install git+https://github.com/laramies/theHarvester.git
 
 # Timeroast
 cd $INTERNALS_DIR
-git -q clone https://github.com/SecuraBV/Timeroast.git
+git clone https://github.com/SecuraBV/Timeroast.git
 
 # Trufflehog
 cd $RECON_DIR
-wget -q https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.12/trufflehog_3.88.12_linux_amd64.tar.gz
+wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.12/trufflehog_3.88.12_linux_amd64.tar.gz
 tar -xzf trufflehog_3.88.12_linux_amd64.tar.gz
 rm README.md LICENSE trufflehog_3.88.12_linux_amd64.tar.gz
 chmod +x trufflehog
 
 # Vita
 cd $RECON_DIR
-wget -q https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
+wget https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 tar -xzf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 rm vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 mv vita-0.1.16-x86_64-unknown-linux-musl/vita .
@@ -423,7 +423,7 @@ rm -r vita-0.1.16-x86_64-unknown-linux-musl
 
 # Waybackurls
 cd $WEB_DIR
-wget -q https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz
+wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz
 tar -xzf waybackurls-linux-amd64-0.1.0.tgz
 rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
@@ -436,11 +436,11 @@ pipx ensurepath
 
 # Weevely3
 cd $WEB_DIR
-git -q clone https://github.com/epinna/weevely3.git
+git clone https://github.com/epinna/weevely3.git
 
 # Windows-Exploit-Suggester
 cd $INTERNALS_DIR
-git -q clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
 
 echo "[+] All repositories have been successfully cloned, and scripts downloaded into their respective directories."
 
@@ -452,10 +452,10 @@ echo "[+] Downloading last scripts"
 
 # Cpassword_decrypt
 cd $INTERNALS_DIR
-wget -q https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
+wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
 chmod +x cpassword_decrypt.rb
 
 # iLO4_add_admin
 cd $INTERNALS_DIR
-wget -q https://www.exploit-db.com/download/44005
+wget https://www.exploit-db.com/download/44005
 mv 44005 iLO4_add_admin.py
