@@ -23,7 +23,8 @@ echo 'export tools_passgen="$BASE_DIR/passgen"' >> ~/.zshrc
 echo 'export tools_general="$BASE_DIR/general"' >> ~/.zshrc
 
 # Dependencies
-sudo apt install pipx git
+sudo apt-get -y update
+sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 
 #############################################################
@@ -318,7 +319,7 @@ cd $INTERNALS_DIR
 cd PCredz
 python3 -m venv .
 source bin/activate
-sudo apt-get install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+sudo apt-get -y install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
 
 # PKINITtools
