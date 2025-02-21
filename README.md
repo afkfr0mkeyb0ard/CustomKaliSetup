@@ -3,7 +3,10 @@ To automatically download &amp; install most used pentest tools on Kali or any L
 
 ### Setup
 ```
-Work in progress
+git clone https://github.com/afkfr0mkeyb0ard/CustomKaliSetup.git
+cd CustomKaliSetup
+chmod +x setup.sh
+./setup.sh
 ```
 
 ### List of installed tools
