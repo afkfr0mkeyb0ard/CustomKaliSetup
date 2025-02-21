@@ -34,7 +34,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 # Amass
 cd $RECON_DIR
 wget https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip
-unzip amass_Linux_amd64.zip amass_Linux_amd64/amass
+unzip -q amass_Linux_amd64.zip amass_Linux_amd64/amass
 rm amass_Linux_amd64.zip
 mv amass_Linux_amd64/amass amass
 rm -r amass_Linux_amd64
@@ -43,7 +43,7 @@ chmod +x amass
 # Aquatone
 cd $INTERNALS_DIR
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
-unzip aquatone_linux_amd64_1.7.0.zip aquatone
+unzip -q aquatone_linux_amd64_1.7.0.zip aquatone
 chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
 echo 'alias aquatone="$INTERNALS_DIR/aquatone"' >> ~/.zsh_history
@@ -58,7 +58,7 @@ pipx install bloodhound
 # BloodHound-Legacy
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip
-unzip BloodHound-linux-x64.zip
+unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
 
 # BloodyAD
@@ -223,7 +223,7 @@ echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p 
 # Mentalist
 cd $PASSGEN_DIR
 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
-unzip Mentalist-v1.0-Linux-x86_64.zip Mentalist
+unzip -q Mentalist-v1.0-Linux-x86_64.zip Mentalist
 chmod +x Mentalist
 rm Mentalist-v1.0-Linux-x86_64.zip
 
@@ -364,7 +364,7 @@ git clone https://github.com/danielmiessler/SecLists.git
 # SharpHound
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/SharpHound/releases/download/v2.5.13/SharpHound-v2.5.13.zip
-unzip SharpHound-v2.5.13.zip -d SharpHound
+unzip -q SharpHound-v2.5.13.zip -d SharpHound
 rm SharpHound-v2.5.13.zip
 
 # Shortscan
