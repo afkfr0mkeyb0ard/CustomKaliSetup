@@ -124,7 +124,7 @@ git clone https://github.com/RedSiege/EyeWitness.git
 # Ffuf
 cd $WEB_DIR
 wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
-tar -xzvf ffuf_2.1.0_linux_amd64.tar.gz
+tar -xzf ffuf_2.1.0_linux_amd64.tar.gz
 rm CHANGELOG.md LICENSE README.md
 chmod +x ffuf
 rm ffuf_2.1.0_linux_amd64.tar.gz
@@ -154,7 +154,7 @@ git clone https://github.com/micahvandeusen/gMSADumper.git
 # GoMapEnum
 cd $RECON_DIR
 wget https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
-tar -xzvf GoMapEnum_1.1.0_linux_amd64.tar.gz
+tar -xzf GoMapEnum_1.1.0_linux_amd64.tar.gz
 rm GoMapEnum_1.1.0_linux_amd64.tar.gz
 
 # Hashcat
@@ -164,7 +164,7 @@ wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7
 # Impacket
 cd $INTERNALS_DIR
 wget https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
-tar -xzvf impacket-0.12.0.tar.gz
+tar -xzf impacket-0.12.0.tar.gz
 cd impacket-0.12.0
 python3 -m venv .
 source bin/activate
@@ -385,7 +385,7 @@ git clone https://github.com/a6avind/spoofcheck.git
 
 # Swaks
 wget https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz
-tar -xvzf swaks-20240103.0.tar.gz
+tar -xzf swaks-20240103.0.tar.gz
 rm swaks-20240103.0.tar.gz
 
 # TeamsEnum
@@ -409,14 +409,14 @@ git clone https://github.com/SecuraBV/Timeroast.git
 # Trufflehog
 cd $RECON_DIR
 wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.12/trufflehog_3.88.12_linux_amd64.tar.gz
-tar -xvzf trufflehog_3.88.12_linux_amd64.tar.gz
+tar -xzf trufflehog_3.88.12_linux_amd64.tar.gz
 rm README.md LICENSE trufflehog_3.88.12_linux_amd64.tar.gz
 chmod +x trufflehog
 
 # Vita
 cd $RECON_DIR
 wget https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
-tar -xvzf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
+tar -xzf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 rm vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 mv vita-0.1.16-x86_64-unknown-linux-musl/vita .
 rm -r vita-0.1.16-x86_64-unknown-linux-musl
@@ -424,7 +424,7 @@ rm -r vita-0.1.16-x86_64-unknown-linux-musl
 # Waybackurls
 cd $WEB_DIR
 wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz
-tar -xvzf waybackurls-linux-amd64-0.1.0.tgz
+tar -xzf waybackurls-linux-amd64-0.1.0.tgz
 rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
 echo 'alias waybackurls="cd $WEB_DIR/waybackurls"' >> ~/.zshrc 
