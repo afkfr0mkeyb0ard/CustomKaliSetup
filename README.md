@@ -32,6 +32,7 @@ FindADCS
 GenUsernames
 Gitleaks
 GMSADumper
+GoMapEnum
 Hashcat
 ItWasAllADream
 Impacket
