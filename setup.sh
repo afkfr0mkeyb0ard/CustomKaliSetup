@@ -314,8 +314,8 @@ wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/wi
 wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas.sh
 wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_darwin_amd64
 wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_linux_amd64
-chmod +x win*
-chmod +x lin*
+wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS.ps1
+wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS-Light.ps1
 
 # PetitPotam
 cd $INTERNALS_DIR
