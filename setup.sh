@@ -169,6 +169,10 @@ rm GoMapEnum_1.1.0_linux_amd64.tar.gz
 cd $PASSGEN_DIR
 wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
 
+# Hostapd-wpe
+cd $WIFI_DIR
+sudo apt-get install hostapd-wpe
+
 # Impacket
 cd $INTERNALS_DIR
 wget https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
@@ -364,6 +368,13 @@ git clone https://github.com/breenmachine/RottenPotatoNG.git
 # RSMangler
 cd $PASSGEN_DIR
 git clone https://github.com/digininja/RSMangler.git
+
+# Rtl8812au
+cd $WIFI_DIR
+sudo apt-get install dkms bc mokutil build-essential libelf-dev linux-headers-`uname -r`
+git clone https://github.com/aircrack-ng/rtl8812au.git
+cd rtl*
+sudo make dkms_install
 
 # SecLists
 cd $WEB_DIR
