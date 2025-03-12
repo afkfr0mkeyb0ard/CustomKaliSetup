@@ -34,6 +34,7 @@ Gitleaks
 GMSADumper
 GoMapEnum
 Hashcat
+Hostapd-wpe
 ItWasAllADream
 Impacket
 JSLuice
@@ -88,8 +89,15 @@ Windows-Exploit-Suggester
 ### Downloaded exploits 
 ```
 # iLO4 admin account creation
-https://www.exploit-db.com/download/44005
+https://www.exploit-db.com/download/44005*
 
 # Cpassword decrypt
 https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
 ```
+
+### Modules
+```
+# Wi-Fi antennas
+rtl8812au
+```
+
