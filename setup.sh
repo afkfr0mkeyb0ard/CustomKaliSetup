@@ -177,6 +177,7 @@ sudo apt-get install hostapd-wpe
 cd $INTERNALS_DIR
 wget https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
 tar -xzf impacket-0.12.0.tar.gz
+rm impacket-0.12.0.tar.gz
 cd impacket-0.12.0
 python3 -m venv .
 source bin/activate
