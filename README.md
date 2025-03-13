@@ -40,6 +40,7 @@ Impacket
 JSLuice
 Kerbrute
 KnockKnock
+Kraken
 Krbrelayx
 Ldapnomnom
 Ldapsearch-ad
