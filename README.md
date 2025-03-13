@@ -84,6 +84,7 @@ TheHarvester
 Timeroast
 Webclientservicescanner
 Weevely3
+Wef
 Windows-Exploit-Suggester
 ```
 
