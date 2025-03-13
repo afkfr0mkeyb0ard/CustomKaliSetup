@@ -271,6 +271,11 @@ git clone https://github.com/joey-melo/netcredz.git
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
 
+# Ntlm_theft
+cd $INTERNALS_DIR
+git clone https://github.com/Greenwolf/ntlm_theft.git
+pipx install xlsxwriter
+
 # Nomore403
 cd $WEB_DIR
 wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
