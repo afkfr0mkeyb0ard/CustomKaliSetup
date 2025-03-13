@@ -334,10 +334,11 @@ git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
 
 # PCredz
 cd $INTERNALS_DIR
+git clone https://github.com/lgandx/PCredz.git
 cd PCredz
 python3 -m venv .
 source bin/activate
-sudo apt-get -y install libpcap-dev && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+sudo apt-get install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
 
 # PKINITtools
