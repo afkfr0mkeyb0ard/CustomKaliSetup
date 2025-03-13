@@ -210,6 +210,15 @@ pip3 install -r requirements.txt
 deactivate
 echo 'alias knockknock="$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/KnockKnock.py"' >> ~/.zshrc
 
+# Kraken
+cd $GENERAL_DIR
+git clone https://github.com/jasonxtn/Kraken.git
+cd Kraken
+python3 -m venv .
+source bin/activate
+python3 -m pip install -r requirements.txt
+deactivate
+
 # Krbrelayx
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/krbrelayx.git
