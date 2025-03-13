@@ -462,6 +462,10 @@ pipx ensurepath
 cd $WEB_DIR
 git clone https://github.com/epinna/weevely3.git
 
+# Wef
+cd $WIFI_DIR
+git clone https://github.com/D3Ext/WEF.git
+
 # Windows-Exploit-Suggester
 cd $INTERNALS_DIR
 git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
