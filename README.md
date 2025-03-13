@@ -54,6 +54,7 @@ Netexec
 Neo-reGeorg
 Nomore403
 NoPac
+Ntlm_theft
 O365enum
 O365spray
 OpenRedireX
