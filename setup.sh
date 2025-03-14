@@ -171,7 +171,7 @@ wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7
 
 # Hostapd-wpe
 cd $WIFI_DIR
-sudo apt-get install hostapd-wpe
+sudo apt-get -y install hostapd-wpe
 
 # Impacket
 cd $INTERNALS_DIR
@@ -347,7 +347,7 @@ git clone https://github.com/lgandx/PCredz.git
 cd PCredz
 python3 -m venv .
 source bin/activate
-sudo apt-get install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+sudo apt-get -y install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
 
 # PKINITtools
@@ -387,7 +387,7 @@ git clone https://github.com/digininja/RSMangler.git
 
 # Rtl8812au
 cd $WIFI_DIR
-sudo apt-get install dkms bc mokutil build-essential libelf-dev linux-headers-`uname -r`
+sudo apt-get -y install dkms bc mokutil build-essential libelf-dev linux-headers-`uname -r`
 git clone https://github.com/aircrack-ng/rtl8812au.git
 cd rtl*
 sudo make dkms_install
