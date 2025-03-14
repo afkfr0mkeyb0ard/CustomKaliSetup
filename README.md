@@ -57,6 +57,7 @@ Nomore403
 NoPac
 Ntlm_theft
 O365enum
+O365recon
 O365spray
 OpenRedireX
 PassTheCert
