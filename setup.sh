@@ -334,7 +334,7 @@ git clone https://github.com/lgandx/PCredz.git
 cd PCredz
 python3 -m venv .
 source bin/activate
-sudo apt-get -y install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+sudo apt-get -y install python3-pip libpcap-dev file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
 
 # PEASS-ng
