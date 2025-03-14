@@ -438,6 +438,10 @@ pip3 install -r requirements.txt
 deactivate
 echo 'alias teamsenum.py="$RECON_DIR/TeamsEnum/bin/python3 $RECON_DIR/TeamsEnum/TeamsEnum.py"' >> ~/.zshrc
 
+# Testssl
+cd $WEB_DIR
+git clone --depth 1 https://github.com/testssl/testssl.sh.git
+
 # TheHarvester
 cd $RECON_DIR
 pipx install git+https://github.com/laramies/theHarvester.git
