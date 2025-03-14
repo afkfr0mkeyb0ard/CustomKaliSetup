@@ -304,6 +304,10 @@ git clone https://github.com/evilmog/ntlmv1-multi.git
 cd $RECON_DIR
 git clone https://github.com/gremwell/o365enum.git
 
+# O365recon
+cd $RECON_DIR
+git clone https://github.com/nyxgeek/o365recon.git
+
 # O365spray
 cd $RECON_DIR
 pipx install git+https://github.com/0xZDH/o365spray.git
