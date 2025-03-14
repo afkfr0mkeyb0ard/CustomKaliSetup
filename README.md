@@ -84,6 +84,7 @@ Spoofcheck
 TeamsEnum
 TheHarvester
 Timeroast
+TomcatSampleWebshell
 Webclientservicescanner
 Weevely3
 Wef
