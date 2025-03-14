@@ -419,6 +419,7 @@ cd $RECON_DIR
 git clone https://github.com/a6avind/spoofcheck.git
 
 # Swaks
+cd $RECON_DIR
 wget https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz
 tar -xzf swaks-20240103.0.tar.gz
 rm swaks-20240103.0.tar.gz
