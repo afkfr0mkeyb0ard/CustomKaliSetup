@@ -87,6 +87,7 @@ Spiderfoot
 Spoofcheck
 Swaks
 TeamsEnum
+Testssl
 TheHarvester
 Timeroast
 TomcatSampleWebshell
