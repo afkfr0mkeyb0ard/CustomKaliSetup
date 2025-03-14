@@ -85,6 +85,9 @@ TeamsEnum
 TheHarvester
 Timeroast
 TomcatSampleWebshell
+Trufflehog
+Vita
+Waybackurls
 Webclientservicescanner
 Weevely3
 Wef
