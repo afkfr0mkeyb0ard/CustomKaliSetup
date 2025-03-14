@@ -12,6 +12,7 @@ chmod +x setup.sh
 ### List of installed tools
 
 ```
+Amass
 Aquatone
 BBot
 BloodHound
@@ -23,6 +24,7 @@ Cloud_enum
 Coercer
 CrossLinked
 Crowbar
+CsFalconUninstaller
 DonPAPI
 Eaphammer
 EyeWitness
@@ -35,8 +37,8 @@ GMSADumper
 GoMapEnum
 Hashcat
 Hostapd-wpe
-ItWasAllADream
 Impacket
+ItWasAllADream
 JSLuice
 Kerbrute
 KnockKnock
@@ -46,15 +48,17 @@ Ldapnomnom
 Ldapsearch-ad
 Manspider
 Mentalist
+Mentalist_chains
+Mhydeath
 Mitm6
 MS17-010
 MSOLSpray
-Mhydeath
+Neo-reGeorg
 Netcredz
 Netexec
-Neo-reGeorg
 Nomore403
 NoPac
+NTLMv1-multi
 Ntlm_theft
 O365enum
 O365recon
@@ -63,8 +67,8 @@ OpenRedireX
 PassTheCert
 PayloadEverything
 PayloadsAllTheThings
-PEASS-ng
 PCredz
+PEASS-ng
 PetitPotam
 PKINITtools
 Pre2k
@@ -81,6 +85,7 @@ ShortScan (IIS Tilde)
 Smuggler
 Spiderfoot
 Spoofcheck
+Swaks
 TeamsEnum
 TheHarvester
 Timeroast
