@@ -446,6 +446,10 @@ pipx install git+https://github.com/laramies/theHarvester.git
 cd $INTERNALS_DIR
 git clone https://github.com/SecuraBV/Timeroast.git
 
+# TomcatSampleWebshell
+cd $WEB_DIR
+git clone https://github.com/afkfr0mkeyb0ard/TomcatSampleWebshell.git
+
 # Trufflehog
 cd $RECON_DIR
 wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.12/trufflehog_3.88.12_linux_amd64.tar.gz
@@ -492,7 +496,7 @@ echo "[+] All repositories have been successfully cloned, and scripts downloaded
 ### Installation of the scripts
 #############################################################
 
-echo "[+] Downloading last scripts"
+echo "[+] Downloading scripts"
 
 # Cpassword_decrypt
 cd $INTERNALS_DIR
