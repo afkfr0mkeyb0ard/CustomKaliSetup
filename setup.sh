@@ -281,11 +281,6 @@ git clone https://github.com/joey-melo/netcredz.git
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
 
-# Ntlm_theft
-cd $INTERNALS_DIR
-git clone https://github.com/Greenwolf/ntlm_theft.git
-pipx install xlsxwriter
-
 # Nomore403
 cd $WEB_DIR
 wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
@@ -295,6 +290,11 @@ chmod +x nomore403
 # NoPac
 cd $INTERNALS_DIR
 git clone https://github.com/Ridter/noPac.git
+
+# Ntlm_theft
+cd $INTERNALS_DIR
+git clone https://github.com/Greenwolf/ntlm_theft.git
+pipx install xlsxwriter
 
 # NTLMv1-multi
 cd $INTERNALS_DIR
@@ -328,6 +328,15 @@ git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
 cd $WEB_DIR
 git clone https://github.com/afkfr0mkeyb0ard/PayloadEverything.git
 
+# PCredz
+cd $INTERNALS_DIR
+git clone https://github.com/lgandx/PCredz.git
+cd PCredz
+python3 -m venv .
+source bin/activate
+sudo apt-get -y install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
+deactivate
+
 # PEASS-ng
 cd $INTERNALS_DIR
 mkdir PEASS-ng
@@ -344,15 +353,6 @@ wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS-Li
 cd $INTERNALS_DIR
 git clone https://github.com/topotam/PetitPotam.git
 git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
-
-# PCredz
-cd $INTERNALS_DIR
-git clone https://github.com/lgandx/PCredz.git
-cd PCredz
-python3 -m venv .
-source bin/activate
-sudo apt-get -y install python3-pip && sudo apt install libpcap-dev && sudo apt install file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
-deactivate
 
 # PKINITtools
 cd $INTERNALS_DIR
