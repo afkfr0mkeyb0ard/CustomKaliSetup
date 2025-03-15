@@ -193,6 +193,10 @@ echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_his
 cd $WEB_DIR
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest
 
+# Jwt_tool
+cd $WEB_DIR
+git clone https://github.com/ticarpi/jwt_tool.git
+
 # Kerbrute
 cd $INTERNALS_DIR
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
