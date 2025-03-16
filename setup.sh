@@ -26,6 +26,7 @@ echo 'export tools_general="$BASE_DIR/general"' >> ~/.zshrc
 sudo apt-get -y update
 sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
+sudo apt-get -y install golang-go
 
 #############################################################
 ### Installation of the tools
@@ -174,6 +175,10 @@ cd $RECON_DIR
 wget https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
 tar -xzf GoMapEnum_1.1.0_linux_amd64.tar.gz
 rm GoMapEnum_1.1.0_linux_amd64.tar.gz
+
+# GoRedOps
+cd $GENERAL_DIR
+git clone https://github.com/EvilBytecode/GoRedOps.git
 
 # Hashcat
 cd $PASSGEN_DIR
