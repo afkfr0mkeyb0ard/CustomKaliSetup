@@ -33,6 +33,7 @@ Ffuf
 FinalRecon
 FindADCS
 GenUsernames
+Git-dumper
 Gitleaks
 GMSADumper
 GoMapEnum
