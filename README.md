@@ -37,6 +37,7 @@ Git-dumper
 Gitleaks
 GMSADumper
 GoMapEnum
+GoRedOps
 Hashcat
 Hostapd-wpe
 Impacket
