@@ -48,6 +48,12 @@ chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
 echo 'alias aquatone="$INTERNALS_DIR/aquatone"' >> ~/.zsh_history
 
+# Assetfinder
+cd $RECON_DIR
+wget https://github.com/tomnomnom/assetfinder/releases/download/v0.1.1/assetfinder-linux-amd64-0.1.1.tgz
+tar -xzf assetfinder-linux-amd64-0.1.1.tgz
+rm assetfinder-linux-amd64-0.1.1.tgz
+
 # Bbot
 pipx install bbot
 
