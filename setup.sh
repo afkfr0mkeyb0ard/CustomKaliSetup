@@ -153,6 +153,10 @@ git clone https://github.com/afkfr0mkeyb0ard/findADCS.git
 cd $PASSGEN_DIR
 git clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
 
+# Git-dumper
+cd $WEB_DIR
+pipx install git+https://github.com/arthaud/git-dumper.git
+
 # Gitleaks
 cd $RECON_DIR
 wget https://github.com/gitleaks/gitleaks/releases/download/v8.24.0/gitleaks_8.24.0_linux_x64.tar.gz
