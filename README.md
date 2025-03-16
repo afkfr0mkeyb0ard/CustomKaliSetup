@@ -14,6 +14,7 @@ chmod +x setup.sh
 ```
 Amass
 Aquatone
+Assetfinder
 BBot
 BloodHound
 BloodyAD
