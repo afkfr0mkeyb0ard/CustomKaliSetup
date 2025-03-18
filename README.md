@@ -52,6 +52,7 @@ Ldapsearch-ad
 Manspider
 Mentalist
 Mentalist_chains
+MFASweep
 Mhydeath
 Mitm6
 MS17-010
