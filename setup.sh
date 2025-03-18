@@ -272,6 +272,10 @@ rm Mentalist-v1.0-Linux-x86_64.zip
 cd $PASSGEN_DIR
 git clone https://github.com/afkfr0mkeyb0ard/Mentalist_chains.git
 
+# MFASweep
+cd $RECON_DIR
+wget https://raw.githubusercontent.com/dafthack/MFASweep/refs/heads/master/MFASweep.ps1
+
 # Mhydeath
 cd $INTERNALS_DIR
 git clone https://github.com/zer0condition/mhydeath.git
