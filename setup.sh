@@ -314,6 +314,14 @@ chmod +x nomore403
 cd $INTERNALS_DIR
 git clone https://github.com/Ridter/noPac.git
 
+# NTLMRecon
+cd $RECON_DIR
+pipx install git+https://github.com/pwnfoo/NTLMRecon.git
+
+# Ntlmscan
+cd $RECON_DIR
+git clone https://github.com/nyxgeek/ntlmscan.git
+
 # Ntlm_theft
 cd $INTERNALS_DIR
 git clone https://github.com/Greenwolf/ntlm_theft.git
