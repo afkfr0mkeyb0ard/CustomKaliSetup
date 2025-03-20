@@ -520,15 +520,19 @@ git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
 echo "[+] All repositories have been successfully cloned, and scripts downloaded into their respective directories."
 
 #############################################################
-### Installation of the scripts
+### Installation of the scripts/exploits
 #############################################################
 
-echo "[+] Downloading scripts"
+echo "[+] Downloading scripts/exploits"
 
 # Cpassword_decrypt
 cd $INTERNALS_DIR
 wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
 chmod +x cpassword_decrypt.rb
+
+# CVE-2025-24071 (NTLM auth via ZIP/RAR)
+cd $GENERAL_DIR
+git clone https://github.com/0x6rss/CVE-2025-24071_PoC.git
 
 # iLO4_add_admin
 cd $INTERNALS_DIR
