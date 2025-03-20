@@ -62,6 +62,8 @@ Netcredz
 Netexec
 Nomore403
 NoPac
+NTLMRecon
+Ntlmscan
 NTLMv1-multi
 Ntlm_theft
 O365enum
