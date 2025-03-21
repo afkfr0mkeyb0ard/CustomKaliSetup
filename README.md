@@ -117,7 +117,7 @@ https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/passw
 # CVE-2025-24071 (NTLM auth via ZIP/RAR)
 https://github.com/0x6rss/CVE-2025-24071_PoC
 
-# iLO4 admin account creation
+# CVE-2017-12542 (iLO4 admin account creation)
 https://www.exploit-db.com/download/44005
 
 # Proxyshell
