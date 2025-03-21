@@ -58,6 +58,10 @@ rm assetfinder-linux-amd64-0.1.1.tgz
 # Bbot
 pipx install bbot
 
+# Bettercap
+cd $INTERNALS_DIR
+go install github.com/bettercap/bettercap@latest 
+
 # BloodHound
 cd $INTERNALS_DIR
 pipx install bloodhound
