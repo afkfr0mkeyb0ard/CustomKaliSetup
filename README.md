@@ -116,6 +116,9 @@ https://github.com/0x6rss/CVE-2025-24071_PoC
 
 # iLO4 admin account creation
 https://www.exploit-db.com/download/44005
+
+# Proxyshell
+https://github.com/dmaasland/proxyshell-poc.git
 ```
 
 ### Modules
