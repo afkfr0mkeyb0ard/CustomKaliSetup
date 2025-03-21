@@ -92,6 +92,7 @@ SecLists
 SharpHound
 ShortScan (IIS Tilde)
 Smuggler
+Snoop
 Spiderfoot
 Spoofcheck
 Swaks
