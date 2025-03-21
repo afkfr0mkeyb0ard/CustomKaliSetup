@@ -457,6 +457,14 @@ go install github.com/bitquark/shortscan/cmd/shortscan@latest
 cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
 
+# Snoop
+cd $RECON_DIR
+mkdir Snoop
+cd Snoop
+wget https://github.com/snooppr/snoop/releases/download/v1.4.2__2025-1-1/Snoop_for_GNU_Linux.rar
+unrar x Snoop_for_GNU_Linux.rar
+rm Snoop_for_GNU_Linux.rar
+
 # Spiderfoot
 # Installed by default on Kali
 # https://github.com/smicallef/spiderfoot
