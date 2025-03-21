@@ -23,6 +23,7 @@ Certipy
 Chisel
 Cloud_enum
 Coercer
+CredMaster
 CrossLinked
 Crowbar
 CsFalconUninstaller
@@ -49,6 +50,7 @@ Kraken
 Krbrelayx
 Ldapnomnom
 Ldapsearch-ad
+MailSniper
 Manspider
 Mentalist
 Mentalist_chains
@@ -97,6 +99,7 @@ Testssl
 TheHarvester
 Timeroast
 TomcatSampleWebshell
+TREVORspray
 Trufflehog
 Vita
 Waybackurls
