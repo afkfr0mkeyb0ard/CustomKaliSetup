@@ -104,6 +104,10 @@ pipx install git+https://github.com/p0dalirius/Coercer.git || echo "[-] Failed t
 echo "coercer scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
 echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
+# CredMaster
+cd $RECON_DIR
+git clone https://github.com/knavesec/CredMaster.git
+
 # CrossLinked
 cd $RECON_DIR
 pipx install git+https://github.com/m8sec/CrossLinked.git
@@ -256,6 +260,10 @@ echo 'alias ldapnomnom_obfuscated="$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscate
 # Ldapsearch-ad
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
 echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
+
+# MailSniper
+cd $RECON_DIR
+git clone https://github.com/dafthack/MailSniper.git
 
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
@@ -484,6 +492,10 @@ git clone https://github.com/SecuraBV/Timeroast.git
 # TomcatSampleWebshell
 cd $WEB_DIR
 git clone https://github.com/afkfr0mkeyb0ard/TomcatSampleWebshell.git
+
+# TREVORspray
+cd $RECON_DIR
+pipx install git+https://github.com/blacklanternsecurity/TREVORspray.git
 
 # Trufflehog
 cd $RECON_DIR
