@@ -546,3 +546,7 @@ git clone https://github.com/0x6rss/CVE-2025-24071_PoC.git
 cd $INTERNALS_DIR
 wget https://www.exploit-db.com/download/44005
 mv 44005 iLO4_add_admin.py
+
+# Proxyshell
+cd $INTERNALS_DIR
+git clone https://github.com/dmaasland/proxyshell-poc.git
