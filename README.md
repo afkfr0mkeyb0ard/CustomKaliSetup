@@ -16,6 +16,7 @@ Amass
 Aquatone
 Assetfinder
 BBot
+Bettercap
 BloodHound
 BloodyAD
 BruteSubdomains
