@@ -145,6 +145,10 @@ git clone https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
 
+# Drozer
+cd $MOBILE_DIR
+pipx install drozer
+
 # Eaphammer
 cd $WIFI_DIR
 git clone https://github.com/s0lst1c3/eaphammer.git
