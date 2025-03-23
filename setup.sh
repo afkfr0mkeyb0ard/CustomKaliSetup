@@ -47,7 +47,7 @@ chmod +x amass
 cd $MOBILE_DIR
 wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
 echo 'alias apktool="java -jar $MOBILE_DIR/apktool_2.11.1.jar"' >> ~/.zshrc
-echo "apktool" >> ~/.zsh_history
+echo "apktool d test.apk" >> ~/.zsh_history
 
 # Aquatone
 cd $INTERNALS_DIR
