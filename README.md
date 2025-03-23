@@ -54,6 +54,7 @@ Kraken
 Krbrelayx
 Ldapnomnom
 Ldapsearch-ad
+Magisk
 MailSniper
 Manspider
 Mentalist
