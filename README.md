@@ -15,6 +15,7 @@ chmod +x setup.sh
 
 ```
 Amass
+Android-kit (adb, sqlite3)
 Apktool
 Aquatone
 Assetfinder
