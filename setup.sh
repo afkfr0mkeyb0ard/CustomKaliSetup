@@ -43,13 +43,19 @@ mv amass_Linux_amd64/amass amass
 rm -r amass_Linux_amd64
 chmod +x amass
 
+# Apktool
+cd $MOBILE_DIR
+wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
+echo 'alias apktool="java -jar $MOBILE_DIR/apktool_2.11.1.jar"' >> ~/.zshrc
+echo "apktool" >> ~/.zsh_history
+
 # Aquatone
 cd $INTERNALS_DIR
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip -q aquatone_linux_amd64_1.7.0.zip aquatone
 chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
-echo 'alias aquatone="$INTERNALS_DIR/aquatone"' >> ~/.zsh_history
+echo 'alias aquatone="$INTERNALS_DIR/aquatone"' >> ~/.zshrc
 
 # Assetfinder
 cd $RECON_DIR
