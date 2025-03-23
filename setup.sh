@@ -175,6 +175,10 @@ echo 'alias finalrecon="$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/
 cd $INTERNALS_DIR
 git clone https://github.com/afkfr0mkeyb0ard/findADCS.git
 
+# Frida
+cd $MOBILE_DIR
+pipx install frida-tools
+
 # GenUsernames
 cd $PASSGEN_DIR
 git clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
