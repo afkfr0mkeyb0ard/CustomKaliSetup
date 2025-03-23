@@ -33,6 +33,7 @@ CrossLinked
 Crowbar
 CsFalconUninstaller
 DonPAPI
+Drozer
 Eaphammer
 EyeWitness
 Ffuf
