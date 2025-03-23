@@ -38,6 +38,7 @@ EyeWitness
 Ffuf
 FinalRecon
 FindADCS
+Frida
 GenUsernames
 Git-dumper
 Gitleaks
