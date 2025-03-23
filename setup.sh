@@ -273,6 +273,13 @@ echo 'alias ldapnomnom_obfuscated="$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscate
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
 echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
 
+# Magisk
+cd $MOBILE_DIR
+mkdir Magisk
+cd Magisk
+wget https://github.com/topjohnwu/Magisk/releases/download/canary-28103/app-debug.apk
+wget https://github.com/topjohnwu/Magisk/releases/download/canary-28103/app-release.apk
+
 # MailSniper
 cd $RECON_DIR
 git clone https://github.com/dafthack/MailSniper.git
