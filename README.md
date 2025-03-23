@@ -1,5 +1,7 @@
 # CustomKaliSetup
-To automatically download &amp; install most used pentest tools on Kali or any Linux distrib.
+A script to setup an offensive Linux machine.
+
+**All tools are intended for legal and educational use only, use at your own risk.**
 
 ### Setup
 ```
