@@ -96,6 +96,7 @@ RSMangler
 SecLists
 SharpHound
 ShortScan (IIS Tilde)
+Simplify
 Smuggler
 Snoop
 Spiderfoot
