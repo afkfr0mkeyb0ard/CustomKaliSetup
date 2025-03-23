@@ -472,6 +472,14 @@ rm SharpHound-v2.5.13.zip
 cd $WEB_DIR
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
 
+# Simplify
+cd $MOBILE_DIR
+mkdir Simplify
+cd Simplify
+wget https://github.com/CalebFenton/simplify/releases/download/v1.3.0/simplify-1.3.0.jar
+echo 'alias simplify="java -jar $MOBILE_DIR/Simplify/simplify-1.3.0.jar"' >> ~/.zshrc
+echo "simplify -v" >> ~/.zsh_history
+
 # Smuggler
 cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
