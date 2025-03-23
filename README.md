@@ -15,6 +15,7 @@ chmod +x setup.sh
 
 ```
 Amass
+Apktool
 Aquatone
 Assetfinder
 BBot
