@@ -43,6 +43,15 @@ mv amass_Linux_amd64/amass amass
 rm -r amass_Linux_amd64
 chmod +x amass
 
+# Android-kit (adb, sqlite3)
+cd $MOBILE_DIR
+wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+unzip -q platform-tools-latest-linux.zip
+rm platform-tools-latest-linux.zip
+echo 'alias adb="$MOBILE_DIR/platform-tools/adb"' >> ~/.zshrc
+echo "adb shell" >> ~/.zsh_history
+echo "adb devices" >> ~/.zsh_history
+
 # Apktool
 cd $MOBILE_DIR
 wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
