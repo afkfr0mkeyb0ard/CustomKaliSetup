@@ -74,6 +74,7 @@ Ntlm_theft
 O365enum
 O365recon
 O365spray
+Objection
 OpenRedireX
 PassTheCert
 PayloadEverything
