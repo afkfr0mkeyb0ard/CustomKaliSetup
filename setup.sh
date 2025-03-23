@@ -10,6 +10,7 @@ WIFI_DIR="$BASE_DIR/wifi"
 RECON_DIR="$BASE_DIR/recon"
 PASSGEN_DIR="$BASE_DIR/passgen"
 GENERAL_DIR="$BASE_DIR/general"
+MOBILE_DIR="$BASE_DIR/mobile"
 
 # Create the directories if they don't exist
 mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR"
@@ -21,6 +22,7 @@ echo 'export tools_wifi="$BASE_DIR/wifi"' >> ~/.zshrc
 echo 'export tools_recon="$BASE_DIR/recon"' >> ~/.zshrc
 echo 'export tools_passgen="$BASE_DIR/passgen"' >> ~/.zshrc
 echo 'export tools_general="$BASE_DIR/general"' >> ~/.zshrc
+echo 'export tools_mobile="$BASE_DIR/mobile"' >> ~/.zshrc
 
 # Dependencies
 sudo apt-get -y update
@@ -354,6 +356,10 @@ git clone https://github.com/nyxgeek/o365recon.git
 # O365spray
 cd $RECON_DIR
 pipx install git+https://github.com/0xZDH/o365spray.git
+
+# Objection
+cd $MOBILE_DIR
+pipx install git+https://github.com/sensepost/objection.git
 
 # OpenRedireX
 cd $WEB_DIR
