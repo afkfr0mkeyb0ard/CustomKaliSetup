@@ -141,6 +141,12 @@ pipx install git+https://github.com/galkan/crowbar || echo "[-] Failed to instal
 cd $INTERNALS_DIR
 git clone https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git
 
+# Dex2Jar
+cd $MOBILE_DIR
+wget https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip
+unzip dex-tools-v2.4.zip
+rm dex-tools-v2.4.zip
+
 # DonPAPI
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
