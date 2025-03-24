@@ -13,7 +13,7 @@ GENERAL_DIR="$BASE_DIR/general"
 MOBILE_DIR="$BASE_DIR/mobile"
 
 # Create the directories if they don't exist
-mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR"
+mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR" "$MOBILE_DIR"
 
 # Config variables
 echo 'export tools_internals="$BASE_DIR/internals"' >> ~/.zshrc
