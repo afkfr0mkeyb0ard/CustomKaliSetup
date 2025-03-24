@@ -51,6 +51,7 @@ Hashcat
 Hostapd-wpe
 Impacket
 ItWasAllADream
+Jd-Gui
 JSLuice
 Kerbrute
 KnockKnock
