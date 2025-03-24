@@ -32,6 +32,7 @@ CredMaster
 CrossLinked
 Crowbar
 CsFalconUninstaller
+Dex2Jar
 DonPAPI
 Drozer
 Eaphammer
