@@ -243,6 +243,10 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Failed to install ItWasAllADream"
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
 
+# Jd-gui
+cd $MOBILE_DIR
+wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar
+
 # JSLuice
 cd $WEB_DIR
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest
