@@ -42,6 +42,8 @@ rm amass_Linux_amd64.zip
 mv amass_Linux_amd64/amass amass
 rm -r amass_Linux_amd64
 chmod +x amass
+echo "alias amass='$RECON_DIR/amass'" >> ~/.zshrc
+echo "amass -h" >> ~/.zsh_history
 
 # Android-kit (adb, sqlite3)
 cd $MOBILE_DIR
@@ -71,6 +73,8 @@ cd $RECON_DIR
 wget https://github.com/tomnomnom/assetfinder/releases/download/v0.1.1/assetfinder-linux-amd64-0.1.1.tgz
 tar -xzf assetfinder-linux-amd64-0.1.1.tgz
 rm assetfinder-linux-amd64-0.1.1.tgz
+echo "alias assetfinder='$RECON_DIR/assetfinder'" >> ~/.zshrc
+echo "assetfinder domain.com" >> ~/.zsh_history
 
 # Bbot
 pipx install bbot
