@@ -119,6 +119,10 @@ echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 cd $RECON_DIR
 pipx install git+https://github.com/initstring/cloud_enum.git
 
+# CloudPEASS
+cd $RECON_DIR
+git clone https://github.com/carlospolop/CloudPEASS.git
+
 # Coercer
 cd $INTERNALS_DIR
 pipx install git+https://github.com/p0dalirius/Coercer.git || echo "[-] Failed to install Coercer"
