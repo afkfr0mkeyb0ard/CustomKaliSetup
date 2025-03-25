@@ -179,14 +179,20 @@ echo "dex2jar app.apk" >> ~/.zsh_history
 # DonPAPI
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
+echo "donpapi collect -u username -p password -d domain" >> ~/.zsh_history
 
 # Drozer
 cd $MOBILE_DIR
+mkdir Drozer
+cd Drozer
 pipx install drozer
+wget https://github.com/WithSecureLabs/drozer-agent/releases/download/3.1.0/drozer-agent.apk
 
 # Eaphammer
 cd $WIFI_DIR
 git clone https://github.com/s0lst1c3/eaphammer.git
+echo "eaphammer --cert-wizard" >> ~/.zsh_history
+echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >> ~/.zsh_history
 
 # EyeWitness
 cd $RECON_DIR
@@ -199,6 +205,8 @@ tar -xzf ffuf_2.1.0_linux_amd64.tar.gz
 rm CHANGELOG.md LICENSE README.md
 chmod +x ffuf
 rm ffuf_2.1.0_linux_amd64.tar.gz
+echo "alias ffuf='$WEB_DIR/ffuf'" >> ~/.zshrc
+echo "ffuf -u 'https://target/FUZZ' -w 'dico.txt' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0' -r -c -p 0.1 -t 3" >> ~/.zsh_history
 
 # FinalRecon
 cd $RECON_DIR
