@@ -27,6 +27,7 @@ BruteSubdomains
 Certipy
 Chisel
 Cloud_enum
+CloudPEASS
 Coercer
 CredMaster
 CrossLinked
