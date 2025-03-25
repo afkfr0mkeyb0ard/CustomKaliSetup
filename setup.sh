@@ -135,6 +135,13 @@ echo 'cloud_enum -k keyword1 -k keyword2 -k someproduct' >> ~/.zsh_history
 # CloudPEASS
 cd $RECON_DIR
 git clone https://github.com/carlospolop/CloudPEASS.git
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias AwsPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/AWSPEASS.py'" >> ~/.zshrc
+echo "alias AzurePEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/AzurePEASS.py'" >> ~/.zshrc
+echo "alias GcpPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/GCPPEASS.py'" >> ~/.zshrc
 
 # Coercer
 cd $INTERNALS_DIR
