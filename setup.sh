@@ -152,14 +152,17 @@ echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v"
 # CredMaster
 cd $RECON_DIR
 git clone https://github.com/knavesec/CredMaster.git
+echo "python3 credmaster.py --plugin {pluginname} --access_key {key} --secret_access_key {key} -u userfile -p passwordfile -a useragentfile {otherargs}" >> ~/.zsh_history
 
 # CrossLinked
 cd $RECON_DIR
 pipx install git+https://github.com/m8sec/CrossLinked.git
+echo "crosslinked -f '{first}.{last}@domain.com' company_name" >> ~/.zsh_history
 
 # Crowbar
 cd $INTERNALS_DIR
 pipx install git+https://github.com/galkan/crowbar || echo "[-] Failed to install Crowbar"
+echo "crowbar -b rdp -s 192.168.2.250/32 -u localuser -C ~/Desktop/passlist" >> ~/.zsh_history
 
 # CsFalconUninstaller
 cd $INTERNALS_DIR
@@ -170,6 +173,8 @@ cd $MOBILE_DIR
 wget https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip
 unzip dex-tools-v2.4.zip
 rm dex-tools-v2.4.zip
+echo "alias dex2jar='$MOBILE_DIR/dex-tools-v2.4/d2j-dex2jar.sh'" >> ~/.zshrc
+echo "dex2jar app.apk" >> ~/.zsh_history
 
 # DonPAPI
 cd $INTERNALS_DIR
