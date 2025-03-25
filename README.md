@@ -5,10 +5,7 @@ A script to setup an offensive Linux machine.
 
 ### Setup
 ```
-git clone https://github.com/afkfr0mkeyb0ard/CustomKaliSetup.git
-cd CustomKaliSetup
-chmod +x setup.sh
-./setup.sh
+wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/CustomKaliSetup/refs/heads/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 ### List of installed tools
