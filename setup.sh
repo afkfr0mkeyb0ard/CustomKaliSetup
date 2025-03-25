@@ -8,18 +8,18 @@ INTERNALS_DIR="$BASE_DIR/internals"
 WEB_DIR="$BASE_DIR/web"
 WIFI_DIR="$BASE_DIR/wifi"
 RECON_DIR="$BASE_DIR/recon"
-PASSGEN_DIR="$BASE_DIR/passgen"
+PASSCRACK_DIR="$BASE_DIR/passcrack"
 GENERAL_DIR="$BASE_DIR/general"
 MOBILE_DIR="$BASE_DIR/mobile"
 
 # Create the directories if they don't exist
-mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR" "$MOBILE_DIR"
+mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSCRACK_DIR" "$GENERAL_DIR" "$MOBILE_DIR"
 
 # Config variables
 echo "alias tools_general='cd $BASE_DIR/general'" >> ~/.zshrc
 echo "alias tools_internals='cd $BASE_DIR/internals'" >> ~/.zshrc
 echo "alias tools_mobile='cd $BASE_DIR/mobile'" >> ~/.zshrc
-echo "alias tools_passgen='cd $BASE_DIR/passgen'" >> ~/.zshrc
+echo "alias tools_passcrack='cd $BASE_DIR/passcrack'" >> ~/.zshrc
 echo "alias tools_recon='cd $BASE_DIR/recon'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
@@ -276,7 +276,7 @@ cd $GENERAL_DIR
 git clone https://github.com/EvilBytecode/GoRedOps.git
 
 # Hashcat
-cd $PASSGEN_DIR
+cd $PASSCRACK_DIR
 wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
 
 # Hostapd-wpe
@@ -372,14 +372,14 @@ pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] 
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
 
 # Mentalist
-cd $PASSGEN_DIR
+cd $PASSCRACK_DIR
 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
 unzip -q Mentalist-v1.0-Linux-x86_64.zip Mentalist
 chmod +x Mentalist
 rm Mentalist-v1.0-Linux-x86_64.zip
 
 # Mentalist_chains
-cd $PASSGEN_DIR
+cd $PASSCRACK_DIR
 git clone https://github.com/afkfr0mkeyb0ard/Mentalist_chains.git
 
 # MFASweep
@@ -537,7 +537,7 @@ cd $INTERNALS_DIR
 git clone https://github.com/breenmachine/RottenPotatoNG.git
 
 # RSMangler
-cd $PASSGEN_DIR
+cd $PASSCRACK_DIR
 git clone https://github.com/digininja/RSMangler.git
 
 # Rtl8812au
