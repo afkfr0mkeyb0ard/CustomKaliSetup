@@ -349,6 +349,8 @@ wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_
 mv kerbrute_linux_amd64 kerbrute
 chmod +x kerbrute
 echo "alias kerbrute='$INTERNALS_DIR/kerbrute'" >> ~/.zshrc
+echo "kerbrute userenum -d domain.local --dc <DC-IP> '/home/kali/web/PayloadEverything/Usernames/TOP_8M_usernames.txt'" >> ~/.zsh_history
+echo "kerbrute passwordspray -v -d domain.local 'domain_users' Password123" >> ~/.zsh_history
 
 # KnockKnock
 cd $RECON_DIR
@@ -359,6 +361,7 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias knockknock='$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/KnockKnock.py'" >> ~/.zshrc
+echo "knockknock -onedrive -i users.txt -d domain.local" >> ~/.zsh_history
 
 # Kraken
 cd $GENERAL_DIR
@@ -368,10 +371,15 @@ python3 -m venv .
 source bin/activate
 python3 -m pip install -r requirements.txt
 deactivate
+echo "alias kraken='$GENERAL_DIR/Kraken/bin/python3 $GENERAL_DIR/Kraken/kraken.py'" >> ~/.zshrc
 
 # Krbrelayx
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/krbrelayx.git
+echo "alias impacket-addspn='python3 $INTERNALS_DIR/krbrelayx/addspn.py'" >> ~/.zshrc
+echo "alias impacket-dnstool='python3 $INTERNALS_DIR/krbrelayx/dnstool.py'" >> ~/.zshrc
+echo "alias impacket-krbrelayx='python3 $INTERNALS_DIR/krbrelayx/krbrelayx.py'" >> ~/.zshrc
+echo "alias impacket-printerbug='python3 $INTERNALS_DIR/krbrelayx/printerbug.py'" >> ~/.zshrc
 
 # Ldapnomnom
 cd $INTERNALS_DIR
