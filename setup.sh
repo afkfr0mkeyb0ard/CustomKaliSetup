@@ -217,10 +217,15 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias finalrecon='$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/finalrecon.py'" >> ~/.zshrc
+echo "ffuf -u 'finalrecon --full --url https://example.com" >> ~/.zsh_history
 
 # FindADCS
 cd $INTERNALS_DIR
 git clone https://github.com/afkfr0mkeyb0ard/findADCS.git
+echo "alias findADCS-scanweb='python3 $INTERNALS_DIR/findADCS/scanWeb.py'" >> ~/.zshrc
+echo "alias findADCS-scancerts='python3 $INTERNALS_DIR/findADCS/scanCerts.py'" >> ~/.zshrc
+echo "findADCS-scanweb 10.10.10.0/24" >> ~/.zsh_history
+echo "findADCS-scancerts 10.10.10.0/24" >> ~/.zsh_history
 
 # Frida
 cd $MOBILE_DIR
