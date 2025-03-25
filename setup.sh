@@ -48,14 +48,14 @@ cd $MOBILE_DIR
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip -q platform-tools-latest-linux.zip
 rm platform-tools-latest-linux.zip
-echo 'alias adb="$MOBILE_DIR/platform-tools/adb"' >> ~/.zshrc
+echo "alias adb='$MOBILE_DIR/platform-tools/adb'" >> ~/.zshrc
 echo "adb shell" >> ~/.zsh_history
 echo "adb devices" >> ~/.zsh_history
 
 # Apktool
 cd $MOBILE_DIR
 wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
-echo 'alias apktool="java -jar $MOBILE_DIR/apktool_2.11.1.jar"' >> ~/.zshrc
+echo "alias apktool='java -jar $MOBILE_DIR/apktool_2.11.1.jar'" >> ~/.zshrc
 echo "apktool d test.apk" >> ~/.zsh_history
 
 # Aquatone
@@ -64,7 +64,7 @@ wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_
 unzip -q aquatone_linux_amd64_1.7.0.zip aquatone
 chmod +x aquatone
 rm aquatone_linux_amd64_1.7.0.zip
-echo 'alias aquatone="$INTERNALS_DIR/aquatone"' >> ~/.zshrc
+echo "alias aquatone='$INTERNALS_DIR/aquatone'" >> ~/.zshrc
 
 # Assetfinder
 cd $RECON_DIR
@@ -112,7 +112,7 @@ gzip -d chisel_1.10.1_linux_amd64.gz
 mv chisel_1.10.1_windows_amd64 chisel_windows
 mv chisel_1.10.1_linux_amd64 chisel_linux
 chmod +x chisel_linux
-echo 'alias chisel="$INTERNALS_DIR/chisel_linux"' >> ~/.zshrc
+echo "alias chisel='$INTERNALS_DIR/chisel_linux'" >> ~/.zshrc
 echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 
 # Cloud_enum
@@ -183,7 +183,7 @@ python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo 'alias finalrecon="$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/finalrecon.py"' >> ~/.zshrc
+echo "alias finalrecon='$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/finalrecon.py'" >> ~/.zshrc
 
 # FindADCS
 cd $INTERNALS_DIR
@@ -264,7 +264,7 @@ cd $INTERNALS_DIR
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 mv kerbrute_linux_amd64 kerbrute
 chmod +x kerbrute
-echo 'alias kerbrute="$INTERNALS_DIR/kerbrute"' >> ~/.zshrc
+echo "alias kerbrute='$INTERNALS_DIR/kerbrute'" >> ~/.zshrc
 
 # KnockKnock
 cd $RECON_DIR
@@ -274,7 +274,7 @@ python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo 'alias knockknock="$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/KnockKnock.py"' >> ~/.zshrc
+echo "alias knockknock='$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/KnockKnock.py'" >> ~/.zshrc
 
 # Kraken
 cd $GENERAL_DIR
@@ -297,8 +297,8 @@ wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomno
 wget https://github.com/lkarlslund/ldapnomnom/releases/download/v1.5.1/ldapnomnom-windows-x64-obfuscated.exe
 chmod +x ldapnomnom-linux-x64
 chmod +x ldapnomnom-linux-x64-obfuscated
-echo 'alias ldapnomnom="$INTERNALS_DIR/ldapnomnom-linux-x64"' >> ~/.zshrc
-echo 'alias ldapnomnom_obfuscated="$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscated"' >> ~/.zshrc
+echo "alias ldapnomnom='$INTERNALS_DIR/ldapnomnom-linux-x64'" >> ~/.zshrc
+echo "alias ldapnomnom_obfuscated='$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscated'" >> ~/.zshrc
 
 # Ldapsearch-ad
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
@@ -514,7 +514,7 @@ cd $MOBILE_DIR
 mkdir Simplify
 cd Simplify
 wget https://github.com/CalebFenton/simplify/releases/download/v1.3.0/simplify-1.3.0.jar
-echo 'alias simplify="java -jar $MOBILE_DIR/Simplify/simplify-1.3.0.jar"' >> ~/.zshrc
+echo "alias simplify='java -jar $MOBILE_DIR/Simplify/simplify-1.3.0.jar'" >> ~/.zshrc
 echo "simplify -v" >> ~/.zsh_history
 
 # Smuggler
@@ -551,7 +551,7 @@ python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo 'alias teamsenum.py="$RECON_DIR/TeamsEnum/bin/python3 $RECON_DIR/TeamsEnum/TeamsEnum.py"' >> ~/.zshrc
+echo "alias teamsenum.py='$RECON_DIR/TeamsEnum/bin/python3 $RECON_DIR/TeamsEnum/TeamsEnum.py'" >> ~/.zshrc
 
 # Testssl
 cd $WEB_DIR
@@ -594,7 +594,7 @@ wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackur
 tar -xzf waybackurls-linux-amd64-0.1.0.tgz
 rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
-echo 'alias waybackurls="cd $WEB_DIR/waybackurls"' >> ~/.zshrc 
+echo "alias waybackurls='cd $WEB_DIR/waybackurls'" >> ~/.zshrc 
 
 # Webclientservicescanner
 cd $INTERNALS_DIR
