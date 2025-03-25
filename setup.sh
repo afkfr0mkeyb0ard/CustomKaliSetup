@@ -81,7 +81,9 @@ pipx install bbot
 
 # Bettercap
 cd $INTERNALS_DIR
-go install github.com/bettercap/bettercap@latest 
+sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+go install github.com/bettercap/bettercap@latest
+echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
 # BloodHound
 cd $INTERNALS_DIR
