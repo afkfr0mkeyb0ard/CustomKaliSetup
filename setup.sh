@@ -342,6 +342,12 @@ git clone https://github.com/zer0condition/mhydeath.git
 pipx install git+https://github.com/dirkjanm/mitm6 || echo "[-] Failed to install Mitm6"
 echo "mitm6 -i eth0 -d domain.local -hb [donotrespondtoFILE] [-hw <target>] [--ignore-nofqnd]" >> ~/.zsh_history
 
+# Monolith
+cd $RECON_DIR
+wget https://github.com/Y2Z/monolith/releases/download/v2.10.0/monolith-gnu-linux-x86_64
+mv monolith-gnu-linux-x86_64 monolith
+chmod +x monolith
+
 # MS17-010
 cd $INTERNALS_DIR
 git clone https://github.com/worawit/MS17-010.git
