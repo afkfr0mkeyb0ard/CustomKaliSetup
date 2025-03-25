@@ -16,13 +16,13 @@ MOBILE_DIR="$BASE_DIR/mobile"
 mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSGEN_DIR" "$GENERAL_DIR" "$MOBILE_DIR"
 
 # Config variables
-echo 'export tools_internals="$BASE_DIR/internals"' >> ~/.zshrc
-echo 'export tools_web="$BASE_DIR/web"' >> ~/.zshrc
-echo 'export tools_wifi="$BASE_DIR/wifi"' >> ~/.zshrc
-echo 'export tools_recon="$BASE_DIR/recon"' >> ~/.zshrc
-echo 'export tools_passgen="$BASE_DIR/passgen"' >> ~/.zshrc
-echo 'export tools_general="$BASE_DIR/general"' >> ~/.zshrc
-echo 'export tools_mobile="$BASE_DIR/mobile"' >> ~/.zshrc
+echo "alias tools_general='cd $BASE_DIR/general'" >> ~/.zshrc
+echo "alias tools_internals='cd $BASE_DIR/internals'" >> ~/.zshrc
+echo "alias tools_mobile='cd $BASE_DIR/mobile'" >> ~/.zshrc
+echo "alias tools_passgen='cd $BASE_DIR/passgen'" >> ~/.zshrc
+echo "alias tools_recon='cd $BASE_DIR/recon'" >> ~/.zshrc
+echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
+echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
 # Dependencies
 sudo apt-get -y update
