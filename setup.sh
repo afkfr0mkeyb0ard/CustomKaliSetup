@@ -88,6 +88,7 @@ echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 # BloodHound
 cd $INTERNALS_DIR
 pipx install bloodhound
+echo "bloodhound-python -u user -p password -d domain" >> ~/.zsh_history   
 
 # BloodHound-Legacy
 cd $INTERNALS_DIR
