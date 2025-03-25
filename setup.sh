@@ -269,7 +269,7 @@ tar -xzf GoMapEnum_1.1.0_linux_amd64.tar.gz
 rm GoMapEnum_1.1.0_linux_amd64.tar.gz
 echo "alias gomapenum='$RECON_DIR/GoMapEnum'" >> ~/.zshrc
 echo "gomapenum userenum o365 -u user.txt -v" >> ~/.zsh_history
-echo "gomapenum bruteSpray o365 -u users.txt -p "MyPass123" -v -l 2" >> ~/.zsh_history
+echo "gomapenum bruteSpray o365 -u users.txt -p 'MyPass123' -v -l 2" >> ~/.zsh_history
 
 # GoRedOps
 cd $GENERAL_DIR
