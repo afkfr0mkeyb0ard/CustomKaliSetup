@@ -88,13 +88,18 @@ echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 # BloodHound
 cd $INTERNALS_DIR
 pipx install bloodhound
-echo "bloodhound-python -u user -p password -d domain" >> ~/.zsh_history   
+echo "bloodhound-python -u user -p password -d domain" >> ~/.zsh_history
 
 # BloodHound-Legacy
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
+sudo apt-get -y install neo4j
+echo "alias bloodhound-gui='sudo $INTERNALS_DIR/BloodHound-linux-x64/BloodHound'" >> ~/.zshrc
+echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
+echo "bloodhound-gui" >> ~/.zsh_history
+echo "neo4j" >> ~/.zsh_history
 
 # BloodyAD
 cd $INTERNALS_DIR
