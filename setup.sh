@@ -232,12 +232,15 @@ cd $MOBILE_DIR
 pipx install frida-tools
 
 # GenUsernames
-cd $PASSGEN_DIR
+cd $GENERAL_DIR
 git clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
+echo "alias genusernames='python3 $GENERAL_DIR/GenUsernames/genusernames.py'" >> ~/.zshrc
+echo "genusernames [-f1/f2/f3/f4] [-es/fr/en] [-d google.com]" >> ~/.zsh_history
 
 # Git-dumper
 cd $WEB_DIR
 pipx install git+https://github.com/arthaud/git-dumper.git
+echo "git-dumper http://website.com/.git output-dir" >> ~/.zsh_history
 
 # Gitleaks
 cd $RECON_DIR
