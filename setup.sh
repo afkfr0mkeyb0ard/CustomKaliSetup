@@ -295,17 +295,17 @@ python3 -m venv .
 #source bin/activate
 #pip3 install -r requirements.txt
 #deactivate
+echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host 10.10.11.222 'DOMAIN/user:password'" >> ~/.zsh_history
 echo "impacket-Get-GPPPassword 'DOMAIN'/'USER':'PASSWORD'@'DOMAIN_CONTROLLER'" >> ~/.zsh_history
+echo "impacket-GetADUsers -all -dc-ip <DC-IP> domain.local/username" >> ~/.zsh_history
+echo "impacket-getTGT domain.local/username -hashes :<NTLM> -dc-ip <DC-IP>" >> ~/.zsh_history
 echo "impacket-lookupsid DOMAIN/guest@IP" >> ~/.zsh_history
 echo "impacket-ntlmrelayx --lootdir "loot_relay" -of ~/ntlmrelay_hashs.txt -t "ldap://<DC-IP>" -smb2support --remove-mic" >> ~/.zsh_history
 echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -debug -smb2support -t http://<IP-PKI>/certsrv/certfnsh.asp --adcs --template [KerberosAuthentication/DomainController]" >> ~/.zsh_history
 echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -tf relay.txt -smb2support [-socks]" >> ~/.zsh_history
-echo "impacket-GetADUsers -all -dc-ip <DC-IP> domain.local/username" >> ~/.zsh_history
-echo "impacket-getTGT domain.local/username -hashes :<NTLM> -dc-ip <DC-IP>" >> ~/.zsh_history
-echo "impacket-smbclient 'domain.local/user:pass@10.10.11.222'" >> ~/.zsh_history
-echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host 10.10.11.222 'DOMAIN/user:password'" >> ~/.zsh_history
-echo "impacket-secretsdump -target-ip IP [-just-dc-ntlm] [-history] USER@DOMAIN" >> ~/.zsh_history
 echo "impacket-psexec 'domain.local/user:pass@10.10.11.222' whoami" >> ~/.zsh_history
+echo "impacket-secretsdump -target-ip IP [-just-dc-ntlm] [-history] USER@DOMAIN" >> ~/.zsh_history
+echo "impacket-smbclient 'domain.local/user:pass@10.10.11.222'" >> ~/.zsh_history
 
 # ItWasAllADream
 cd $INTERNALS_DIR
@@ -315,14 +315,33 @@ echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_his
 # Jd-gui
 cd $MOBILE_DIR
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar
+echo "alias jd-gui='java -jar $MOBILE_DIR/jd-gui-1.6.6.jar'" >> ~/.zshrc
+echo "jd-gui" >> ~/.zsh_history
 
 # JSLuice
 cd $WEB_DIR
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest
+echo "alias jsluice='~/go/bin/jsluice'" >> ~/.zshrc
+
+# Jwt-hack
+cd $WEB_DIR
+go install github.com/hahwul/jwt-hack@latest
+echo "alias jwt-hack='~/go/bin/jwt-hack'" >> ~/.zshrc
+echo "jwt-hack crack -w {WORDLIST} {JWT_CODE}" >> ~/.zsh_history
+echo "jwt-hack payload {JWT_CODE}" >> ~/.zsh_history
 
 # Jwt_tool
 cd $WEB_DIR
 git clone https://github.com/ticarpi/jwt_tool.git
+cd jwt_tool
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias jwt_tool='$WEB_DIR/jwt_tool/bin/python3 $WEB_DIR/jwt_tool/jwt_tool.py'" >> ~/.zshrc
+echo "jwt_tool <JWT>" >> ~/.zsh_history
+echo "jwt_tool.py -t 'https://www.example.com/' -rc 'jwt=<JWT>;anothercookie=test' -M pb" >> ~/.zsh_history
+echo "jwt_tool.py -C -d '/home/kali/web/PayloadEverything/Web/Jwt_keys.txt' <JWT>" >> ~/.zsh_history
 
 # Kerbrute
 cd $INTERNALS_DIR
