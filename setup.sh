@@ -511,6 +511,8 @@ git clone https://github.com/evilmog/ntlmv1-multi.git
 # O365enum
 cd $RECON_DIR
 git clone https://github.com/gremwell/o365enum.git
+echo "alias o365enum='python3 $RECON_DIR/o365enum/o365enum.py'" >> ~/.zshrc
+echo "o365enum -u users.txt -p Password2 -n 1 -m {activesync,autodiscover,office.com}" >> ~/.zsh_history
 
 # O365recon
 cd $RECON_DIR
@@ -519,6 +521,9 @@ git clone https://github.com/nyxgeek/o365recon.git
 # O365spray
 cd $RECON_DIR
 pipx install git+https://github.com/0xZDH/o365spray.git
+echo "o365spray --validate --domain test.com" >> ~/.zsh_history
+echo "o365spray --enum -U usernames.txt --domain test.com" >> ~/.zsh_history
+echo "o365spray --spray -U usernames.txt -P passwords.txt --count 2 --lockout 5 --domain test.com" >> ~/.zsh_history
 
 # Objection
 cd $MOBILE_DIR
@@ -531,6 +536,7 @@ git clone https://github.com/devanshbatham/OpenRedireX.git
 # PassTheCert
 cd $INTERNALS_DIR
 git clone https://github.com/AlmondOffSec/PassTheCert.git
+echo "alias impacket-passthecert='python3 $INTERNALS_DIR/PassTheCert/Python/passthecert.py'" >> ~/.zshrc
 
 # PayloadsAllTheThings
 cd $WEB_DIR
@@ -548,6 +554,8 @@ python3 -m venv .
 source bin/activate
 sudo apt-get -y install python3-pip libpcap-dev file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
+echo "alias PCredz='$INTERNALS_DIR/PCredz/bin/python3 $INTERNALS_DIR/PCredz/Pcredz'" >> ~/.zshrc
+echo "Pcredz -f capture.pcap" >> ~/.zsh_history
 
 # PEASS-ng
 cd $INTERNALS_DIR
