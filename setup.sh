@@ -410,6 +410,7 @@ git clone https://github.com/dafthack/MailSniper.git
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
+echo "manspider 10.10.10.0/24 -e ps1 -c SecureString pwd \$Pass -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
 
 # Mentalist
 cd $PASSCRACK_DIR
@@ -417,6 +418,7 @@ wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0
 unzip -q Mentalist-v1.0-Linux-x86_64.zip Mentalist
 chmod +x Mentalist
 rm Mentalist-v1.0-Linux-x86_64.zip
+echo "alias mentalist='$PASSCRACK_DIR/Mentalist'" >> ~/.zshrc
 
 # Mentalist_chains
 cd $PASSCRACK_DIR
@@ -439,6 +441,8 @@ cd $RECON_DIR
 wget https://github.com/Y2Z/monolith/releases/download/v2.10.0/monolith-gnu-linux-x86_64
 mv monolith-gnu-linux-x86_64 monolith
 chmod +x monolith
+echo "alias monolith='$RECON_DIR/monolith'" >> ~/.zshrc
+echo "monolith https://www.google.com -o %title%.%timestamp%.html" >> ~/.zsh_history
 
 # MS17-010
 cd $INTERNALS_DIR
@@ -455,33 +459,50 @@ git clone https://github.com/L-codes/Neo-reGeorg.git
 # Netcredz
 cd $INTERNALS_DIR
 git clone https://github.com/joey-melo/netcredz.git
+echo "alias netcredz='python3 $INTERNALS_DIR/netcredz/netcredz.py'" >> ~/.zshrc
+echo "netcredz -f capture.pcap" >> ~/.zsh_history
 
 # Netexec
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
+echo "netexec smb IP -u username -p password -d domain" >> ~/.zsh_history
 
 # Nomore403
 cd $WEB_DIR
 wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
 mv nomore403_linux_amd64 nomore403
 chmod +x nomore403
+echo "alias nomore403='$WEB_DIR/nomore403'" >> ~/.zshrc
+echo "nomore403 -u 'https://example.com/admin'" >> ~/.zsh_history
 
 # NoPac
 cd $INTERNALS_DIR
 git clone https://github.com/Ridter/noPac.git
+cd noPac
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias noPac='$INTERNALS_DIR/noPac/bin/python3 $INTERNALS_DIR/noPac/noPac.py'" >> ~/.zshrc
+echo "python noPac.py 'domain.local/username:password' -dc-ip 192.168.1.1 -dc-host mydc2025 --impersonate administrator -dump" >> ~/.zsh_history
 
 # NTLMRecon
 cd $RECON_DIR
 pipx install git+https://github.com/pwnfoo/NTLMRecon.git
+echo "ntlmrecon --input 192.168.1.1/24 --outfile ntlmrecon-ranges.csv" >> ~/.zsh_history
 
 # Ntlmscan
 cd $RECON_DIR
 git clone https://github.com/nyxgeek/ntlmscan.git
+echo "alias ntlmscan='python3 $RECON_DIR/ntlmscan/ntlmscan.py'" >> ~/.zshrc
+echo "ntlmscan --host autodiscover.domain.com" >> ~/.zsh_history
 
 # Ntlm_theft
 cd $INTERNALS_DIR
 git clone https://github.com/Greenwolf/ntlm_theft.git
 pipx install xlsxwriter
+echo "alias ntlm_theft='python3 $INTERNALS_DIR/ntlm_theft/ntlm_theft.py'" >> ~/.zshrc
+echo "ntlm_theft -g all -s 127.0.0.1 -f test" >> ~/.zsh_history
 
 # NTLMv1-multi
 cd $INTERNALS_DIR
