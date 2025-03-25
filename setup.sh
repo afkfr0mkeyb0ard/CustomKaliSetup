@@ -249,16 +249,27 @@ tar -xzf gitleaks_8.24.0_linux_x64.tar.gz
 rm README.md
 rm LICENSE
 rm gitleaks_8.24.0_linux_x64.tar.gz
+echo "alias gitleaks='$RECON_DIR/gitleaks'" >> ~/.zshrc
 
 # GMSADumper
 cd $INTERNALS_DIR
 git clone https://github.com/micahvandeusen/gMSADumper.git
+cd gMSADumper
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias gmsadumper='$INTERNALS_DIR/gMSADumper/bin/python3 $INTERNALS_DIR/gMSADumper/gMSADumper.py'" >> ~/.zshrc
+echo "gmsadumper -u user -p password -d domain.local" >> ~/.zsh_history
 
 # GoMapEnum
 cd $RECON_DIR
 wget https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
 tar -xzf GoMapEnum_1.1.0_linux_amd64.tar.gz
 rm GoMapEnum_1.1.0_linux_amd64.tar.gz
+echo "alias gomapenum='$RECON_DIR/GoMapEnum'" >> ~/.zshrc
+echo "gomapenum userenum o365 -u user.txt -v" >> ~/.zsh_history
+echo "gomapenum bruteSpray o365 -u users.txt -p "MyPass123" -v -l 2" >> ~/.zsh_history
 
 # GoRedOps
 cd $GENERAL_DIR
