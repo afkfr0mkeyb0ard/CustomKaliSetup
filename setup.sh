@@ -130,6 +130,7 @@ echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 # Cloud_enum
 cd $RECON_DIR
 pipx install git+https://github.com/initstring/cloud_enum.git
+echo 'cloud_enum -k keyword1 -k keyword2 -k someproduct' >> ~/.zsh_history
 
 # CloudPEASS
 cd $RECON_DIR
