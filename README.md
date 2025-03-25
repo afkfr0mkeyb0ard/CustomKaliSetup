@@ -68,6 +68,7 @@ Mentalist_chains
 MFASweep
 Mhydeath
 Mitm6
+Monolith
 MS17-010
 MSOLSpray
 Neo-reGeorg
