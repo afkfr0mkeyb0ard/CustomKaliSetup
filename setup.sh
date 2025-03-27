@@ -306,6 +306,7 @@ echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -tf relay.txt -smb2support [
 echo "impacket-psexec 'domain.local/user:pass@10.10.11.222' whoami" >> ~/.zsh_history
 echo "impacket-secretsdump -target-ip IP [-just-dc-ntlm] [-history] USER@DOMAIN" >> ~/.zsh_history
 echo "impacket-smbclient 'domain.local/user:pass@10.10.11.222'" >> ~/.zsh_history
+echo "export KRB5CCNAME=$path_to_ticket.ccache" >> ~/.zsh_history
 
 # ItWasAllADream
 cd $INTERNALS_DIR
@@ -573,10 +574,22 @@ wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS-Li
 cd $INTERNALS_DIR
 git clone https://github.com/topotam/PetitPotam.git
 git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
+echo "python3 PetitPotam.py <ip_listener> <ip_dc>" >> ~/.zsh_history
 
 # PKINITtools
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/PKINITtools.git
+cd PKINITtools
+python3 -m venv .
+source bin/activate
+pip3 install impacket minikerberos
+deactivate
+echo "alias impacket-getnthash='$INTERNALS_DIR/PKINITtools/bin/python3 $INTERNALS_DIR/PKINITtools/getnthash.py'" >> ~/.zshrc
+echo "alias impacket-gets4uticket='$INTERNALS_DIR/PKINITtools/bin/python3 $INTERNALS_DIR/PKINITtools/gets4uticket.py'" >> ~/.zshrc
+echo "alias impacket-gettgtpkinit='$INTERNALS_DIR/PKINITtools/bin/python3 $INTERNALS_DIR/PKINITtools/gettgtpkinit.py'" >> ~/.zshrc
+echo "impacket-getnthash" >> ~/.zsh_history
+echo "impacket-gets4uticket" >> ~/.zsh_history
+echo "impacket-gettgtpkinit" >> ~/.zsh_history
 
 # Pre2k
 cd $INTERNALS_DIR
