@@ -478,7 +478,7 @@ echo "netexec smb IP -u username -p password -d domain" >> ~/.zsh_history
 
 # Nmap
 cd $INTERNALS_DIR
-sudo apt-get install nmap
+sudo apt-get -y install nmap
 
 # Nomore403
 cd $WEB_DIR
