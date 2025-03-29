@@ -468,6 +468,10 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
 echo "netexec smb IP -u username -p password -d domain" >> ~/.zsh_history
 
+# Nmap
+cd $INTERNALS_DIR
+sudo apt-get install nmap
+
 # Nomore403
 cd $WEB_DIR
 wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
@@ -706,6 +710,11 @@ pip3 install -r requirements.txt
 deactivate
 echo "alias spoofcheck='$RECON_DIR/spoofcheck/bin/python3 $RECON_DIR/spoofcheck/spoofcheck.py'" >> ~/.zshrc
 echo "spoofcheck <domain>" >> ~/.zsh_history
+
+# SQLmap
+cd $WEB_DIR
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
+echo "alias sqlmap='python3 $WEB_DIR/sqlmap/sqlmap.py'" >> ~/.zshrc
 
 # Swaks
 cd $RECON_DIR
