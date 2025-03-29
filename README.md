@@ -71,6 +71,7 @@ MSOLSpray
 Neo-reGeorg
 Netcredz
 Netexec
+Nmap
 Nomore403
 NoPac
 NTLMRecon
