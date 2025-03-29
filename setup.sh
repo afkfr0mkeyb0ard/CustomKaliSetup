@@ -143,6 +143,7 @@ echo 'cloud_enum -k keyword1 -k keyword2 -k someproduct' >> ~/.zsh_history
 # CloudPEASS
 cd $RECON_DIR
 git clone https://github.com/carlospolop/CloudPEASS.git
+cd CloudPEASS
 python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
