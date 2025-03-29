@@ -106,6 +106,7 @@ Smuggler
 Snoop
 Spiderfoot
 Spoofcheck
+SQLmap
 Swaks
 TeamsEnum
 Testssl
