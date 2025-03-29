@@ -3,7 +3,7 @@ A script to setup an offensive Linux machine.
 
 **All tools are intended for legal and educational use only, use at your own risk.**
 
-### Setup
+### Setup (~11Go)
 ```
 wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/CustomKaliSetup/refs/heads/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
