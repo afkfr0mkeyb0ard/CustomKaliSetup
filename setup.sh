@@ -109,6 +109,14 @@ wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.
 cd $RECON_DIR
 git clone https://github.com/afkfr0mkeyb0ard/bruteSubdomains.git
 
+# BurpSuite
+cd $WEB_DIR
+mkdir Burp
+cd Burp
+wget "https://portswigger-cdn.net/burp/releases/download?product=community&version=2025.1.5&type=Linux" -O BurpCommunity
+chmod +x BurpCommunity
+echo "install-burp='$WEB_DIR/Burp/BurpCommunity'" >> ~/.zshrc
+
 # Certipy
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy"
