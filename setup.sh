@@ -177,6 +177,11 @@ echo "crowbar -b rdp -s 192.168.2.250/32 -u localuser -C ~/Desktop/passlist" >> 
 cd $INTERNALS_DIR
 git clone https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller.git
 
+# DefaultCreds
+cd $GENERAL_DIR
+pipx install git+https://github.com/ihebski/DefaultCreds-cheat-sheet.git
+echo "creds search tomcat" >> ~/.zsh_history
+
 # Dex2Jar
 cd $MOBILE_DIR
 wget https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip
