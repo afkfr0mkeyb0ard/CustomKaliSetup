@@ -1,9 +1,9 @@
 # CustomKaliSetup
-A script to setup an offensive Linux machine.
+A script to setup an offensive Linux machine (~11Go).
 
 **All tools are intended for legal and educational use only, use at your own risk.**
 
-### Setup (~11Go)
+### Setup
 ```
 wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/CustomKaliSetup/refs/heads/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
