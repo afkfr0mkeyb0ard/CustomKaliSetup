@@ -21,6 +21,7 @@ Bettercap
 BloodHound
 BloodyAD
 BruteSubdomains
+Burpsuite
 Certipy
 Chisel
 Cloud_enum
