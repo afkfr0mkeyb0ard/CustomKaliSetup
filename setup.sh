@@ -115,7 +115,7 @@ mkdir Burp
 cd Burp
 wget "https://portswigger-cdn.net/burp/releases/download?product=community&version=2025.1.5&type=Linux" -O BurpCommunity
 chmod +x BurpCommunity
-echo "install-burp='$WEB_DIR/Burp/BurpCommunity'" >> ~/.zshrc
+echo "alias install-burp='$WEB_DIR/Burp/BurpCommunity'" >> ~/.zshrc
 
 # Certipy
 cd $INTERNALS_DIR
