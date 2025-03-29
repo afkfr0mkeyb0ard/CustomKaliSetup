@@ -752,10 +752,14 @@ echo "trevorspray --recon evilcorp.com -u emails.txt --threads 3" >> ~/.zsh_hist
 
 # Trufflehog
 cd $RECON_DIR
-wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.12/trufflehog_3.88.12_linux_amd64.tar.gz
-tar -xzf trufflehog_3.88.12_linux_amd64.tar.gz
-rm README.md LICENSE trufflehog_3.88.12_linux_amd64.tar.gz
+wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.20/trufflehog_3.88.20_linux_amd64.tar.gz
+tar -xzf trufflehog_3.88.20_linux_amd64.tar.gz
+rm README.md LICENSE trufflehog_3.88.20_linux_amd64.tar.gz
 chmod +x trufflehog
+echo "alias trufflehog='$RECON_DIR/trufflehog'" >> ~/.zshrc
+echo "trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown" >> ~/.zsh_history
+echo "trufflehog github --org=trufflesecurity --results=verified,unknown" >> ~/.zsh_history
+echo "trufflehog s3 --bucket=<bucket name> --results=verified,unknown" >> ~/.zsh_history
 
 # Vita
 cd $RECON_DIR
@@ -764,6 +768,8 @@ tar -xzf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 rm vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
 mv vita-0.1.16-x86_64-unknown-linux-musl/vita .
 rm -r vita-0.1.16-x86_64-unknown-linux-musl
+echo "alias vita='$RECON_DIR/vita'" >> ~/.zshrc
+echo "vita -d hackerone.com" >> ~/.zsh_history
 
 # Waybackurls
 cd $WEB_DIR
@@ -771,26 +777,35 @@ wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackur
 tar -xzf waybackurls-linux-amd64-0.1.0.tgz
 rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
-echo "alias waybackurls='cd $WEB_DIR/waybackurls'" >> ~/.zshrc 
+echo "alias waybackurls='$WEB_DIR/waybackurls'" >> ~/.zshrc 
 
 # Webclientservicescanner
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Hackndo/WebclientServiceScanner || echo "[-] Failed to install Webclientservicescanner"
 pipx ensurepath
+echo "webclientservicescanner domain.local/user:pass@10.10.10.0/24" >> ~/.zsh_history
 
 # Weevely3
 cd $WEB_DIR
 git clone https://github.com/epinna/weevely3.git
+echo "alias weevely3='python3 $WEB_DIR/weevely3/weevely.py'" >> ~/.zshrc
+echo "weevely3 generate <password> <path>" >> ~/.zsh_history
+echo "weevely3 <URL> <password> <cmd>" >> ~/.zsh_history
 
 # Wef
 cd $WIFI_DIR
 git clone https://github.com/D3Ext/WEF.git
+sudo $WIFI_DIR/WEF/wef
+echo "alias wef='bash $WIFI_DIR/WEF/wef'" >> ~/.zshrc
 
 # Windows-Exploit-Suggester
 cd $INTERNALS_DIR
 git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
+echo "alias windows-exploit-suggester='python2.7 $INTERNALS_DIR/Windows-Exploit-Suggester/windows-exploit-suggester.py'" >> ~/.zshrc
+echo "windows-exploit-suggester --update" >> ~/.zsh_history
+echo "windows-exploit-suggester --database 2014-06-06-mssb.xlsx --systeminfo win7sp1-systeminfo.txt" >> ~/.zsh_history
 
-echo "[+] All repositories have been successfully cloned, and scripts downloaded into their respective directories."
+echo "[+] All tools were setup."
 
 #############################################################
 ### Installation of the scripts/exploits
@@ -800,8 +815,7 @@ echo "[+] Downloading scripts/exploits"
 
 # Cpassword_decrypt
 cd $INTERNALS_DIR
-wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
-chmod +x cpassword_decrypt.rb
+pipx install git+https://github.com/t0thkr1s/gpp-decrypt.git --include-deps
 
 # CVE-2025-24071 (NTLM auth via ZIP/RAR)
 cd $GENERAL_DIR
@@ -815,3 +829,11 @@ mv 44005 iLO4_add_admin.py
 # Proxyshell
 cd $INTERNALS_DIR
 git clone https://github.com/dmaasland/proxyshell-poc.git
+cd proxyshell-poc
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias proxyshell-enumerate='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell-enumerate.py'" >> ~/.zshrc
+echo "alias proxyshell-poc='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell.py'" >> ~/.zshrc
+echo "alias proxyshell-rce='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell_rce.py'" >> ~/.zshrc
