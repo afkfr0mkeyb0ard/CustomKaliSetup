@@ -61,6 +61,7 @@ Ldapsearch-ad
 Magisk
 MailSniper
 Manspider
+Many-passwords
 Mentalist
 Mentalist_chains
 MFASweep
