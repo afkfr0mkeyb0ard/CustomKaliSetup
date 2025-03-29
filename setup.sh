@@ -422,6 +422,10 @@ pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] 
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
 echo "manspider 10.10.10.0/24 -e ps1 -c SecureString pwd \$Pass -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
 
+# Many-passwords (default credentials)
+cd $GENERAL_DIR
+git clone https://github.com/many-passwords/many-passwords.git
+
 # Mentalist
 cd $PASSCRACK_DIR
 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
