@@ -533,6 +533,9 @@ pipx install git+https://github.com/sensepost/objection.git
 # OpenRedireX
 cd $WEB_DIR
 git clone https://github.com/devanshbatham/OpenRedireX.git
+cd OpenRedireX
+chmod +x setup.sh
+./setup.sh
 
 # PassTheCert
 cd $INTERNALS_DIR
