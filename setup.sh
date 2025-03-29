@@ -688,6 +688,10 @@ cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
 echo "alias smuggler='python3 $WEB_DIR/smuggler/smuggler.py'" >> ~/.zshrc
 
+# Smugglo
+cd $WEB_DIR
+git clone https://github.com/b3rito/smugglo.git
+
 # Snoop
 cd $RECON_DIR
 mkdir Snoop
