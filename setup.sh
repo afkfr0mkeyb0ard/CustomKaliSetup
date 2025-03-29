@@ -699,12 +699,20 @@ echo "spiderfoot -l 127.0.0.1:5001" >> ~/.zsh_history
 # Spoofcheck
 cd $RECON_DIR
 git clone https://github.com/a6avind/spoofcheck.git
+cd spoofcheck
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias spoofcheck='$RECON_DIR/spoofcheck/bin/python3 $RECON_DIR/spoofcheck/spoofcheck.py'" >> ~/.zshrc
+echo "spoofcheck <domain>" >> ~/.zsh_history
 
 # Swaks
 cd $RECON_DIR
 wget https://github.com/jetmore/swaks/releases/download/v20240103.0/swaks-20240103.0.tar.gz
 tar -xzf swaks-20240103.0.tar.gz
 rm swaks-20240103.0.tar.gz
+echo "alias swaks='$RECON_DIR/swaks-20240103.0/swaks'" >> ~/.zshrc
 
 # TeamsEnum
 cd $RECON_DIR
@@ -714,11 +722,14 @@ python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo "alias teamsenum.py='$RECON_DIR/TeamsEnum/bin/python3 $RECON_DIR/TeamsEnum/TeamsEnum.py'" >> ~/.zshrc
+echo "alias teamsenum='$RECON_DIR/TeamsEnum/bin/python3 $RECON_DIR/TeamsEnum/TeamsEnum.py'" >> ~/.zshrc
+echo "teamsenum -a password -u <username> -f emails.txt" >> ~/.zsh_history
 
 # Testssl
 cd $WEB_DIR
-git clone --depth 1 https://github.com/testssl/testssl.sh.git
+git clone --depth 1 https://github.com/testssl/testssl.sh.git testssl
+echo "alias testssl='$WEB_DIR/testssl/testssl.sh'" >> ~/.zshrc
+echo "testssl https://example.com" >> ~/.zsh_history
 
 # TheHarvester
 cd $RECON_DIR
@@ -727,6 +738,7 @@ pipx install git+https://github.com/laramies/theHarvester.git
 # Timeroast
 cd $INTERNALS_DIR
 git clone https://github.com/SecuraBV/Timeroast.git
+echo "python3 timeroast.py" >> ~/.zsh_history
 
 # TomcatSampleWebshell
 cd $WEB_DIR
@@ -735,6 +747,8 @@ git clone https://github.com/afkfr0mkeyb0ard/TomcatSampleWebshell.git
 # TREVORspray
 cd $RECON_DIR
 pipx install git+https://github.com/blacklanternsecurity/TREVORspray.git
+echo "trevorspray --recon evilcorp.com" >> ~/.zsh_history
+echo "trevorspray --recon evilcorp.com -u emails.txt --threads 3" >> ~/.zsh_history
 
 # Trufflehog
 cd $RECON_DIR
