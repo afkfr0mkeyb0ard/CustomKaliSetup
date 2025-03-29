@@ -104,6 +104,7 @@ SharpHound
 ShortScan (IIS Tilde)
 Simplify
 Smuggler
+Smugglo
 Snoop
 Spiderfoot
 Spoofcheck
