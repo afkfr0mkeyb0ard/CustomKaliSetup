@@ -529,6 +529,7 @@ echo "o365spray --spray -U usernames.txt -P passwords.txt --count 2 --lockout 5 
 # Objection
 cd $MOBILE_DIR
 pipx install git+https://github.com/sensepost/objection.git
+echo "objection --help" >> ~/.zsh_history
 
 # OpenRedireX
 cd $WEB_DIR
@@ -597,6 +598,13 @@ echo "impacket-gettgtpkinit" >> ~/.zsh_history
 # Pre2k
 cd $INTERNALS_DIR
 git clone https://github.com/garrettfoster13/pre2k.git
+cd pre2k
+python3 -m venv .
+source bin/activate
+pip3 install .
+deactivate
+echo "alias pre2k='$INTERNALS_DIR/pre2k/bin/python3 $INTERNALS_DIR/pre2k/bin/pre2k'" >> ~/.zshrc
+echo "pre2k -h" >> ~/.zsh_history
 
 # PrintNightmare
 cd $INTERNALS_DIR
