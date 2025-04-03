@@ -345,6 +345,17 @@ echo "alias jwt-hack='~/go/bin/jwt-hack'" >> ~/.zshrc
 echo "jwt-hack crack -w {WORDLIST} {JWT_CODE}" >> ~/.zsh_history
 echo "jwt-hack payload {JWT_CODE}" >> ~/.zsh_history
 
+# JWT-Key-Recovery
+cd $WEB_DIR
+git clone https://github.com/FlorianPicca/JWT-Key-Recovery.git
+cd JWT-Key-Recovery
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias jwt-key-recovery='$WEB_DIR/JWT-Key-Recovery/bin/python3 $WEB_DIR/JWT-Key-Recovery/recover.py'" >> ~/.zshrc
+echo "jwt-key-recovery <JWT>" >> ~/.zsh_history
+
 # Jwt_tool
 cd $WEB_DIR
 git clone https://github.com/ticarpi/jwt_tool.git
@@ -355,8 +366,8 @@ pip3 install -r requirements.txt
 deactivate
 echo "alias jwt_tool='$WEB_DIR/jwt_tool/bin/python3 $WEB_DIR/jwt_tool/jwt_tool.py'" >> ~/.zshrc
 echo "jwt_tool <JWT>" >> ~/.zsh_history
-echo "jwt_tool.py -t 'https://www.example.com/' -rc 'jwt=<JWT>;anothercookie=test' -M pb" >> ~/.zsh_history
-echo "jwt_tool.py -C -d '/home/kali/web/PayloadEverything/Web/Jwt_keys.txt' <JWT>" >> ~/.zsh_history
+echo "jwt_tool -t 'https://www.example.com/' -rc 'jwt=<JWT>;anothercookie=test' -M pb" >> ~/.zsh_history
+echo "jwt_tool -C -d '/home/kali/web/PayloadEverything/Web/Jwt_keys.txt' <JWT>" >> ~/.zsh_history
 
 # Kerbrute
 cd $INTERNALS_DIR
