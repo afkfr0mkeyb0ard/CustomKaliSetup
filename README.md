@@ -53,6 +53,8 @@ Impacket
 ItWasAllADream
 Jd-Gui
 JSLuice
+JWT-Key-Recovery
+Jwt-tools
 Kerbrute
 KnockKnock
 Kraken
