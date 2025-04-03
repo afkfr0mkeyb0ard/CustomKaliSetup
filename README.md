@@ -53,6 +53,7 @@ Impacket
 ItWasAllADream
 Jd-Gui
 JSLuice
+Jwt-hack
 JWT-Key-Recovery
 Jwt-tools
 Kerbrute
