@@ -327,6 +327,17 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Failed to install ItWasAllADream"
 echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
 
+# Jadx
+cd $MOBILE_DIR
+wget https://github.com/skylot/jadx/releases/download/v1.5.1/jadx-1.5.1.zip
+mkdir jadx
+mv jadx-1.5.1.zip ./jadx/jadx-1.5.1.zip
+cd jadx
+unzip jadx-1.5.1.zip
+rm jadx-1.5.1.zip
+echo "alias jadx='$MOBILE_DIR/jadx/jadx'" >> ~/.zshrc
+echo "alias jadx-gui='$MOBILE_DIR/jadx/jadx-gui'" >> ~/.zshrc
+
 # Jd-gui
 cd $MOBILE_DIR
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar
