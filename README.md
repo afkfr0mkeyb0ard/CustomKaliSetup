@@ -51,6 +51,7 @@ Hashcat
 Hostapd-wpe
 Impacket
 ItWasAllADream
+Jadx
 Jd-Gui
 JSLuice
 Jwt-hack
