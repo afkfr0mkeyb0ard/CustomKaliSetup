@@ -335,8 +335,8 @@ mv jadx-1.5.1.zip ./jadx/jadx-1.5.1.zip
 cd jadx
 unzip jadx-1.5.1.zip
 rm jadx-1.5.1.zip
-echo "alias jadx='$MOBILE_DIR/jadx/jadx'" >> ~/.zshrc
-echo "alias jadx-gui='$MOBILE_DIR/jadx/jadx-gui'" >> ~/.zshrc
+echo "alias jadx='$MOBILE_DIR/jadx/bin/jadx'" >> ~/.zshrc
+echo "alias jadx-gui='$MOBILE_DIR/jadx/bin/jadx-gui'" >> ~/.zshrc
 
 # Jd-gui
 cd $MOBILE_DIR
