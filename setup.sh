@@ -572,7 +572,7 @@ echo "o365spray --spray -U usernames.txt -P passwords.txt --count 2 --lockout 5 
 
 # Objection
 cd $MOBILE_DIR
-pipx install git+https://github.com/sensepost/objection.git
+pipx install objection
 echo "objection --help" >> ~/.zsh_history
 
 # OpenRedireX
