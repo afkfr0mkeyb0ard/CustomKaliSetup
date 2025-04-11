@@ -691,6 +691,11 @@ git clone https://github.com/aircrack-ng/rtl8812au.git
 cd rtl*
 sudo make dkms_install
 
+# SCCMHunter
+cd $INTERNALS_DIR
+pipx install git+https://github.com/garrettfoster13/sccmhunter/
+echo "alias sccmhunter='sccmhunter.py'" >> ~/.zshrc
+
 # SecLists
 cd $WEB_DIR
 git clone https://github.com/danielmiessler/SecLists.git
