@@ -105,6 +105,7 @@ Pyscan
 Responder
 RottenPotatoNG
 RSMangler
+SCCMHunter
 SecLists
 SharpHound
 ShortScan (IIS Tilde)
