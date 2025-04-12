@@ -49,6 +49,7 @@ GoMapEnum
 GoRedOps
 Hashcat
 Hostapd-wpe
+Httpx
 Impacket
 ItWasAllADream
 Jadx
