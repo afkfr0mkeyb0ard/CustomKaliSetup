@@ -289,6 +289,14 @@ echo "gomapenum bruteSpray o365 -u users.txt -p 'MyPass123' -v -l 2" >> ~/.zsh_h
 cd $GENERAL_DIR
 git clone https://github.com/EvilBytecode/GoRedOps.git
 
+# Gowitness
+cd $RECON_DIR
+wget https://github.com/sensepost/gowitness/releases/download/3.0.5/gowitness-3.0.5-linux-amd64
+mv gowitness-3.0.5-linux-amd64 gowitness
+chmod +x gowitness
+echo "alias gowitness='$RECON_DIR/gowitness'" >> ~/.zshrc
+echo "gowitness scan single --url 'https://domain.com' --write-db" >> ~/.zsh_history
+
 # Hashcat
 cd $PASSCRACK_DIR
 wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
