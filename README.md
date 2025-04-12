@@ -47,6 +47,7 @@ Gitleaks
 GMSADumper
 GoMapEnum
 GoRedOps
+Gowitness
 Hashcat
 Hostapd-wpe
 Httpx
