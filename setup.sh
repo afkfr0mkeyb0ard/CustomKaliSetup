@@ -298,6 +298,11 @@ cd $WIFI_DIR
 sudo apt-get -y install hostapd-wpe
 echo "hostapd-wpe /etc/hostapd-wpe/hostapd-wpe.conf" >> ~/.zsh_history
 
+# Httpx
+cd $RECON_DIR
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+echo "alias httpx='~/go/bin/httpx'" >> ~/.zshrc
+
 # Impacket
 cd $INTERNALS_DIR
 pipx install impacket
