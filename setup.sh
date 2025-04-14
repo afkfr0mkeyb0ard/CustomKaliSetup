@@ -241,6 +241,10 @@ echo "alias findADCS-scancerts='python3 $INTERNALS_DIR/findADCS/scanCerts.py'" >
 echo "findADCS-scanweb 10.10.10.0/24" >> ~/.zsh_history
 echo "findADCS-scancerts 10.10.10.0/24" >> ~/.zsh_history
 
+# FindURLS
+cd $WEB_DIR
+git clone https://github.com/afkfr0mkeyb0ard/findURLS.git
+
 # Frida
 cd $MOBILE_DIR
 pipx install frida-tools
