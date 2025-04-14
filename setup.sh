@@ -466,6 +466,7 @@ cd $MOBILE_DIR
 wget https://github.com/LaurieWired/Malimite/releases/download/1.1/Malimite-1-1.zip
 unzip -q Malimite-1-1.zip -d Malimite
 rm Malimite-1-1.zip
+echo "alias malimite='java -jar $MOBILE_DIR/Malimite/Malimite-1-1.jar'" >> ~/.zshrc
 
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
