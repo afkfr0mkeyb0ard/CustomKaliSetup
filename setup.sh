@@ -538,10 +538,12 @@ sudo apt-get -y install nmap
 
 # Nomore403
 cd $WEB_DIR
-wget https://github.com/devploit/nomore403/releases/download/v1.1.0/nomore403_linux_amd64
+git clone https://github.com/devploit/nomore403.git
+cd nomore403
+wget https://github.com/devploit/nomore403/releases/download/v1.1.1/nomore403_linux_amd64
 mv nomore403_linux_amd64 nomore403
 chmod +x nomore403
-echo "alias nomore403='$WEB_DIR/nomore403'" >> ~/.zshrc
+echo "alias nomore403='$WEB_DIR/nomore403/nomore403'" >> ~/.zshrc
 echo "nomore403 -u 'https://example.com/admin'" >> ~/.zsh_history
 
 # NoPac
