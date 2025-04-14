@@ -461,6 +461,12 @@ wget https://github.com/topjohnwu/Magisk/releases/download/canary-28103/app-rele
 cd $RECON_DIR
 git clone https://github.com/dafthack/MailSniper.git
 
+# Malimite
+cd $MOBILE_DIR
+wget https://github.com/LaurieWired/Malimite/releases/download/1.1/Malimite-1-1.zip
+unzip -q Malimite-1-1.zip -d Malimite
+rm Malimite-1-1.zip
+
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
