@@ -68,6 +68,7 @@ Ldapnomnom
 Ldapsearch-ad
 Magisk
 MailSniper
+Malimite
 Manspider
 Many-passwords
 Mentalist
