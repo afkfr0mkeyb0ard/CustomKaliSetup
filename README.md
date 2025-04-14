@@ -40,6 +40,7 @@ EyeWitness
 Ffuf
 FinalRecon
 FindADCS
+FindURLS
 Frida
 GenUsernames
 Git-dumper
