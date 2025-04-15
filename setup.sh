@@ -889,6 +889,10 @@ echo "alias windows-exploit-suggester='python2.7 $INTERNALS_DIR/Windows-Exploit-
 echo "windows-exploit-suggester --update" >> ~/.zsh_history
 echo "windows-exploit-suggester --database 2014-06-06-mssb.xlsx --systeminfo win7sp1-systeminfo.txt" >> ~/.zsh_history
 
+# Wpscan
+# Installed by default on Kali
+echo "wpscan --url 'https://example.com/' --user-agent 'Windows Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0' -e vp,vt,cb,dbe,u1-50 --api-token <yourapitoken>" >> ~/.zsh_history
+
 echo "[+] All tools were setup."
 
 #############################################################
