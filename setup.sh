@@ -725,6 +725,9 @@ echo "alias sccmhunter='sccmhunter.py'" >> ~/.zshrc
 # SecLists
 cd $WEB_DIR
 git clone https://github.com/danielmiessler/SecLists.git
+cd SecLists
+cd Passwords
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
 # SharpHound
 cd $INTERNALS_DIR
