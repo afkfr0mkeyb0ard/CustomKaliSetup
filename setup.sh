@@ -450,6 +450,14 @@ echo "alias ldapnomnom_obfuscated='$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscate
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
 echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
 
+# Ldeep
+cd $INTERNALS_DIR
+wget https://github.com/franc-pentest/ldeep/releases/download/1.0.86/ldeep_linux-amd64 ldeep
+mv ldeep_linux-amd64 ldeep
+chmod +x ldeep
+echo "alias ldeep='$INTERNALS_DIR/ldeep'" >> ~/.zshrc
+echo "ldeep ldap -u <user> -p <password> -d <domain> -s ldap://<dc_ip> sccm" >> ~/.zsh_history
+
 # Magisk
 cd $MOBILE_DIR
 mkdir Magisk
