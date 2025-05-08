@@ -66,6 +66,7 @@ Kraken
 Krbrelayx
 Ldapnomnom
 Ldapsearch-ad
+Ldeep
 Magisk
 MailSniper
 Malimite
