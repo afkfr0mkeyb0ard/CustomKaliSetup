@@ -452,10 +452,7 @@ echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
 
 # Ldeep
 cd $INTERNALS_DIR
-wget https://github.com/franc-pentest/ldeep/releases/download/1.0.86/ldeep_linux-amd64 ldeep
-mv ldeep_linux-amd64 ldeep
-chmod +x ldeep
-echo "alias ldeep='$INTERNALS_DIR/ldeep'" >> ~/.zshrc
+pipx install ldeep
 echo "ldeep ldap -u <user> -p <password> -d <domain> -s ldap://<dc_ip> sccm" >> ~/.zsh_history
 
 # Magisk
