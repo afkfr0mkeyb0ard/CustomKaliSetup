@@ -34,6 +34,10 @@ sudo apt-get -y install golang-go
 ### Installation of the tools
 #############################################################
 
+# Adidnsdump
+cd $INTERNALS_DIR
+pipx install git+https://github.com/dirkjanm/adidnsdump#egg=adidnsdump
+
 # Amass
 cd $RECON_DIR
 wget https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip
