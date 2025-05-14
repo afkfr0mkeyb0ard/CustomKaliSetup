@@ -305,6 +305,9 @@ chmod +x gowitness
 echo "alias gowitness='$RECON_DIR/gowitness'" >> ~/.zshrc
 echo "gowitness scan single --url 'https://domain.com' --write-db" >> ~/.zsh_history
 
+# GPOHound
+pipx install "git+https://github.com/cogiceo/GPOHound"
+
 # Hashcat
 cd $PASSCRACK_DIR
 wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
