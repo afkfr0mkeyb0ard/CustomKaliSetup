@@ -453,6 +453,17 @@ chmod +x ldapnomnom-linux-x64-obfuscated
 echo "alias ldapnomnom='$INTERNALS_DIR/ldapnomnom-linux-x64'" >> ~/.zshrc
 echo "alias ldapnomnom_obfuscated='$INTERNALS_DIR/ldapnomnom-linux-x64-obfuscated'" >> ~/.zshrc
 
+# LdapRelayScan
+cd $INTERNALS_DIR
+git clone https://github.com/zyn3rgy/LdapRelayScan.git
+cd LdapRelayScan
+python3 -m venv .
+source bin/activate
+python3 -m pip install -r requirements_exact.txt
+deactivate
+echo "alias LdapRelayScan='$INTERNALS_DIR/LdapRelayScan/bin/python3 $INTERNALS_DIR/LdapRelayScan/LdapRelayScan.py'" >> ~/.zshrc
+echo "LdapRelayScan -method LDAPS -dc-ip 10.0.0.20" >> ~/.zsh_history
+
 # Ldapsearch-ad
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
 echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
