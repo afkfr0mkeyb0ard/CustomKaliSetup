@@ -707,6 +707,10 @@ git clone https://github.com/afkfr0mkeyb0ard/PyScan.git
 echo "alias pyscan='python3 $INTERNALS_DIR/PyScan/pyscan.py'" >> ~/.zshrc
 echo "pyscan'" >> ~/.zsh_history
 
+# Pywhisker
+cd $INTERNALS_DIR
+pipx install git+https://github.com/ShutdownRepo/pywhisker.git
+
 # Responder
 cd $INTERNALS_DIR
 git clone https://github.com/lgandx/Responder.git
