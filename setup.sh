@@ -158,7 +158,13 @@ echo "alias GcpPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/GC
 
 # Coercer
 cd $INTERNALS_DIR
-pipx install git+https://github.com/p0dalirius/Coercer.git || echo "[-] Failed to install Coercer"
+mkdir Coercer
+cd Coercer
+python3 -m venv .
+source bin/activate
+python3 -m pip install coercer
+deactivate
+echo "alias coercer='$INTERNALS_DIR/Coercer/bin/coercer'" >> ~/.zshrc
 echo "coercer scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
 echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
