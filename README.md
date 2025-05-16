@@ -67,6 +67,7 @@ KnockKnock
 Kraken
 Krbrelayx
 Ldapnomnom
+LdapRelayScan
 Ldapsearch-ad
 Ldeep
 Magisk
