@@ -710,6 +710,7 @@ echo "pyscan'" >> ~/.zsh_history
 # Pywhisker
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ShutdownRepo/pywhisker.git
+echo "pywhisker -d 'domain.local' -u 'user1' -p 'pass123' --target 'user2' --action 'list'" >> ~/.zsh_history
 
 # Responder
 cd $INTERNALS_DIR
