@@ -109,6 +109,7 @@ PrintNightmare
 PrivescCheck
 Pypycatz
 Pyscan
+Pywhisker
 Responder
 RottenPotatoNG
 RSMangler
