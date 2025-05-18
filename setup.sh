@@ -100,7 +100,7 @@ wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/Bl
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
 sudo apt-get -y install neo4j
-echo "alias bloodhound-gui='sudo $INTERNALS_DIR/BloodHound-linux-x64/BloodHound'" >> ~/.zshrc
+echo "alias bloodhound-gui='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound'" >> ~/.zshrc
 echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
 echo "bloodhound-gui" >> ~/.zsh_history
 echo "neo4j" >> ~/.zsh_history
