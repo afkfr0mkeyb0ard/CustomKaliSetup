@@ -546,6 +546,10 @@ git clone https://github.com/worawit/MS17-010.git
 cd $RECON_DIR
 git clone https://github.com/MartinIngesen/MSOLSpray.git
 
+# Mssqlrelay
+cd $INTERNALS_DIR
+pip3 install git+https://github.com/CompassSecurity/mssqlrelay.git
+
 # Neo-reGeorg
 cd $INTERNALS_DIR
 git clone https://github.com/L-codes/Neo-reGeorg.git
