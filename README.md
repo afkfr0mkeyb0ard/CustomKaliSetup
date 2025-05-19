@@ -83,6 +83,7 @@ Mitm6
 Monolith
 MS17-010
 MSOLSpray
+Mssqlrelay
 Neo-reGeorg
 Netcredz
 Netexec
