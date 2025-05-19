@@ -549,6 +549,7 @@ git clone https://github.com/MartinIngesen/MSOLSpray.git
 # Mssqlrelay
 cd $INTERNALS_DIR
 pip3 install git+https://github.com/CompassSecurity/mssqlrelay.git
+echo "mssqlrelay checkall -scheme ldap -target domain.local -ns 10.0.1.100 -u user@domain.local -p pass123 -windows-auth" >> ~/.zsh_history
 
 # Neo-reGeorg
 cd $INTERNALS_DIR
