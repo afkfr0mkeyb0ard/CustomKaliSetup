@@ -66,6 +66,7 @@ Jwt-tools
 Kerbrute
 KnockKnock
 Kraken
+Krb5-user
 Krbrelayx
 Ldapnomnom
 LdapRelayScan
