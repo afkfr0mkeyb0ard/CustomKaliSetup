@@ -445,6 +445,9 @@ python3 -m pip install -r requirements.txt
 deactivate
 echo "alias kraken='$GENERAL_DIR/Kraken/bin/python3 $GENERAL_DIR/Kraken/kraken.py'" >> ~/.zshrc
 
+# Krb5-user
+sudo apt-get -y install krb5-user
+
 # Krbrelayx
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/krbrelayx.git
