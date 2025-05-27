@@ -115,6 +115,7 @@ Pypycatz
 Pyscan
 Pywhisker
 Responder
+Ridenum
 RottenPotatoNG
 RSMangler
 SCCMHunter
