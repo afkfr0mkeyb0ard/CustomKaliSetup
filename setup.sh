@@ -219,7 +219,7 @@ wget https://github.com/WithSecureLabs/drozer-agent/releases/download/3.1.0/droz
 
 # Eaphammer
 cd $WIFI_DIR
-git clone https://github.com/s0lst1c3/eaphammer.git
+sudo apt-get -y install eaphammer
 echo "eaphammer --cert-wizard" >> ~/.zsh_history
 echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >> ~/.zsh_history
 
