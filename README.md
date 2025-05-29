@@ -158,6 +158,9 @@ https://www.exploit-db.com/download/44005
 
 # Proxyshell
 https://github.com/dmaasland/proxyshell-poc.git
+
+#ZeroLogon
+https://github.com/dirkjanm/CVE-2020-1472
 ```
 
 ### Modules
