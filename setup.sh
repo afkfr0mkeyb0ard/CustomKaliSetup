@@ -981,3 +981,7 @@ deactivate
 echo "alias proxyshell-enumerate='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell-enumerate.py'" >> ~/.zshrc
 echo "alias proxyshell-poc='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell.py'" >> ~/.zshrc
 echo "alias proxyshell-rce='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS_DIR/proxyshell-poc/proxyshell_rce.py'" >> ~/.zshrc
+
+# ZeroLogon
+cd $INTERNALS_DIR
+git clone https://github.com/dirkjanm/CVE-2020-1472.git Zerologon
