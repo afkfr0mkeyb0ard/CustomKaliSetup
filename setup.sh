@@ -716,7 +716,7 @@ source bin/activate
 pip3 install .
 deactivate
 echo "alias pre2k='$INTERNALS_DIR/pre2k/bin/python3 $INTERNALS_DIR/pre2k/bin/pre2k'" >> ~/.zshrc
-echo "pre2k -h" >> ~/.zsh_history
+echo "pre2k auth -u \$USER -p \$PASSWORD -d \$DOMAIN -dc-ip \$IP -verbose" >> ~/.zsh_history
 
 # PrintNightmare
 cd $INTERNALS_DIR
