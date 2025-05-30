@@ -346,7 +346,8 @@ python3 -m venv .
 #deactivate
 cd examples
 wget https://raw.githubusercontent.com/api0cradle/impacket/a1d0cc99ff1bd4425eddc1b28add1f269ff230a6/examples/rpcchangepwd.py
-echo "alias impacket-rpcchangepwd='$INTERNALS_DIR/impacket-0.12.0/bin/python3 $INTERNALS_DIR/examples/rpcchangepwd.py'" >> ~/.zshrc
+chmod +x rpcchangepwd.py
+echo "alias impacket-rpcchangepwd='$INTERNALS_DIR/impacket-0.12.0/bin/python3 $INTERNALS_DIR/impacket-0.12.0/examples/rpcchangepwd.py'" >> ~/.zshrc
 echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host 10.10.11.222 'DOMAIN/user:password'" >> ~/.zsh_history
 echo "impacket-changepasswd \$DOMAIN/\$MACHINE_ACC:\$PASS@\$IP -newpass 'P@ssw0rd' -p rpc-samr" >> ~/.zsh_history
 echo "impacket-Get-GPPPassword 'DOMAIN'/'USER':'PASSWORD'@'DOMAIN_CONTROLLER'" >> ~/.zsh_history
