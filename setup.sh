@@ -825,6 +825,12 @@ wget https://github.com/snooppr/snoop/releases/download/v1.4.2__2025-1-1/Snoop_f
 unrar x Snoop_for_GNU_Linux.rar
 rm Snoop_for_GNU_Linux.rar
 
+# Sourcemapper
+cd $WEB_DIR
+go install github.com/denandz/sourcemapper@latest
+echo "alias sourcemapper='~/go/bin/sourcemapper'" >> ~/.zshrc
+echo "sourcemapper -url 'https://DOMAIN/file.js.map' -output ~/Desktop -insecure --header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'" >> ~/.zsh_history
+
 # Spiderfoot
 # Installed by default on Kali but remove comments to install
 # cd $RECON_DIR
