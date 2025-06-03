@@ -126,6 +126,7 @@ Simplify
 Smuggler
 Smugglo
 Snoop
+Sourcemapper
 Spiderfoot
 Spoofcheck
 SQLmap
