@@ -140,6 +140,7 @@ TREVORspray
 Trufflehog
 Vita
 Waybackurls
+WebCacheVulnerabilityScanner
 Webclientservicescanner
 Weevely3
 Wef
