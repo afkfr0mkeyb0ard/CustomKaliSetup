@@ -931,6 +931,13 @@ rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
 echo "alias waybackurls='$WEB_DIR/waybackurls'" >> ~/.zshrc 
 
+# WebCacheVulnerabilityScanner
+cd $WEB_DIR
+wget https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner/releases/download/1.4.2/web-cache-vulnerability-scanner_1.4.2_linux_amd64.tar.gz
+tar -xzf web-cache-vulnerability-scanner_1.4.2_linux_amd64.tar.gz
+rm web-cache-vulnerability-scanner_1.4.2_linux_amd64.tar.gz
+echo "alias web-cache-vulnerability-scanner='$WEB_DIR/wcvs'" >> ~/.zshrc
+
 # Webclientservicescanner
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Hackndo/WebclientServiceScanner || echo "[-] Failed to install Webclientservicescanner"
