@@ -748,6 +748,13 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/ShutdownRepo/pywhisker.git
 echo "pywhisker -d 'domain.local' -u 'user1' -p 'pass123' --target 'user2' --action 'list'" >> ~/.zsh_history
 
+# Rcat
+cd $GENERAL_DIR
+wget https://github.com/0xfalafel/rcat/releases/download/0.2/rcat_amd64 rcat
+chmod +x rcat
+echo "alias rcat='$GENERAL_DIR/rcat'" >> ~/.zshrc
+echo "rcat -l 4445 --pwn" >> ~/.zsh_history
+
 # Responder
 cd $INTERNALS_DIR
 git clone https://github.com/lgandx/Responder.git
