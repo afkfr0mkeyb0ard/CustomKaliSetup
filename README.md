@@ -114,6 +114,7 @@ PrivescCheck
 Pypycatz
 Pyscan
 Pywhisker
+Rcat
 Responder
 Ridenum
 RottenPotatoNG
