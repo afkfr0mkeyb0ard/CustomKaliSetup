@@ -11,9 +11,10 @@ RECON_DIR="$BASE_DIR/recon"
 PASSCRACK_DIR="$BASE_DIR/passcrack"
 GENERAL_DIR="$BASE_DIR/general"
 MOBILE_DIR="$BASE_DIR/mobile"
+REDTEAM="$BASE_DIR/redteam"
 
 # Create the directories if they don't exist
-mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSCRACK_DIR" "$GENERAL_DIR" "$MOBILE_DIR"
+mkdir -p "$INTERNALS_DIR" "$WEB_DIR" "$WIFI_DIR" "$RECON_DIR" "$PASSCRACK_DIR" "$GENERAL_DIR" "$MOBILE_DIR" "$REDTEAM"
 
 # Config variables
 echo "alias tools_general='cd $BASE_DIR/general'" >> ~/.zshrc
@@ -21,6 +22,7 @@ echo "alias tools_internals='cd $BASE_DIR/internals'" >> ~/.zshrc
 echo "alias tools_mobile='cd $BASE_DIR/mobile'" >> ~/.zshrc
 echo "alias tools_passcrack='cd $BASE_DIR/passcrack'" >> ~/.zshrc
 echo "alias tools_recon='cd $BASE_DIR/recon'" >> ~/.zshrc
+echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
@@ -821,7 +823,7 @@ git clone https://github.com/defparam/smuggler.git
 echo "alias smuggler='python3 $WEB_DIR/smuggler/smuggler.py'" >> ~/.zshrc
 
 # Smugglo
-cd $WEB_DIR
+cd $REDTEAM
 git clone https://github.com/b3rito/smugglo.git
 
 # Snoop
