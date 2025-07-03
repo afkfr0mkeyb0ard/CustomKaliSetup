@@ -700,6 +700,10 @@ git clone https://github.com/topotam/PetitPotam.git
 git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
 echo "python3 PetitPotam.py <ip_listener> <ip_dc>" >> ~/.zsh_history
 
+# Phishing-HTML-linter
+cd $REDTEAM
+git clone https://github.com/pentest01/phishing-HTML-linter.git
+
 # PKINITtools
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/PKINITtools.git
