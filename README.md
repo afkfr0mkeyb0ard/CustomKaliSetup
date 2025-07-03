@@ -107,6 +107,7 @@ PayloadsAllTheThings
 PCredz
 PEASS-ng
 PetitPotam
+Phishing-HTML-linter
 PKINITtools
 Pre2k
 PrintNightmare
