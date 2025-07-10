@@ -147,6 +147,7 @@ Webclientservicescanner
 Weevely3
 Wef
 Windows-Exploit-Suggester
+Ysoserial
 ```
 
 ### Downloaded exploits 
