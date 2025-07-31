@@ -82,6 +82,16 @@ rm assetfinder-linux-amd64-0.1.1.tgz
 echo "alias assetfinder='$RECON_DIR/assetfinder'" >> ~/.zshrc
 echo "assetfinder domain.com" >> ~/.zsh_history
 
+# Autoswagger
+cd $WEB_DIR
+git clone https://github.com/intruder-io/autoswagger.git
+cd autoswagger
+python3 -m venv .
+source bin/activate
+python3 -m pip install -r requirements.txt
+deactivate
+echo "alias autoswagger='$WEB_DIR/autoswagger/bin/python3 $WEB_DIR/autoswagger/autoswagger.py'" >> ~/.zshrc
+
 # Backup_dc_registry
 cd $INTERNALS_DIR
 git clone https://github.com/horizon3ai/backup_dc_registry
