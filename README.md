@@ -17,6 +17,7 @@ Android-kit (adb, sqlite3)
 Apktool
 Aquatone
 Assetfinder
+Autoswagger
 Backup_dc_registry
 BBot
 Bettercap
