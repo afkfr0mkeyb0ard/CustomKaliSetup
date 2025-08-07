@@ -156,6 +156,9 @@ Ysoserial
 # Cpassword decrypt
 https://raw.githubusercontent.com/rapid7/metasploit-framework/master/tools/password/cpassword_decrypt.rb
 
+# CVE-2025-33073 (NTLMreflection)
+https://github.com/mverschu/CVE-2025-33073
+
 # CVE-2025-24071 (NTLM auth via ZIP/RAR)
 https://github.com/0x6rss/CVE-2025-24071_PoC
 
