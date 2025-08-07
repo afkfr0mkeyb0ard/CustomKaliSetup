@@ -622,6 +622,10 @@ cd $RECON_DIR
 pipx install git+https://github.com/pwnfoo/NTLMRecon.git
 echo "ntlmrecon --input 192.168.1.1/24 --outfile ntlmrecon-ranges.csv" >> ~/.zsh_history
 
+# NTLMreflection
+cd $INTERNALS_DIR
+git clone https://github.com/mverschu/CVE-2025-33073.git
+
 # Ntlmscan
 cd $RECON_DIR
 git clone https://github.com/nyxgeek/ntlmscan.git
