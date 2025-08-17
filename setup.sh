@@ -235,13 +235,13 @@ sudo apt-get -y install eaphammer
 echo "eaphammer --cert-wizard" >> ~/.zsh_history
 echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >> ~/.zsh_history
 
-# EyeWitness
-cd $RECON_DIR
-git clone https://github.com/RedSiege/EyeWitness.git
-
 # ExetoDll
 cd $INTERNALS_DIR
 git clone --recursive https://github.com/hasherezade/exe_to_dll.git
+
+# EyeWitness
+cd $RECON_DIR
+git clone https://github.com/RedSiege/EyeWitness.git
 
 # Ffuf
 cd $WEB_DIR
