@@ -239,6 +239,10 @@ echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >>
 cd $RECON_DIR
 git clone https://github.com/RedSiege/EyeWitness.git
 
+# ExetoDll
+cd $INTERNALS_DIR
+git clone --recursive https://github.com/hasherezade/exe_to_dll.git
+
 # Ffuf
 cd $WEB_DIR
 wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
