@@ -39,8 +39,8 @@ Dex2Jar
 DonPAPI
 Drozer
 Eaphammer
-EyeWitness
 ExetoDll
+EyeWitness
 Ffuf
 FinalRecon
 FindADCS
