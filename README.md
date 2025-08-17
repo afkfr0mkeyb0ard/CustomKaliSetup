@@ -40,6 +40,7 @@ DonPAPI
 Drozer
 Eaphammer
 EyeWitness
+ExetoDll
 Ffuf
 FinalRecon
 FindADCS
