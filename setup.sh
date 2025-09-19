@@ -311,6 +311,14 @@ deactivate
 echo "alias gmsadumper='$INTERNALS_DIR/gMSADumper/bin/python3 $INTERNALS_DIR/gMSADumper/gMSADumper.py'" >> ~/.zshrc
 echo "gmsadumper -u user -p password -d domain.local" >> ~/.zsh_history
 
+# Go-secdump
+cd $INTERNALS_DIR
+wget https://github.com/jfjallid/go-secdump/releases/download/0.5.0/go-secdump
+chmod +x go-secdump
+echo "alias go-secdump='$INTERNALS_DIR/go-secdump'" >> ~/.zshrc
+echo "go-secdump --host \$IP --user \$USER --pass \$PASS --local" >> ~/.zsh_history
+echo "go-secdump --host \$IP --user \$USER --pass \$PASS --local --sam --lsa --dcc2" >> ~/.zsh_history
+
 # GoMapEnum
 cd $RECON_DIR
 wget https://github.com/nodauf/GoMapEnum/releases/download/v1.1.0/GoMapEnum_1.1.0_linux_amd64.tar.gz
