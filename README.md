@@ -50,6 +50,7 @@ GenUsernames
 Git-dumper
 Gitleaks
 GMSADumper
+Go-secdump
 GoMapEnum
 GoRedOps
 Gowitness
