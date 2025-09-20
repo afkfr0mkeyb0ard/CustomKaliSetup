@@ -414,6 +414,10 @@ cd $WEB_DIR
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest
 echo "alias jsluice='~/go/bin/jsluice'" >> ~/.zshrc
 
+# Jwt_exploit
+cd $WEB_DIR
+git clone https://github.com/afkfr0mkeyb0ard/jwt_exploit.git
+
 # Jwt-hack
 cd $WEB_DIR
 go install github.com/hahwul/jwt-hack@latest
