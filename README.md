@@ -149,6 +149,7 @@ WebCacheVulnerabilityScanner
 Webclientservicescanner
 Weevely3
 Wef
+Wi-Fi Hotspot
 Windows-Exploit-Suggester
 Ysoserial
 ```
