@@ -1005,6 +1005,12 @@ git clone https://github.com/D3Ext/WEF.git
 sudo $WIFI_DIR/WEF/wef
 echo "alias wef='bash $WIFI_DIR/WEF/wef'" >> ~/.zshrc
 
+# Wi-Fi Hotspot
+cd $WIFI_DIR
+wget https://github.com/lakinduakash/linux-wifi-hotspot/releases/download/v4.7.2/linux-wifi-hotspot_4.7.2_amd64.deb
+chmod +x linux-wifi-hotspot_4.7.2_amd64.deb
+sudo apt -y install ./linux-wifi-hotspot_4.7.2_amd64.deb
+
 # Windows-Exploit-Suggester
 cd $INTERNALS_DIR
 git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester.git
