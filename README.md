@@ -122,6 +122,7 @@ Pywhisker
 Rcat
 Responder
 Ridenum
+RootAVD
 RottenPotatoNG
 RSMangler
 SCCMHunter
