@@ -11,6 +11,7 @@ wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/CustomKaliSetup/refs/head
 ### List of installed tools
 
 ```
+Adalanche
 Adidnsdump
 Amass
 Android-kit (adb, sqlite3)
