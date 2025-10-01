@@ -60,6 +60,11 @@ echo "alias adb='$MOBILE_DIR/platform-tools/adb'" >> ~/.zshrc
 echo "adb shell" >> ~/.zsh_history
 echo "adb devices" >> ~/.zsh_history
 
+# Android-unpinner
+cd $MOBILE_DIR
+pipx install git+https://github.com/mitmproxy/android-unpinner.git
+echo "android-unpinner all -f example.apk" >> ~/.zsh_history
+
 # Apktool
 cd $MOBILE_DIR
 wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
