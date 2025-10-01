@@ -808,6 +808,12 @@ git clone https://github.com/trustedsec/ridenum.git
 echo "alias ridenum='$INTERNALS_DIR/ridenum/ridenum.py'" >> ~/.zshrc
 echo "ridenum <server_ip> <start_rid> <end_rid> <optional_username> <optional_password> <optional_password_file> <optional_username_filename>" >> ~/.zsh_history
 
+# RootAVD
+cd $MOBILE_DIR
+git clone https://gitlab.com/newbit/rootAVD
+echo "alias rootAVD='$MOBILE_DIR/rootAVD/rootAVD.sh'" >> ~/.zshrc
+echo "rootAVD ListAllAVDs" >> ~/.zsh_history
+
 # RottenPotatoNG
 cd $INTERNALS_DIR
 git clone https://github.com/breenmachine/RottenPotatoNG.git
