@@ -14,6 +14,7 @@ wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/CustomKaliSetup/refs/head
 Adidnsdump
 Amass
 Android-kit (adb, sqlite3)
+Android-unpinner
 Apktool
 Aquatone
 Assetfinder
