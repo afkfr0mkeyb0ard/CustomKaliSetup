@@ -42,6 +42,7 @@ DonPAPI
 Drozer
 Eaphammer
 ExetoDll
+ExtractBitlockerKeys
 EyeWitness
 Ffuf
 FinalRecon
