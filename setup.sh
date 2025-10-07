@@ -251,6 +251,18 @@ echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >>
 cd $INTERNALS_DIR
 git clone --recursive https://github.com/hasherezade/exe_to_dll.git
 
+# ExtractBitlockerKeys
+cd $INTERNALS_DIR
+git clone https://github.com/p0dalirius/ExtractBitlockerKeys.git
+cd ExtractBitlockerKeys
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+pip3 install ldap3
+deactivate
+echo "alias ExtractBitlockerKeys='$INTERNALS_DIR/ExtractBitlockerKeys/bin/python3 $INTERNALS_DIR/ExtractBitlockerKeys/python/ExtractBitlockerKeys.py'" >> ~/.zshrc
+echo "ExtractBitlockerKeys -d \$DOMAIN -u \$USER -p \$PASS --dc-ip \$DC" >> ~/.zsh_history
+
 # EyeWitness
 cd $RECON_DIR
 git clone https://github.com/RedSiege/EyeWitness.git
