@@ -371,6 +371,17 @@ pipx install "git+https://github.com/cogiceo/GPOHound"
 cd $PASSCRACK_DIR
 wget https://github.com/hashcat/hashcat/releases/download/v6.2.6/hashcat-6.2.6.7z
 
+# HExHTTP
+cd $WEB_DIR
+git clone https://github.com/c0dejump/HExHTTP.git
+cd HExHTTP
+python3 -m venv .
+source bin/activate
+pip3 install .
+deactivate
+echo "alias hexhttp=$WEB_DIR/HExHTTP/bin/python3 $WEB_DIR/HExHTTP/hexhttp.py" >> ~/.zshrc
+echo "hexhttp -u 'https://target.com/' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Firefox/123.0' --burp '192.168.1.100:8080'" >> ~/.zsh_history
+
 # Hostapd-wpe
 cd $WIFI_DIR
 sudo apt-get -y install hostapd-wpe
