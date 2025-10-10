@@ -83,10 +83,10 @@ echo "apktool d test.apk" >> ~/.zsh_history
 
 # Aquatone
 cd $INTERNALS_DIR
-wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
-unzip -q aquatone_linux_amd64_1.7.0.zip aquatone
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip -O aquatone_linux.zip
+unzip -q aquatone_linux.zip aquatone
 chmod +x aquatone
-rm aquatone_linux_amd64_1.7.0.zip
+rm aquatone_linux.zip
 echo "alias aquatone='$INTERNALS_DIR/aquatone'" >> ~/.zshrc
 
 # Assetfinder
@@ -110,10 +110,11 @@ echo "alias autoswagger='$WEB_DIR/autoswagger/bin/python3 $WEB_DIR/autoswagger/a
 # Backup_dc_registry
 cd $INTERNALS_DIR
 git clone https://github.com/horizon3ai/backup_dc_registry
-echo "python reg.py user:pass@ip backup -path '\\192.168.1.210\shared\'" >> ~/.zsh_history
+echo "python3 reg.py \$USER:\$PASS@\$IP backup -path '\\\$KALI\shared\'" >> ~/.zsh_history
 
 # Bbot
 pipx install bbot
+echo "bbot -t domain.com -p subdomain-enum [-rf passive]" >> ~/.zsh_history
 
 # Bettercap
 cd $INTERNALS_DIR
@@ -124,7 +125,7 @@ echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 # BloodHound
 cd $INTERNALS_DIR
 pipx install bloodhound
-echo "bloodhound-python -u user -p password -d domain" >> ~/.zsh_history
+echo "bloodhound-python -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 
 # BloodHound-Legacy
 cd $INTERNALS_DIR
