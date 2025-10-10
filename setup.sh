@@ -145,6 +145,8 @@ wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.29/bloodyAD
 # BruteSubdomains
 cd $RECON_DIR
 git clone https://github.com/afkfr0mkeyb0ard/bruteSubdomains.git
+echo "alias bruteSubdomains='python3 $RECON_DIR/bruteSubdomains/bruteSubdomains.py'" >> ~/.zshrc
+echo "bruteSubdomains -d domain.com" >> ~/.zsh_history
 
 # BurpSuite
 cd $WEB_DIR
