@@ -66,6 +66,9 @@ rm platform-tools-latest-linux.zip
 echo "alias adb='$MOBILE_DIR/platform-tools/adb'" >> ~/.zshrc
 echo "adb shell" >> ~/.zsh_history
 echo "adb devices" >> ~/.zsh_history
+echo "adb install app.apk" >> ~/.zsh_history
+echo "adb shell pm list packages" >> ~/.zsh_history
+echo "adb shell settings put global http_proxy 192.168.1.100:8080" >> ~/.zsh_history
 
 # Android-unpinner
 cd $MOBILE_DIR
