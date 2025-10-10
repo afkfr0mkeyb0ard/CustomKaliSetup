@@ -50,13 +50,12 @@ echo "adidnsdump -u \$DOMAIN\\\$USER ldap://\$DC -r" >> ~/.zsh_history
 
 # Amass
 cd $RECON_DIR
-wget https://github.com/owasp-amass/amass/releases/download/v4.2.0/amass_Linux_amd64.zip
-unzip -q amass_Linux_amd64.zip amass_Linux_amd64/amass
-rm amass_Linux_amd64.zip
-mv amass_Linux_amd64/amass amass
-rm -r amass_Linux_amd64
-chmod +x amass
-echo "alias amass='$RECON_DIR/amass'" >> ~/.zshrc
+wget https://github.com/owasp-amass/amass/releases/download/v5.0.1/amass_linux_amd64.tar.gz -O amass.tar.gz
+tar -xzvf amass.tar.gz
+rm amass.tar.gz
+mv amass_linux_amd64 amass
+chmod +x amass/amass
+echo "alias amass='$RECON_DIR/amass/amass'" >> ~/.zshrc
 echo "amass -h" >> ~/.zsh_history
 
 # Android-kit (adb, sqlite3)
