@@ -59,6 +59,7 @@ GoRedOps
 Gowitness
 GPOHound
 Hashcat
+HExHTTP
 Hostapd-wpe
 Httpx
 Impacket
