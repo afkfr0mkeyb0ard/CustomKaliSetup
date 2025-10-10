@@ -129,18 +129,18 @@ echo "bloodhound-python -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 
 # BloodHound-Legacy
 cd $INTERNALS_DIR
-wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip
+wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip -O BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
 sudo apt-get -y install neo4j
-echo "alias bloodhound-gui='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound'" >> ~/.zshrc
+echo "alias bloodhound-gui='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound --no-sandbox'" >> ~/.zshrc
 echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
 echo "bloodhound-gui" >> ~/.zsh_history
 echo "neo4j" >> ~/.zsh_history
 
 # BloodyAD
 cd $INTERNALS_DIR
-wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.7/bloodyAD.exe
+wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.29/bloodyAD.exe -O bloodyAD.exe
 
 # BruteSubdomains
 cd $RECON_DIR
