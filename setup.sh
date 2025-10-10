@@ -38,14 +38,15 @@ sudo apt-get -y install golang-go
 
 # Adalanche
 cd $INTERNALS_DIR
-wget https://github.com/lkarlslund/Adalanche/releases/download/v2025.2.6/adalanche-linux-x64-v2025.2.6
-wget https://github.com/lkarlslund/Adalanche/releases/download/v2025.2.6/adalanche-collector-windows-x64-v2025.2.6.exe
-chmod +x adalanche-linux-x64-v2025.2.6
-echo "alias adalanche='$INTERNALS_DIR/adalanche-linux-x64-v2025.2.6'" >> ~/.zshrc
+wget https://github.com/lkarlslund/Adalanche/releases/download/v2025.2.6/adalanche-linux-x64-v2025.2.6 -O adalanche-linux-x64
+wget https://github.com/lkarlslund/Adalanche/releases/download/v2025.2.6/adalanche-collector-windows-x64-v2025.2.6.exe -O adalanche-collector-windows-x64
+chmod +x adalanche-linux-x64
+echo "alias adalanche='$INTERNALS_DIR/adalanche-linux-x64'" >> ~/.zshrc
 
 # Adidnsdump
 cd $INTERNALS_DIR
 pipx install git+https://github.com/dirkjanm/adidnsdump#egg=adidnsdump
+echo "adidnsdump -u \$DOMAIN\\\$USER ldap://\$DC -r" >> ~/.zsh_history
 
 # Amass
 cd $RECON_DIR
