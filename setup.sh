@@ -263,6 +263,15 @@ echo "ExtractBitlockerKeys -d \$DOMAIN -u \$USER -p \$PASS --dc-ip \$DC" >> ~/.z
 # EyeWitness
 cd $RECON_DIR
 git clone https://github.com/RedSiege/EyeWitness.git
+cd EyeWitness
+cd Python
+python3 -m venv .
+source bin/activate
+cd setup
+sh setup.sh
+deactivate
+echo "alias EyeWitness='$RECON_DIR/EyeWitness/Python/bin/python3 $RECON_DIR/EyeWitness/Python/EyeWitness.py'" >> ~/.zshrc
+echo "EyeWitness -f urls.txt --web" >> ~/.zsh_history
 
 # Ffuf
 cd $WEB_DIR
