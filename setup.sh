@@ -275,11 +275,11 @@ echo "EyeWitness -f urls.txt --web" >> ~/.zsh_history
 
 # Ffuf
 cd $WEB_DIR
-wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
-tar -xzf ffuf_2.1.0_linux_amd64.tar.gz
+wget https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz -O ffuf.tar.gz
+tar -xzf ffuf.tar.gz
 rm CHANGELOG.md LICENSE README.md
 chmod +x ffuf
-rm ffuf_2.1.0_linux_amd64.tar.gz
+rm ffuf.tar.gz
 echo "alias ffuf='$WEB_DIR/ffuf'" >> ~/.zshrc
 echo "ffuf -u 'https://domain.com/FUZZ' -w '/home/kali/web/PayloadEverything/Web/Discovery/Top_118K_paths.txt' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0' -r -c -p 0.1 -t 3 -mc all -fs 107 -replay-proxy 'http://127.0.0.1:8080' -debug-log ffuf_output.txt" >> ~/.zsh_history
 
@@ -305,6 +305,7 @@ echo "findADCS-scancerts 10.10.10.0/24" >> ~/.zsh_history
 # FindURLS
 cd $WEB_DIR
 git clone https://github.com/afkfr0mkeyb0ard/findURLS.git
+echo "alias findURLS='cd python3 $WEB_DIR/findURLS'" >> ~/.zshrc
 
 # Frida
 cd $MOBILE_DIR
@@ -323,11 +324,11 @@ echo "git-dumper http://website.com/.git output-dir" >> ~/.zsh_history
 
 # Gitleaks
 cd $RECON_DIR
-wget https://github.com/gitleaks/gitleaks/releases/download/v8.24.0/gitleaks_8.24.0_linux_x64.tar.gz
-tar -xzf gitleaks_8.24.0_linux_x64.tar.gz
+wget https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_linux_x64.tar.gz -O gitleaks.tar.gz
+tar -xzf gitleaks.tar.gz
 rm README.md
 rm LICENSE
-rm gitleaks_8.24.0_linux_x64.tar.gz
+rm gitleaks.tar.gz
 echo "alias gitleaks='$RECON_DIR/gitleaks'" >> ~/.zshrc
 
 # GMSADumper
