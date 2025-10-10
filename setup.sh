@@ -220,9 +220,9 @@ echo "creds search tomcat" >> ~/.zsh_history
 
 # Dex2Jar
 cd $MOBILE_DIR
-wget https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip
-unzip dex-tools-v2.4.zip
-rm dex-tools-v2.4.zip
+wget https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip -O dex-tools.zip
+unzip dex-tools.zip
+rm dex-tools.zip
 echo "alias dex2jar='$MOBILE_DIR/dex-tools-v2.4/d2j-dex2jar.sh'" >> ~/.zshrc
 echo "dex2jar app.apk" >> ~/.zsh_history
 
@@ -242,7 +242,7 @@ wget https://github.com/WithSecureLabs/drozer-agent/releases/download/3.1.0/droz
 cd $WIFI_DIR
 sudo apt-get -y install eaphammer
 echo "eaphammer --cert-wizard" >> ~/.zsh_history
-echo "eaphammer -i wlan0 --channel 4 --auth wpa-eap --essid CorpWifi --creds" >> ~/.zsh_history
+echo "eaphammer -i wlan0 --channel 1 --auth wpa-eap --essid MySSID --creds" >> ~/.zsh_history
 
 # ExetoDll
 cd $INTERNALS_DIR
