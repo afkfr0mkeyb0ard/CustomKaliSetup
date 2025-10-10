@@ -159,17 +159,14 @@ echo "alias install-burp='$WEB_DIR/Burp/BurpCommunity'" >> ~/.zshrc
 # Certipy
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy"
-echo "certipy find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222" >> ~/.zsh_history
-echo "certipy find -u 'svc_ldap@DOMAIN.local' -p 'pass123' -dc-ip 10.10.11.222 -vulnerable" >> ~/.zsh_history
+echo "certipy find -u '\$USER@\$DOMAIN' -p '\$PASS' -dc-ip \$PASS [-vulnerable]" >> ~/.zsh_history
 
 # Chisel
 cd $INTERNALS_DIR
-wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz
-wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz
-gzip -d chisel_1.10.1_windows_amd64.gz
-gzip -d chisel_1.10.1_linux_amd64.gz
-mv chisel_1.10.1_windows_amd64 chisel_windows
-mv chisel_1.10.1_linux_amd64 chisel_linux
+wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O chisel_windows.gz
+wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz -O chisel_linux.gz
+gzip -d chisel_windows.gz
+gzip -d chisel_linux.gz
 chmod +x chisel_linux
 echo "alias chisel='$INTERNALS_DIR/chisel_linux'" >> ~/.zshrc
 echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
@@ -193,13 +190,7 @@ echo "alias GcpPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/GC
 
 # Coercer
 cd $INTERNALS_DIR
-mkdir Coercer
-cd Coercer
-python3 -m venv .
-source bin/activate
-python3 -m pip install coercer
-deactivate
-echo "alias coercer='$INTERNALS_DIR/Coercer/bin/coercer'" >> ~/.zshrc
+pipx install git+https://github.com/p0dalirius/Coercer.git
 echo "coercer scan -t IP -u USER -p PASS -d DOMAIN -v" >> ~/.zsh_history
 echo "coercer coerce -l IP_LISTERNER -t IP_TARGET -u USER -p PASS -d DOMAINE -v" >> ~/.zsh_history
 
