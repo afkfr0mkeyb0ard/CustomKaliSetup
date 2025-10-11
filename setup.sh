@@ -494,12 +494,11 @@ echo "jwt_tool -C -d '/home/kali/web/PayloadEverything/Web/Jwt_keys.txt' <JWT>" 
 
 # Kerbrute
 cd $INTERNALS_DIR
-wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
-mv kerbrute_linux_amd64 kerbrute
+wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute
 chmod +x kerbrute
 echo "alias kerbrute='$INTERNALS_DIR/kerbrute'" >> ~/.zshrc
-echo "kerbrute userenum -d domain.local --dc <DC-IP> '/home/kali/web/PayloadEverything/Usernames/TOP_8M_usernames.txt'" >> ~/.zsh_history
-echo "kerbrute passwordspray -v -d domain.local 'domain_users' Password123" >> ~/.zsh_history
+echo "kerbrute userenum -d \$DOMAIN --dc \$DC '/home/kali/web/PayloadEverything/Usernames/TOP_8M_usernames.txt'" >> ~/.zsh_history
+echo "kerbrute passwordspray -v -d \$DOMAIN 'domain_users' Password123" >> ~/.zsh_history
 
 # KnockKnock
 cd $RECON_DIR
@@ -510,7 +509,7 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias knockknock='$RECON_DIR/KnockKnock/bin/python3 $RECON_DIR/KnockKnock/KnockKnock.py'" >> ~/.zshrc
-echo "knockknock -onedrive -i users.txt -d domain.local" >> ~/.zsh_history
+echo "knockknock -onedrive -i users.txt -d domain.com" >> ~/.zsh_history
 
 # Kraken
 cd $GENERAL_DIR
@@ -553,7 +552,7 @@ source bin/activate
 python3 -m pip install -r requirements_exact.txt
 deactivate
 echo "alias LdapRelayScan='$INTERNALS_DIR/LdapRelayScan/bin/python3 $INTERNALS_DIR/LdapRelayScan/LdapRelayScan.py'" >> ~/.zshrc
-echo "LdapRelayScan -method LDAPS -dc-ip 10.0.0.20" >> ~/.zsh_history
+echo "LdapRelayScan -method LDAPS -dc-ip \$DC" >> ~/.zsh_history
 
 # Ldapsearch-ad
 pipx install git+https://github.com/yaap7/ldapsearch-ad || echo "[-] Failed to install Ldapsearch-ad"
@@ -562,14 +561,14 @@ echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
 # Ldeep
 cd $INTERNALS_DIR
 pipx install ldeep
-echo "ldeep ldap -u <user> -p <password> -d <domain> -s ldap://<dc_ip> sccm" >> ~/.zsh_history
+echo "ldeep ldap -u \$USER -p \$PASS -d \$DOMAIN -s ldap://\$IP sccm" >> ~/.zsh_history
 
 # Magisk
 cd $MOBILE_DIR
 mkdir Magisk
 cd Magisk
-wget https://github.com/topjohnwu/Magisk/releases/download/canary-28103/app-debug.apk
-wget https://github.com/topjohnwu/Magisk/releases/download/canary-28103/app-release.apk
+wget https://github.com/topjohnwu/Magisk/releases/download/v30.4/app-debug.apk -O Magisk_app_debug.apk
+wget https://github.com/topjohnwu/Magisk/releases/download/v30.4/Magisk-v30.4.apk -O Magisk-v30.4.apk
 
 # MailSniper
 cd $RECON_DIR
