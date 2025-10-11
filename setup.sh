@@ -576,18 +576,19 @@ git clone https://github.com/dafthack/MailSniper.git
 
 # Malimite
 cd $MOBILE_DIR
-wget https://github.com/LaurieWired/Malimite/releases/download/1.1/Malimite-1-1.zip
-unzip -q Malimite-1-1.zip -d Malimite
-rm Malimite-1-1.zip
-echo "alias malimite='java -jar $MOBILE_DIR/Malimite/Malimite-1-1.jar'" >> ~/.zshrc
+wget https://github.com/LaurieWired/Malimite/releases/download/1.2/Malimite-1-2.zip -O Malimite.zip
+unzip -q Malimite.zip -d Malimite
+rm Malimite.zip
+echo "alias malimite='java -jar $MOBILE_DIR/Malimite/Malimite-1-2.jar'" >> ~/.zshrc
 
 # Manspider
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
-echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
-echo "manspider 10.10.10.0/24 -e ps1 -c SecureString pwd \$Pass -n -u USER -p PASS -d DOMAINE" >> ~/.zsh_history
+echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
+echo "manspider 10.10.10.0/24 -e ps1 -c SecureString pwd \$Pass -n -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
+echo "manspider 10.10.10.0/24 -e kdb kdbx -n -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 
 # Many-passwords (default credentials)
-cd $GENERAL_DIR
+cd $PASSCRACK_DIR
 git clone https://github.com/many-passwords/many-passwords.git
 
 # Mentalist
@@ -629,6 +630,8 @@ git clone https://github.com/worawit/MS17-010.git
 # MSOLSpray
 cd $RECON_DIR
 git clone https://github.com/MartinIngesen/MSOLSpray.git
+echo "alias MSOLSpray='python3 $RECON_DIR/MSOLSpray/MSOLSpray.py'" >> ~/.zshrc
+echo "MSOLSpray --userlist users.txt --password pass123" >> ~/.zsh_history
 
 # Mssqlrelay
 cd $INTERNALS_DIR
