@@ -636,11 +636,12 @@ echo "MSOLSpray --userlist users.txt --password pass123" >> ~/.zsh_history
 # Mssqlrelay
 cd $INTERNALS_DIR
 pipx install git+https://github.com/CompassSecurity/mssqlrelay.git
-echo "mssqlrelay checkall -scheme ldap -target domain.local -ns 10.0.1.100 -u user@domain.local -p pass123 -windows-auth" >> ~/.zsh_history
+echo "mssqlrelay checkall -scheme ldap -target \$IP -ns \$DC -u \$USER@\$DOMAIN -p \$PASS -windows-auth" >> ~/.zsh_history
 
 # Neo-reGeorg
 cd $INTERNALS_DIR
 git clone https://github.com/L-codes/Neo-reGeorg.git
+echo "alias Neo-reGeorg='python3 $INTERNALS_DIR/Neo-reGeorg/neoreg.py'" >> ~/.zshrc
 
 # Netcredz
 cd $INTERNALS_DIR
@@ -651,11 +652,13 @@ echo "netcredz -f capture.pcap" >> ~/.zsh_history
 # Netexec
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Pennyw0rth/NetExec || echo "[-] Failed to install Netexec"
-echo "netexec smb IP -u username -p password -d domain" >> ~/.zsh_history
+echo "netexec smb 192.168.0.0/24" >> ~/.zsh_history
+echo "netexec smb \$IP -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 
 # Nmap
 cd $INTERNALS_DIR
 sudo apt-get -y install nmap
+echo "nmap -p- -Pn -sV -oA nmap_result \$IP" >> ~/.zsh_history
 
 # Nomore403
 cd $WEB_DIR
