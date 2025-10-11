@@ -433,16 +433,16 @@ echo "export KRB5CCNAME=\$path_to_ticket.ccache" >> ~/.zsh_history
 # ItWasAllADream
 cd $INTERNALS_DIR
 pipx install git+https://github.com/byt3bl33d3r/ItWasAllADream || echo "[-] Failed to install ItWasAllADream"
-echo "itwasalladream -u user -p password -d domain 192.168.1.0/24" >> ~/.zsh_history
+echo "itwasalladream -u \$USER -p \$PASS -d \$DOMAIN 192.168.1.0/24" >> ~/.zsh_history
 
 # Jadx
 cd $MOBILE_DIR
-wget https://github.com/skylot/jadx/releases/download/v1.5.1/jadx-1.5.1.zip
+wget https://github.com/skylot/jadx/releases/download/v1.5.3/jadx-1.5.3.zip -O jadx.zip
 mkdir jadx
-mv jadx-1.5.1.zip ./jadx/jadx-1.5.1.zip
+mv jadx.zip jadx/jadx.zip
 cd jadx
-unzip jadx-1.5.1.zip
-rm jadx-1.5.1.zip
+unzip jadx.zip
+rm jadx.zip
 echo "alias jadx='$MOBILE_DIR/jadx/bin/jadx'" >> ~/.zshrc
 echo "alias jadx-gui='$MOBILE_DIR/jadx/bin/jadx-gui'" >> ~/.zshrc
 
