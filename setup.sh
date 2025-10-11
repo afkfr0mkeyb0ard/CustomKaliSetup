@@ -867,7 +867,7 @@ echo "responder -I eth0'" >> ~/.zsh_history
 cd $INTERNALS_DIR
 git clone https://github.com/trustedsec/ridenum.git
 echo "alias ridenum='$INTERNALS_DIR/ridenum/ridenum.py'" >> ~/.zshrc
-echo "ridenum <server_ip> <start_rid> <end_rid> <optional_username> <optional_password> <optional_password_file> <optional_username_filename>" >> ~/.zsh_history
+echo "ridenum \$IP 500 50000" >> ~/.zsh_history
 
 # RootAVD
 cd $MOBILE_DIR
@@ -886,7 +886,7 @@ echo "alias rsmangler='$PASSCRACK_DIR/RSMangler/rsmangler.rb'" >> ~/.zshrc
 
 # Rtl8812au
 cd $WIFI_DIR
-sudo apt-get -y install dkms bc mokutil build-essential libelf-dev linux-headers-`uname -r`
+sudo apt-get -y install dkms bc mokutil build-essential libelf-dev linux-headers-*-amd64
 git clone https://github.com/aircrack-ng/rtl8812au.git
 #sudo apt-get update
 #sudo apt-get install dkms bc mokutil build-essential libelf-dev linux-headers-`uname -r`
@@ -895,6 +895,9 @@ git clone https://github.com/aircrack-ng/rtl8812au.git
 #cd rtl8812au
 #sudo make dkms_install
 #reboot
+
+# Rusthound
+# TODO
 
 # SCCMHunter
 cd $INTERNALS_DIR
@@ -910,9 +913,9 @@ wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rocky
 
 # SharpHound
 cd $INTERNALS_DIR
-wget https://github.com/SpecterOps/SharpHound/releases/download/v2.5.13/SharpHound-v2.5.13.zip
-unzip -q SharpHound-v2.5.13.zip -d SharpHound
-rm SharpHound-v2.5.13.zip
+wget https://github.com/SpecterOps/SharpHound/releases/download/v2.7.2/SharpHound_v2.7.2_windows_x86.zip -O SharpHound.zip
+unzip -q SharpHound.zip -d SharpHound
+rm SharpHound.zip
 
 # Shortscan
 cd $WEB_DIR
