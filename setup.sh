@@ -525,7 +525,7 @@ deactivate
 echo "alias kraken='$GENERAL_DIR/Kraken/bin/python3 $GENERAL_DIR/Kraken/kraken.py'" >> ~/.zshrc
 
 # Krb5-user
-sudo apt-get -y install krb5-user
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install krb5-user
 
 # Krbrelayx
 cd $INTERNALS_DIR
