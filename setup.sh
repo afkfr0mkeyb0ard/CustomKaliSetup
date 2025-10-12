@@ -862,7 +862,7 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias responder='$INTERNALS_DIR/Responder/bin/python3 $INTERNALS_DIR/Responder/Responder.py'" >> ~/.zshrc
-echo "responder -I eth0'" >> ~/.zsh_history
+echo "responder -I eth0" >> ~/.zsh_history
 
 # Ridenum
 cd $INTERNALS_DIR
