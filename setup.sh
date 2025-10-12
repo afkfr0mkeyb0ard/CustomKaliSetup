@@ -119,7 +119,7 @@ echo "bbot -t domain.com -p subdomain-enum [-rf passive]" >> ~/.zsh_history
 
 # Bettercap
 cd $INTERNALS_DIR
-sudo apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
