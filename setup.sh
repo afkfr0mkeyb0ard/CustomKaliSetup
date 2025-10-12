@@ -1027,9 +1027,9 @@ echo "trevorspray --recon evilcorp.com -u emails.txt --threads 3" >> ~/.zsh_hist
 
 # Trufflehog
 cd $RECON_DIR
-wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.20/trufflehog_3.88.20_linux_amd64.tar.gz
-tar -xzf trufflehog_3.88.20_linux_amd64.tar.gz
-rm README.md LICENSE trufflehog_3.88.20_linux_amd64.tar.gz
+wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.90.8/trufflehog_3.90.8_linux_amd64.tar.gz
+tar -xzf trufflehog_3.90.8_linux_amd64.tar.gz
+rm README.md LICENSE trufflehog_3.90.8_linux_amd64.tar.gz
 chmod +x trufflehog
 echo "alias trufflehog='$RECON_DIR/trufflehog'" >> ~/.zshrc
 echo "trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown" >> ~/.zsh_history
@@ -1065,7 +1065,7 @@ echo "alias web-cache-vulnerability-scanner='$WEB_DIR/wcvs'" >> ~/.zshrc
 cd $INTERNALS_DIR
 pipx install git+https://github.com/Hackndo/WebclientServiceScanner || echo "[-] Failed to install Webclientservicescanner"
 pipx ensurepath
-echo "webclientservicescanner domain.local/user:pass@10.10.10.0/24" >> ~/.zsh_history
+echo "webclientservicescanner \$DOMAIN/\$USER:\$PASS@10.10.10.0/24" >> ~/.zsh_history
 
 # Weevely3
 cd $WEB_DIR
