@@ -134,6 +134,7 @@ SecLists
 SharpHound
 ShortScan (IIS Tilde)
 Simplify
+Sliver
 Smuggler
 Smugglo
 Snoop
