@@ -932,6 +932,15 @@ wget https://github.com/CalebFenton/simplify/releases/download/v1.3.0/simplify-1
 echo "alias simplify='java -jar $MOBILE_DIR/Simplify/simplify-1.3.0.jar'" >> ~/.zshrc
 echo "simplify -v" >> ~/.zsh_history
 
+# Sliver
+cd $REDTEAM
+wget https://github.com/BishopFox/sliver/releases/download/v1.5.43/sliver-client_linux
+wget https://github.com/BishopFox/sliver/releases/download/v1.5.43/sliver-server_linux
+chmod +x sliver-client_linux
+chmod +x sliver-server_linux
+echo "alias sliver-server='$REDTEAM/sliver-server_linux'" >> ~/.zshrc
+echo "alias sliver-client='$REDTEAM/sliver-client_linux'" >> ~/.zshrc
+
 # Smuggler
 cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
