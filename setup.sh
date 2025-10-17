@@ -585,6 +585,7 @@ rm Malimite.zip
 echo "alias malimite='java -jar $MOBILE_DIR/Malimite/Malimite-1-2.jar'" >> ~/.zshrc
 
 # Manspider
+cd $INTERNALS_DIR
 pipx install git+https://github.com/blacklanternsecurity/MANSPIDER || echo "[-] Failed to install Manspider"
 echo "manspider 10.10.10.0/24 -e xml -c DefaultPassword cpassword -n -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 echo "manspider 10.10.10.0/24 -e ps1 -c SecureString pwd \$Pass -n -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
@@ -593,6 +594,14 @@ echo "manspider 10.10.10.0/24 -e kdb kdbx -n -u \$USER -p \$PASS -d \$DOMAIN" >>
 # Many-passwords (default credentials)
 cd $PASSCRACK_DIR
 git clone https://github.com/many-passwords/many-passwords.git
+
+# Mdk4
+cd $WIFI_DIR
+wget https://github.com/aircrack-ng/mdk4/releases/download/4.2/mdk4.zip
+unzip mdk4.zip
+rm mdk4.zip
+echo "alias mdk4='$WIFI_DIR/mdk4'" >> ~/.zshrc
+echo "mdk4 wlan0 p -t <hiddenBSSID> -f wordlist.txt" >> ~/.zsh_history
 
 # Mentalist
 cd $PASSCRACK_DIR
