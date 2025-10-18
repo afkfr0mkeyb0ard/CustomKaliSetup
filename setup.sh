@@ -166,6 +166,7 @@ echo "certipy cert -pfx user.pfx -nocert -out user.key" >> ~/.zsh_history
 
 # Chisel
 cd $INTERNALS_DIR
+#downloadlink=$(curl -s https://api.github.com/repos/jpillora/chisel/releases/latest | grep browser_download_url | grep "linux_amd64.gz" | cut -d '"' -f 4)
 wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O chisel_windows.gz
 wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz -O chisel_linux.gz
 gzip -d chisel_windows.gz
