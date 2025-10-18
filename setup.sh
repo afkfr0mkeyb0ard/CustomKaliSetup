@@ -1097,8 +1097,7 @@ echo "weevely3 <URL> <password> <cmd>" >> ~/.zsh_history
 # Wef
 cd $WIFI_DIR
 git clone https://github.com/D3Ext/WEF.git
-sudo $WIFI_DIR/WEF/wef
-echo "alias wef='bash $WIFI_DIR/WEF/wef'" >> ~/.zshrc
+echo "alias wef='sudo bash $WIFI_DIR/WEF/wef'" >> ~/.zshrc
 
 # Wi-Fi Hotspot
 cd $WIFI_DIR
