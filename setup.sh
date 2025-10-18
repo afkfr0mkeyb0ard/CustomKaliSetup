@@ -248,6 +248,11 @@ sudo apt-get -y install eaphammer
 echo "eaphammer --cert-wizard" >> ~/.zsh_history
 echo "eaphammer -i wlan0 --channel 1 --auth wpa-eap --essid MySSID --creds" >> ~/.zsh_history
 
+# Enum4linux-ng
+cd $INTERNALS_DIR
+pipx install git+https://github.com/cddmp/enum4linux-ng.git
+echo "enum4linux-ng -a -u '' -p '' \$IP" >> ~/.zsh_history
+
 # ExetoDll
 cd $INTERNALS_DIR
 git clone --recursive https://github.com/hasherezade/exe_to_dll.git
