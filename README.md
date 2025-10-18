@@ -41,6 +41,7 @@ Dex2Jar
 DonPAPI
 Drozer
 Eaphammer
+Enum4linux-ng
 ExetoDll
 ExtractBitlockerKeys
 EyeWitness
