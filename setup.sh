@@ -396,8 +396,8 @@ python3 -m venv .
 source bin/activate
 pip3 install .
 deactivate
-echo "alias hexhttp=$WEB_DIR/HExHTTP/bin/python3 $WEB_DIR/HExHTTP/hexhttp.py" >> ~/.zshrc
-echo "hexhttp -u 'https://target.com/' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Firefox/123.0' --burp '192.168.1.100:8080'" >> ~/.zsh_history
+echo "alias hexhttp='$WEB_DIR/HExHTTP/bin/python3 $WEB_DIR/HExHTTP/hexhttp.py'" >> ~/.zshrc
+echo "hexhttp -u 'https://target.com/' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Firefox/123.0' --burp 'http://192.168.1.100:8080'" >> ~/.zsh_history
 
 # Hostapd-wpe
 cd $WIFI_DIR
