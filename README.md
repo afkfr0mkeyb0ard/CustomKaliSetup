@@ -137,6 +137,7 @@ SharpHound
 ShortScan (IIS Tilde)
 Simplify
 Sliver
+Smbmap
 Smuggler
 Smugglo
 Snoop
