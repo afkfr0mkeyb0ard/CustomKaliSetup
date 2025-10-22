@@ -191,3 +191,9 @@ https://github.com/dirkjanm/CVE-2020-1472
 rtl8812au
 ```
 
+### Dependencies
+```
+Cargo
+Docker
+Golang
+```
