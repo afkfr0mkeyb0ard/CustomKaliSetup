@@ -32,6 +32,8 @@ sudo apt-get -y update
 sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 sudo apt-get -y install golang-go
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install docker.io
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
