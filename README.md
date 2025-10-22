@@ -146,6 +146,7 @@ Spiderfoot
 Spoofcheck
 SQLmap
 Swaks
+TargetedKerberoast
 TeamsEnum
 Testssl
 TheHarvester
