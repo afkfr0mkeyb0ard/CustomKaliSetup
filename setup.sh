@@ -1020,6 +1020,17 @@ tar -xzf swaks-20240103.0.tar.gz
 rm swaks-20240103.0.tar.gz
 echo "alias swaks='$RECON_DIR/swaks-20240103.0/swaks'" >> ~/.zshrc
 
+# TargetedKerberoast
+cd $INTERNALS_DIR
+git clone https://github.com/ShutdownRepo/targetedKerberoast.git
+cd targetedKerberoast
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias impacket-targetedKerberoast='$INTERNALS_DIR/targetedKerberoast/bin/python3 $INTERNALS_DIR/targetedKerberoast/targetedKerberoast.py'" >> ~/.zshrc
+echo "impacket-targetedKerberoast -v -d \$DOMAIN -u \$USER -p \$PASS" >> ~/.zsh_history
+
 # TeamsEnum
 cd $RECON_DIR
 git clone https://github.com/sse-secure-systems/TeamsEnum.git
