@@ -143,7 +143,13 @@ echo "neo4j" >> ~/.zsh_history
 
 # BloodyAD
 cd $INTERNALS_DIR
-wget https://github.com/CravateRouge/bloodyAD/releases/download/v2.1.29/bloodyAD.exe -O bloodyAD.exe
+git clone https://github.com/CravateRouge/bloodyAD.git
+cd bloodyAD
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias bloodyAD='$INTERNALS_DIR/bloodyAD/bin/python3 $INTERNALS_DIR/bloodyAD/bloodyAD.py'" >> ~/.zshrc
 
 # BruteSubdomains
 cd $RECON_DIR
