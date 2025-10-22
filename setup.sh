@@ -955,6 +955,11 @@ chmod +x sliver-server_linux
 echo "alias sliver-server='$REDTEAM/sliver-server_linux'" >> ~/.zshrc
 echo "alias sliver-client='$REDTEAM/sliver-client_linux'" >> ~/.zshrc
 
+# Smbmap
+#cd $INTERNALS_DIR
+#pipx install git+https://github.com/ShawnDEvans/smbmap.git
+echo "smbmap -u \$USER -p \$PASS -d \$DOMAIN -H \$IP" >> ~/.zsh_history
+
 # Smuggler
 cd $WEB_DIR
 git clone https://github.com/defparam/smuggler.git
