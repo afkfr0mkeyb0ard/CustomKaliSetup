@@ -32,9 +32,9 @@ sudo apt-get -y update
 sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 sudo apt-get -y install golang-go
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install docker.io
+sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
+sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
@@ -930,7 +930,10 @@ cd $WIFI_DIR
 #reboot
 
 # Rusthound
-# TODO
+cd $INTERNALS_DIR
+cargo install rusthound-ce
+echo "alias rusthound-ce='$HOME/.cargo/bin/rusthound-ce'" >> ~/.zshrc
+echo "rusthound-ce -d \$DOMAIN -u \$USER@\$DOMAIN -z" >> ~/.zsh_history
 
 # SCCMHunter
 cd $INTERNALS_DIR
