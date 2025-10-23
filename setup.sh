@@ -26,6 +26,8 @@ echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
+export DEBIAN_FRONTEND=noninteractive
+
 # Update
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 sudo apt-get -y update
