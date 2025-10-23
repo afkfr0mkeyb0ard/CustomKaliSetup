@@ -26,8 +26,6 @@ echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
-export DEBIAN_FRONTEND=noninteractive
-
 # Update
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 sudo apt-get -y update
@@ -42,7 +40,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo apt-get -y install cargo
+sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
@@ -130,7 +128,7 @@ echo "bbot -t domain.com -p subdomain-enum [-rf passive]" >> ~/.zsh_history
 
 # Bettercap
 cd $INTERNALS_DIR
-sudo apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
