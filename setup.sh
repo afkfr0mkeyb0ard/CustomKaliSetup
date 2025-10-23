@@ -26,6 +26,9 @@ echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
+# Autorestart services
+sudo sed -i 's/#\$nrconf{restart} = .*/$nrconf{restart} = "a";/' /etc/needrestart/needrestart.conf
+
 # Dependencies
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 sudo apt-get -y update
@@ -34,7 +37,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
+sudo apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
@@ -122,7 +125,7 @@ echo "bbot -t domain.com -p subdomain-enum [-rf passive]" >> ~/.zsh_history
 
 # Bettercap
 cd $INTERNALS_DIR
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+sudo apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
@@ -145,7 +148,7 @@ cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip -O BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install neo4j
+sudo apt-get -y install neo4j
 echo "alias bloodhound-legacy='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound --no-sandbox'" >> ~/.zshrc
 echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
 echo "bloodhound-legacy" >> ~/.zsh_history
@@ -549,7 +552,7 @@ deactivate
 echo "alias kraken='$GENERAL_DIR/Kraken/bin/python3 $GENERAL_DIR/Kraken/kraken.py'" >> ~/.zshrc
 
 # Krb5-user
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install krb5-user
+sudo apt-get -y install krb5-user
 
 # Krbrelayx
 cd $INTERNALS_DIR
