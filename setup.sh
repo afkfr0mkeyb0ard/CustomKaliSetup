@@ -26,13 +26,15 @@ echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
+# Update
+sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
+sudo apt-get -y update
+
 # Autorestart services
 sudo apt-get -y install needrestart
 sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 
 # Dependencies
-sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
-sudo apt-get -y update
 sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 sudo apt-get -y install golang-go
