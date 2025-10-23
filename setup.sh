@@ -27,7 +27,8 @@ echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
 # Autorestart services
-sudo sed -i 's/#\$nrconf{restart} = .*/$nrconf{restart} = "a";/' /etc/needrestart/needrestart.conf
+echo "NEEDRESTART_MODE=a" | sudo tee -a /etc/environment
+source /etc/environment
 
 # Dependencies
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
