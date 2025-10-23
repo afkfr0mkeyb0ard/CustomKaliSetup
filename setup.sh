@@ -33,6 +33,7 @@ sudo apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 sudo apt-get -y install golang-go
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install docker.io
+sudo apt-get -y install docker-compose
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
 
 #############################################################
@@ -130,15 +131,24 @@ cd $INTERNALS_DIR
 pipx install bloodhound
 echo "bloodhound-python -u \$USER -p \$PASS -d \$DOMAIN" >> ~/.zsh_history
 
+# BloodHound-CE
+cd $INTERNALS_DIR
+wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz
+tar -xvzf bloodhound-cli-linux-amd64.tar.gz
+rm bloodhound-cli-linux-amd64.tar.gz
+sudo ./bloodhound-cli install
+echo "alias bloodhound-ce='sudo $INTERNALS_DIR/bloodhound-cli up && echo \"URL: http://127.0.0.1:8080\"'" >> ~/.zshrc
+echo "alias bloodhound-ce-rstpwd='sudo $INTERNALS_DIR/bloodhound-cli resetpwd'" >> ~/.zshrc
+
 # BloodHound-Legacy
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip -O BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
 sudo apt-get -y install neo4j
-echo "alias bloodhound-gui='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound --no-sandbox'" >> ~/.zshrc
+echo "alias bloodhound-legacy='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound --no-sandbox'" >> ~/.zshrc
 echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
-echo "bloodhound-gui" >> ~/.zsh_history
+echo "bloodhound-legacy" >> ~/.zsh_history
 echo "neo4j" >> ~/.zsh_history
 
 # BloodyAD
