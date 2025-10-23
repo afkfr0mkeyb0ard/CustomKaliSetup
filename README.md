@@ -1,5 +1,5 @@
 # CustomKaliSetup
-One script to setup an offensive Linux machine (Debian, Kali) (~18Go).
+One script to setup an offensive Linux machine (Debian, Kali) (~20Go).
 
 **All tools are intended for legal and educational use only, use at your own risk.**
 
