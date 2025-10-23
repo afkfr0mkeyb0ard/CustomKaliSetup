@@ -133,6 +133,7 @@ Ridenum
 RootAVD
 RottenPotatoNG
 RSMangler
+RustHound
 SCCMHunter
 SecLists
 SharpHound
