@@ -24,6 +24,8 @@ Backup_dc_registry
 BBot
 Bettercap
 BloodHound
+BloodHound-CE
+BloodHound-Legacy
 BloodyAD
 BruteSubdomains
 Burpsuite
@@ -196,5 +198,7 @@ rtl8812au
 ```
 Cargo
 Docker
+Docker-compose
 Golang
+Python3 (+pipx)
 ```
