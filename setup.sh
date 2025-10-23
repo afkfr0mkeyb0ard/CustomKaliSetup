@@ -34,7 +34,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get -y install cargo
+sudo NEEDRESTART_MODE=a apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
