@@ -34,7 +34,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo NEEDRESTART_MODE=a apt-get -y install cargo
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
@@ -145,7 +145,7 @@ cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip -O BloodHound-linux-x64.zip
 unzip -q BloodHound-linux-x64.zip
 rm BloodHound-linux-x64.zip
-sudo apt-get -y install neo4j
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install neo4j
 echo "alias bloodhound-legacy='$INTERNALS_DIR/BloodHound-linux-x64/BloodHound --no-sandbox'" >> ~/.zshrc
 echo "alias neo4j='sudo /usr/bin/neo4j console'" >> ~/.zshrc
 echo "bloodhound-legacy" >> ~/.zsh_history
