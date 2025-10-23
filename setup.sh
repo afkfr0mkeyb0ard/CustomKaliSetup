@@ -26,13 +26,16 @@ echo "alias tools_redteam='cd $BASE_DIR/redteam'" >> ~/.zshrc
 echo "alias tools_web='cd $BASE_DIR/web'" >> ~/.zshrc
 echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 
+# Change sudo timeout
+echo "Defaults        timestamp_timeout=60" | sudo tee -a /etc/sudoers
+
 # Update
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 sudo apt-get -y update
 
 # Autorestart services
-sudo apt-get -y install needrestart
-sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
+#sudo apt-get -y install needrestart
+#sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 
 # Dependencies
 sudo apt-get -y install pipx git
@@ -40,7 +43,7 @@ pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" &
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
+sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
@@ -128,7 +131,7 @@ echo "bbot -t domain.com -p subdomain-enum [-rf passive]" >> ~/.zsh_history
 
 # Bettercap
 cd $INTERNALS_DIR
-sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
@@ -555,7 +558,7 @@ deactivate
 echo "alias kraken='$GENERAL_DIR/Kraken/bin/python3 $GENERAL_DIR/Kraken/kraken.py'" >> ~/.zshrc
 
 # Krb5-user
-sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install krb5-user
+sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install krb5-user
 
 # Krbrelayx
 cd $INTERNALS_DIR
