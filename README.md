@@ -127,6 +127,7 @@ Probable-Wordlists
 Pypycatz
 Pyscan
 Pywhisker
+Pywsus
 Rcat
 Responder
 Ridenum
