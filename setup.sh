@@ -135,6 +135,11 @@ sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
 
+# Binwalk
+cd $GENERAL_DIR
+sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libfontconfig1-dev liblzma-dev
+cargo install binwalk
+
 # BloodHound
 cd $INTERNALS_DIR
 pipx install bloodhound
