@@ -23,6 +23,7 @@ Autoswagger
 Backup_dc_registry
 BBot
 Bettercap
+Binwalk
 BloodHound
 BloodHound-CE
 BloodHound-Legacy
