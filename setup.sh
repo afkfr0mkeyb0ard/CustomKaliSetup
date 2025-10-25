@@ -333,7 +333,7 @@ source bin/activate
 pip3 install -r requirements.txt
 deactivate
 echo "alias finalrecon='$RECON_DIR/FinalRecon/bin/python3 $RECON_DIR/FinalRecon/finalrecon.py'" >> ~/.zshrc
-echo "ffuf -u 'finalrecon --full --url https://example.com" >> ~/.zsh_history
+echo "finalrecon --full --url https://example.com" >> ~/.zsh_history
 
 # FindADCS
 cd $INTERNALS_DIR
