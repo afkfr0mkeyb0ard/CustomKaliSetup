@@ -56,6 +56,7 @@ Frida
 GenUsernames
 Git-dumper
 Gitleaks
+Gmapsapiscanner
 GMSADumper
 Go-secdump
 GoMapEnum
