@@ -34,8 +34,8 @@ sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/ka
 sudo apt-get -y update
 
 # Autorestart services
-#sudo apt-get -y install needrestart
-#sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
+sudo apt-get -y install needrestart
+sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 
 # Dependencies
 sudo apt-get -y install pipx git
