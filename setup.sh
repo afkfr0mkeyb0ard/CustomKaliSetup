@@ -373,6 +373,11 @@ rm LICENSE
 rm gitleaks.tar.gz
 echo "alias gitleaks='$RECON_DIR/gitleaks'" >> ~/.zshrc
 
+# Gmapsapiscanner
+cd $WEB_DIR
+pipx install git+https://github.com/ozguralp/gmapsapiscanner
+echo "gmapsapiscanner --api-key KEY" >> ~/.zsh_history
+
 # GMSADumper
 cd $INTERNALS_DIR
 git clone https://github.com/micahvandeusen/gMSADumper.git
