@@ -36,6 +36,7 @@ sudo apt-get -y update
 # Autorestart services
 sudo apt-get -y install needrestart
 sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
+sudo sed -i "s/#NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/" /etc/needrestart/notify.conf
 
 # Dependencies
 sudo apt-get -y install pipx git
