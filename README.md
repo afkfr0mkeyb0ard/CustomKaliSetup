@@ -41,6 +41,7 @@ Crowbar
 CsFalconUninstaller
 DefaultCreds
 Dex2Jar
+Dnscan
 DonPAPI
 Drozer
 Eaphammer
