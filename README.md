@@ -77,6 +77,7 @@ Jwt-hack
 JWT-Key-Recovery
 Jwt-tools
 Kerbrute
+Knockpy
 KnockKnock
 Kraken
 Krb5-user
