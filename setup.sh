@@ -557,6 +557,11 @@ echo "alias kerbrute='$INTERNALS_DIR/kerbrute'" >> ~/.zshrc
 echo "kerbrute userenum -d \$DOMAIN --dc \$DC '/home/kali/web/PayloadEverything/Usernames/TOP_8M_usernames.txt'" >> ~/.zsh_history
 echo "kerbrute passwordspray -v -d \$DOMAIN 'domain_users' Password123" >> ~/.zsh_history
 
+# Knockpy
+cd $RECON_DIR
+pipx install git+https://github.com/guelfoweb/knock.git
+echo "knockpy -d domain.com --recon" >> ~/.zsh_history
+
 # KnockKnock
 cd $RECON_DIR
 git clone https://github.com/waffl3ss/KnockKnock.git
