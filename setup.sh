@@ -263,6 +263,16 @@ rm dex-tools.zip
 echo "alias dex2jar='$MOBILE_DIR/dex-tools-v2.4/d2j-dex2jar.sh'" >> ~/.zshrc
 echo "dex2jar app.apk" >> ~/.zsh_history
 
+# Dnscan
+cd $RECON_DIR
+git clone https://github.com/rbsec/dnscan.git
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias dnscan='$RECON_DIR/dnscan/bin/python3 $RECON_DIR/dnscan/dnscan.py'" >> ~/.zshrc
+echo "dnscan -d domain.com" >> ~/.zsh_history
+
 # DonPAPI
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
