@@ -29,6 +29,9 @@ echo "alias tools_wifi='cd $BASE_DIR/wifi'" >> ~/.zshrc
 # Change sudo timeout
 echo "Defaults        timestamp_timeout=60" | sudo tee -a /etc/sudoers
 
+# Add alias to add an env variable to the .zshrc
+echo 'alias addenv="function _addenv(){ echo export \$1=\"\$2\" >> ~/.zshrc && source ~/.zshrc; }; _addenv"' >> ~/.zshrc && source ~/.zshrc
+
 # Update
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 sudo apt-get -y update
