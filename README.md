@@ -141,6 +141,7 @@ RSMangler
 RustHound
 SCCMHunter
 SecLists
+ShareHound
 SharpHound
 ShortScan (IIS Tilde)
 Simplify
