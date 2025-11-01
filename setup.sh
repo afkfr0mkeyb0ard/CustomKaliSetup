@@ -998,6 +998,10 @@ cd SecLists
 cd Passwords
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
+# ShareHound
+cd $INTERNALS_DIR
+pipx install git+ https://github.com/p0dalirius/ShareHound.git
+
 # SharpHound
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/SharpHound/releases/download/v2.7.2/SharpHound_v2.7.2_windows_x86.zip -O SharpHound.zip
