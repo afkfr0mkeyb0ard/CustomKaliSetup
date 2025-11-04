@@ -19,6 +19,7 @@ Android-unpinner
 Apktool
 Aquatone
 Assetfinder
+Autobloody
 Autoswagger
 Backup_dc_registry
 BBot
