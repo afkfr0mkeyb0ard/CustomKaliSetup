@@ -114,6 +114,11 @@ rm assetfinder-linux-amd64-0.1.1.tgz
 echo "alias assetfinder='$RECON_DIR/assetfinder'" >> ~/.zshrc
 echo "assetfinder domain.com" >> ~/.zsh_history
 
+# Autobloody
+cd $INTERNALS_DIR
+pipx install autobloody
+echo "autobloody -p 'Password123!' --host 192.168.10.2 -dp 'neo4jP@ss' -ds 'JOHN.DOE@BLOODY.LOCAL' -dt 'BLOODY.LOCAL'" >> ~/.zsh_history
+
 # Autoswagger
 cd $WEB_DIR
 git clone https://github.com/intruder-io/autoswagger.git
