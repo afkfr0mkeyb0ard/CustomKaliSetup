@@ -365,7 +365,7 @@ echo "findADCS-scancerts 10.10.10.0/24" >> ~/.zsh_history
 # FindURLS
 cd $WEB_DIR
 git clone https://github.com/afkfr0mkeyb0ard/findURLS.git
-echo "alias findURLS='cd python3 $WEB_DIR/findURLS'" >> ~/.zshrc
+echo "alias findURLS='python3 $WEB_DIR/findURLS/findUrls.py'" >> ~/.zshrc
 
 # Frida
 cd $MOBILE_DIR
