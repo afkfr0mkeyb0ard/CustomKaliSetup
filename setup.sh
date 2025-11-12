@@ -341,7 +341,7 @@ rm CHANGELOG.md LICENSE README.md
 chmod +x ffuf
 rm ffuf.tar.gz
 echo "alias ffuf='$WEB_DIR/ffuf'" >> ~/.zshrc
-echo "ffuf -u 'https://domain.com/FUZZ' -w '/home/kali/web/PayloadEverything/Web/Discovery/Top_118K_paths.txt' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0' -r -c -p 0.1 -t 3 -mc all -fs 107 -replay-proxy 'http://127.0.0.1:8080' -debug-log ffuf_output.txt" >> ~/.zsh_history
+echo "ffuf -u 'https://domain.com/FUZZ' -w '$WEB_DIR/PayloadEverything/Web/Discovery/Top_118K_paths.txt' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0' -r -c -p 0.1 -t 3 -mc all -debug-log ffuf_debug.txt -o ffuf_output.html -of html -replay-proxy 'http://127.0.0.1:8080'" >> ~/.zsh_history
 
 # FinalRecon
 cd $RECON_DIR
