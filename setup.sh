@@ -143,6 +143,7 @@ cd $INTERNALS_DIR
 sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 go install github.com/bettercap/bettercap@latest
 echo "alias bettercap='sudo ~/go/bin/bettercap'" >> ~/.zshrc
+echo "bettercap -iface eth0 -eval 'set http.proxy.sslstrip true; set net.sniff.verbose true; set arp.spoof.fullduplex true; set arp.spoof.internal true; set net.sniff.verbose false; net.recon on; net.probe on; arp.spoof on; http.proxy on; net.sniff on'" >> ~/.zsh_history
 
 # Binwalk
 cd $GENERAL_DIR
