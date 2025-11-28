@@ -147,6 +147,7 @@ SharpHound
 ShortScan (IIS Tilde)
 Simplify
 Sliver
+Smbclient-ng
 Smbmap
 Smuggler
 Smugglo
