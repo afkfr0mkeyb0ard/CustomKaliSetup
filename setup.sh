@@ -1037,6 +1037,10 @@ chmod +x sliver-server_linux
 echo "alias sliver-server='$REDTEAM/sliver-server_linux'" >> ~/.zshrc
 echo "alias sliver-client='$REDTEAM/sliver-client_linux'" >> ~/.zshrc
 
+# Smbclientng
+cd $INTERNALS_DIR
+pipx install smbclientng
+
 # Smbmap
 #cd $INTERNALS_DIR
 #pipx install git+https://github.com/ShawnDEvans/smbmap.git
