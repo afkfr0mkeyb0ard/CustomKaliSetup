@@ -275,6 +275,7 @@ echo "dex2jar app.apk" >> ~/.zsh_history
 # Dnscan
 cd $RECON_DIR
 git clone https://github.com/rbsec/dnscan.git
+cd dnscan
 python3 -m venv .
 source bin/activate
 pip3 install -r requirements.txt
