@@ -708,6 +708,10 @@ echo "monolith https://www.google.com -o %title%.%timestamp%.html" >> ~/.zsh_his
 cd $INTERNALS_DIR
 git clone https://github.com/worawit/MS17-010.git
 
+# Msldap
+cd $INTERNALS_DIR
+pipx install git+https://github.com/skelsec/msldap.git
+
 # MSOLSpray
 cd $RECON_DIR
 git clone https://github.com/MartinIngesen/MSOLSpray.git
