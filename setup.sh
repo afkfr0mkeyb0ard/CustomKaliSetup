@@ -635,6 +635,25 @@ cd $INTERNALS_DIR
 pipx install ldeep
 echo "ldeep ldap -u \$USER -p \$PASS -d \$DOMAIN -s ldap://\$DC all" >> ~/.zsh_history
 
+# Ligolo-ng
+cd $INTERNALS_DIR
+wget https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_agent_0.8.2_linux_amd64.tar.gz
+tar -xzf ligolo-ng_agent_0.8.2_linux_amd64.tar.gz agent
+mv agent ligolo-ng-agent-linux
+rm ligolo-ng_agent_0.8.2_linux_amd64.tar.gz
+wget https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_agent_0.8.2_windows_amd64.zip
+unzip ligolo-ng_agent_0.8.2_windows_amd64.zip agent.exe
+mv agent.exe ligolo-ng-agent-windows
+rm ligolo-ng_agent_0.8.2_windows_amd64.zip
+wget https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_proxy_0.8.2_linux_amd64.tar.gz
+tar -xzf ligolo-ng_proxy_0.8.2_linux_amd64.tar.gz proxy
+mv proxy ligolo-ng-proxy-linux
+rm ligolo-ng_proxy_0.8.2_linux_amd64.tar.gz
+wget https://github.com/nicocha30/ligolo-ng/releases/download/v0.8.2/ligolo-ng_proxy_0.8.2_windows_amd64.zip
+unzip ligolo-ng_proxy_0.8.2_windows_amd64.zip proxy.exe
+mv proxy.exe ligolo-ng-proxy-windows
+rm ligolo-ng_proxy_0.8.2_windows_amd64.zip
+
 # Magisk
 cd $MOBILE_DIR
 mkdir Magisk
