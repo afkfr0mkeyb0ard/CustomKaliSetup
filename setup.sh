@@ -633,7 +633,7 @@ echo "ldapsearch-ad.py -l 10.0.0.1 -t info" >> ~/.zsh_history
 # Ldeep
 cd $INTERNALS_DIR
 pipx install ldeep
-echo "ldeep ldap -u \$USER -p \$PASS -d \$DOMAIN -s ldap://\$IP sccm" >> ~/.zsh_history
+echo "ldeep ldap -u \$USER -p \$PASS -d \$DOMAIN -s ldap://\$DC all" >> ~/.zsh_history
 
 # Magisk
 cd $MOBILE_DIR
