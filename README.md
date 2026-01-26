@@ -87,6 +87,7 @@ Ldapnomnom
 LdapRelayScan
 Ldapsearch-ad
 Ldeep
+Ligolo-ng
 Magisk
 MailSniper
 Malimite
