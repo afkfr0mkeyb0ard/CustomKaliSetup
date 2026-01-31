@@ -1016,6 +1016,16 @@ cargo install rusthound-ce
 echo "alias rusthound-ce='$HOME/.cargo/bin/rusthound-ce'" >> ~/.zshrc
 echo "rusthound-ce -d \$DOMAIN -u \$USER@\$DOMAIN -z" >> ~/.zsh_history
 
+# Rustscan
+cd $INTERNALS_DIR
+wget https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-linux-rustscan.tar.gz.zip
+unzip x86_64-linux-rustscan.tar.gz.zip
+tar -xvf x86_64-linux-rustscan.tar.gz
+rm x86_64-linux-rustscan.tar.gz
+rm x86_64-linux-rustscan.tar.gz.zip
+echo "alias rustscan='$INTERNALS_DIR/rustscan'" >> ~/.zshrc
+echo "rustscan -a 192.168.0.0/24" >> ~/.zsh_history
+
 # SCCMHunter
 cd $INTERNALS_DIR
 pipx install git+https://github.com/garrettfoster13/sccmhunter/
