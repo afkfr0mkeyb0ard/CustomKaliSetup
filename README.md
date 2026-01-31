@@ -142,6 +142,7 @@ RootAVD
 RottenPotatoNG
 RSMangler
 RustHound
+Rustscan
 SCCMHunter
 SecLists
 ShareHound
