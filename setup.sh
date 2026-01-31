@@ -934,7 +934,7 @@ git clone https://github.com/berzerk0/Probable-Wordlists.git
 
 # Pypycatz
 pipx install git+https://github.com/skelsec/pypykatz || echo "[-] Failed to install Pypycatz"
-echo "alias pypykatz='pypykatz lsa minidump lsass.dmp'" >> ~/.zshrc
+echo "pypykatz lsa minidump lsass.dmp" >> ~/.zsh_history
 
 # PyScan
 cd $INTERNALS_DIR
