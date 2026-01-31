@@ -286,7 +286,7 @@ echo "dnscan -d domain.com" >> ~/.zsh_history
 # DonPAPI
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
-echo "donpapi collect -u username -p password -d domain" >> ~/.zsh_history
+echo "donpapi collect -u \$USER -p \$PASSWORD -d \$DOMAIN -t \$IP" >> ~/.zsh_history
 
 # Drozer
 cd $MOBILE_DIR
