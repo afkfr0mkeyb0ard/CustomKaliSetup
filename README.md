@@ -47,6 +47,7 @@ DonPAPI
 Drozer
 Eaphammer
 Enum4linux-ng
+Evil-winrm
 ExetoDll
 ExtractBitlockerKeys
 EyeWitness
