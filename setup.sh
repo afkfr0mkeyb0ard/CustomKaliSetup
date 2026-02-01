@@ -306,6 +306,11 @@ cd $INTERNALS_DIR
 pipx install git+https://github.com/cddmp/enum4linux-ng.git
 echo "enum4linux-ng -a -u '' -p '' \$IP" >> ~/.zsh_history
 
+# Evil-winrm
+#cd $INTERNALS_DIR
+#git clone https://github.com/Hackplayers/evil-winrm.git
+echo "evil-winrm -u '\$USER' -p '\$PASSWORD' -i \$IP -l" >> ~/.zsh_history
+
 # ExetoDll
 cd $INTERNALS_DIR
 git clone --recursive https://github.com/hasherezade/exe_to_dll.git
