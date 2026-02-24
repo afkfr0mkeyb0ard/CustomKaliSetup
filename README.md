@@ -16,6 +16,7 @@ Adidnsdump
 Amass
 Android-kit (adb, sqlite3)
 Android-unpinner
+Apk2url
 Apktool
 Aquatone
 Assetfinder
