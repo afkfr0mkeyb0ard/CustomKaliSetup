@@ -92,6 +92,12 @@ cd $MOBILE_DIR
 pipx install git+https://github.com/mitmproxy/android-unpinner.git
 echo "android-unpinner all -f example.apk" >> ~/.zsh_history
 
+# Apk2url
+cd $MOBILE_DIR
+git clone https://github.com/n0mi1k/apk2url.git
+echo "alias apk2url='$MOBILE_DIR/apk2url/apk2url.sh'" >> ~/.zshrc
+echo "apk2url app.apk" >> ~/.zsh_history
+
 # Apktool
 cd $MOBILE_DIR
 wget https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
