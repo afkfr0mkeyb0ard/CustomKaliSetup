@@ -289,6 +289,10 @@ deactivate
 echo "alias dnscan='$RECON_DIR/dnscan/bin/python3 $RECON_DIR/dnscan/dnscan.py'" >> ~/.zshrc
 echo "dnscan -d domain.com" >> ~/.zsh_history
 
+# Dnschef-ng
+pipx install git+https://github.com/byt3bl33d3r/dnschef-ng.git
+echo "dnschef-ng --logfile log_dnschef_\$(date +\%F_\%H-\%M-\%S).txt -i 0.0.0.0 --fakedomains wpad.domain.local --fakeip \$KALI_IP" >> ~/.zsh_history
+
 # DonPAPI
 cd $INTERNALS_DIR
 pipx install git+https://github.com/login-securite/DonPAPI.git || echo "[-] Failed to install DonPAPI"
