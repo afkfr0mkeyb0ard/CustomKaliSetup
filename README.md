@@ -44,6 +44,7 @@ CsFalconUninstaller
 DefaultCreds
 Dex2Jar
 Dnscan
+Dnschef-ng
 DonPAPI
 Drozer
 Eaphammer
