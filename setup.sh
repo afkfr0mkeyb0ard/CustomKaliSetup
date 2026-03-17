@@ -1018,9 +1018,9 @@ echo "alias rsmangler='$PASSCRACK_DIR/RSMangler/rsmangler.rb'" >> ~/.zshrc
 cd $WIFI_DIR
 #git clone https://github.com/aircrack-ng/rtl8812au.git
 #sudo apt-get update
-#sudo apt-get -y install dkms bc mokutil build-essential libelf-dev linux-headers-*-amd64
+#sudo apt-get -y install dkms bc mokutil linux-headers-generic build-essential libelf-dev
 #reboot
-#git clone https://github.com/aircrack-ng/rtl8812au.git
+#git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
 #cd rtl8812au
 #sudo make dkms_install
 #reboot
