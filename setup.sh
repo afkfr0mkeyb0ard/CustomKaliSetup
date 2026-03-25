@@ -41,13 +41,18 @@ sudo apt-get -y install needrestart
 sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 sudo sed -i "s/#NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/" /etc/needrestart/notify.conf
 
+# Export variables to prevent service restart popup
+export NEEDRESTART_MODE=a
+export NEEDRESTART_NOTIFY=0
+export DEBIAN_FRONTEND=noninteractive
+
 # Dependencies
-sudo apt-get -y install pipx git
+sudo -E apt-get -y install pipx git
 pipx ensurepath || (echo "[-] Please install pipx first with apt install pipx" && exit 1)
 sudo apt-get -y install golang-go
 sudo apt-get -y install docker.io
 sudo apt-get -y install docker-compose
-sudo NEEDRESTART_MODE=a NEEDRESTART_NOTIFY=0 DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
+sudo apt-get -y install cargo
 
 #############################################################
 ### Installation of the tools
