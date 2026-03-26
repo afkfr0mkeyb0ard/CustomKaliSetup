@@ -576,7 +576,7 @@ pip3 install -r requirements.txt
 deactivate
 echo "alias jwt_tool='$WEB_DIR/jwt_tool/bin/python3 $WEB_DIR/jwt_tool/jwt_tool.py'" >> ~/.zshrc
 echo "jwt_tool <JWT>" >> ~/.zsh_history
-echo "jwt_tool -t 'https://www.example.com/' -rc 'jwt=<JWT>;anothercookie=test' -M pb" >> ~/.zsh_history
+echo "jwt_tool -t 'https://<yourURL>' -rh 'Authorization: Bearer <jwt>' -M at -v -np" >> ~/.zsh_history
 echo "jwt_tool -C -d '/home/kali/web/PayloadEverything/Web/Jwt_keys.txt' <JWT>" >> ~/.zsh_history
 
 # Kerbrute
