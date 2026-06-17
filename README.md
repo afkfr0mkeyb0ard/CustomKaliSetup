@@ -28,6 +28,7 @@ Bettercap
 Binwalk
 BloodHound
 BloodHound-CE
+Bloodhoundce-resources
 BloodHound-Legacy
 BloodyAD
 BruteSubdomains
