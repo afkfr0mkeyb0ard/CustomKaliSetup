@@ -1319,3 +1319,14 @@ echo "alias proxyshell-rce='$INTERNALS_DIR/proxyshell-poc/bin/python3 $INTERNALS
 # ZeroLogon
 cd $INTERNALS_DIR
 git clone https://github.com/dirkjanm/CVE-2020-1472.git Zerologon
+
+#############################################################
+### Installation of utils scripts
+#############################################################
+
+# Record your terminal activity
+cd $HOME
+wget https://raw.githubusercontent.com/afkfr0mkeyb0ard/LinuxScripts/refs/heads/main/record.sh
+chmod +x record.sh
+
+echo "alias record='$HOME/record.sh'" >> ~/.zshrc
