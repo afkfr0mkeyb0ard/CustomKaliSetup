@@ -34,10 +34,10 @@ echo "Defaults        timestamp_timeout=-1" | sudo tee -a /etc/sudoers
 
 # Update
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
-sudo apt-get -y update
+sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y update
 
 # Autorestart services
-sudo apt-get -y install needrestart
+sudo NEEDRESTART_MODE=a DEBIAN_FRONTEND=noninteractive apt-get -y install needrestart
 sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 sudo sed -i "s/#NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/NR_NOTIFYD_DISABLE_NOTIFY_SEND='1'/" /etc/needrestart/notify.conf
 
