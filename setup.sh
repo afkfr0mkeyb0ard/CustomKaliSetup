@@ -175,6 +175,10 @@ sudo ./bloodhound-cli install
 echo "alias bloodhound-ce='sudo $INTERNALS_DIR/bloodhound-cli up && echo \"URL: http://127.0.0.1:8080\"'" >> ~/.zshrc
 echo "alias bloodhound-ce-rstpwd='sudo $INTERNALS_DIR/bloodhound-cli resetpwd'" >> ~/.zshrc
 
+# Bloodhoundce-resources
+cd $INTERNALS_DIR
+git clone https://github.com/CompassSecurity/bloodhoundce-resources.git
+
 # BloodHound-Legacy
 cd $INTERNALS_DIR
 wget https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip -O BloodHound-linux-x64.zip
