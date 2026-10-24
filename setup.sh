@@ -1237,6 +1237,10 @@ rm waybackurls-linux-amd64-0.1.0.tgz
 chmod +x waybackurls
 echo "alias waybackurls='$WEB_DIR/waybackurls'" >> ~/.zshrc 
 
+# Waybackurls-py
+cd $WEB_DIR
+git clone https://github.com/BDadmehr0/waybackurls-py.git
+
 # WebCacheVulnerabilityScanner
 cd $WEB_DIR
 wget https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner/releases/download/1.4.2/web-cache-vulnerability-scanner_1.4.2_linux_amd64.tar.gz
