@@ -37,6 +37,7 @@ Certipy
 Chisel
 Cloud_enum
 CloudPEASS
+CloudRip
 Coercer
 CredMaster
 CrossLinked
