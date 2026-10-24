@@ -232,17 +232,6 @@ chmod +x chisel_linux
 echo "alias chisel='$INTERNALS_DIR/chisel_linux'" >> ~/.zshrc
 echo 'chisel server -p 8000 --reverse' >> ~/.zsh_history
 
-# CloudRip
-cd $WEB_DIR
-git clone https://github.com/moscovium-mc/CloudRip.git
-cd CloudRip
-python3 -m venv .
-source bin/activate
-pip3 install -r requirements.txt
-deactivate
-echo "alias cloudrip='$WEB_DIR/CloudRip/bin/python3 $WEB_DIR/CloudRip/cloudrip.py'" >> ~/.zshrc
-echo 'cloudrip domain.com' >> ~/.zsh_history
-
 # Cloud_enum
 cd $RECON_DIR
 pipx install git+https://github.com/initstring/cloud_enum.git
@@ -259,6 +248,17 @@ deactivate
 echo "alias AwsPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/AWSPEASS.py'" >> ~/.zshrc
 echo "alias AzurePEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/AzurePEASS.py'" >> ~/.zshrc
 echo "alias GcpPEASS='$RECON_DIR/CloudPEASS/bin/python3 $RECON_DIR/CloudPEASS/GCPPEASS.py'" >> ~/.zshrc
+
+# CloudRip
+cd $WEB_DIR
+git clone https://github.com/moscovium-mc/CloudRip.git
+cd CloudRip
+python3 -m venv .
+source bin/activate
+pip3 install -r requirements.txt
+deactivate
+echo "alias cloudrip='$WEB_DIR/CloudRip/bin/python3 $WEB_DIR/CloudRip/cloudrip.py'" >> ~/.zshrc
+echo 'cloudrip domain.com' >> ~/.zsh_history
 
 # Coercer
 cd $INTERNALS_DIR
