@@ -174,6 +174,7 @@ TREVORspray
 Trufflehog
 Vita
 Waybackurls
+Waybackurls-py
 WebCacheVulnerabilityScanner
 Webclientservicescanner
 Weevely3
