@@ -60,6 +60,7 @@ FinalRecon
 FindADCS
 FindURLS
 Frida
+Gau
 GenUsernames
 Git-dumper
 Gitleaks
