@@ -408,6 +408,16 @@ echo "alias findURLS='python3 $WEB_DIR/findURLS/findUrls.py'" >> ~/.zshrc
 cd $MOBILE_DIR
 pipx install frida-tools
 
+# Gau
+cd $WEB_DIR
+wget https://github.com/lc/gau/releases/download/v2.2.4/gau_2.2.4_linux_amd64.tar.gz
+tar -xzf gau_2.2.4_linux_amd64.tar.gz
+rm README.md
+rm LICENSE
+rm gau_2.2.4_linux_amd64.tar.gz
+echo "alias gau='$WEB_DIR/gau'" >> ~/.zshrc
+echo "gau --verbose domain.com" >> ~/.zsh_history
+
 # GenUsernames
 cd $GENERAL_DIR
 git clone https://github.com/afkfr0mkeyb0ard/GenUsernames.git
